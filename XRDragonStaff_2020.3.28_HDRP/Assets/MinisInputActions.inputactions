@@ -1,0 +1,374 @@
+{
+    "name": "MinisInputActions",
+    "maps": [
+        {
+            "name": "Launch Control XL 1",
+            "id": "ade526e5-b656-471a-8be6-a4d32ed22c40",
+            "actions": [
+                {
+                    "name": "Send Float",
+                    "type": "Value",
+                    "id": "d7cea231-d4f0-494d-a72d-b51f4a3f07ab",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Buttons",
+                    "type": "Value",
+                    "id": "bbde07ad-4173-4e84-b919-8fd644474cd7",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "e25e42fd-fc9d-4245-aed4-e98fbb67ee6e",
+                    "path": "<MidiDevice>/control034",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VFX Control",
+                    "action": "Send Float",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2cbee0db-6833-4601-a6ba-fadef3fe70a5",
+                    "path": "<MidiDevice>/control035",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VFX Control",
+                    "action": "Send Float",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7edde05d-8449-469d-ba02-0d1db53d3022",
+                    "path": "<MidiDevice>/control045",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VFX Control",
+                    "action": "Send Float",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "32b0cc0f-fdc7-4279-adc1-61f7ef00c0f4",
+                    "path": "<MidiDevice>/control007",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VFX Control",
+                    "action": "Send Float",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "220fb4c0-2eab-4409-9291-13354e7ca489",
+                    "path": "<MidiDevice>/control112",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VFX Control",
+                    "action": "Buttons",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "33cef385-2310-4b03-87f9-ad00a11ed3e8",
+                    "path": "<MidiDevice>/control113",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VFX Control",
+                    "action": "Buttons",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8750e8f6-0fa9-48cc-aa1d-f6e8930cf0c4",
+                    "path": "<MidiDevice>/control114",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VFX Control",
+                    "action": "Buttons",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f415e592-2d16-4284-b5d2-4460d044744e",
+                    "path": "<MidiDevice>/control115",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VFX Control",
+                    "action": "Buttons",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b1d2751b-84ad-4655-8c0d-38795f7303e4",
+                    "path": "<MidiDevice>/control116",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VFX Control",
+                    "action": "Buttons",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "12df32b1-92c9-42e1-a7e7-9d2702ee011a",
+                    "path": "<MidiDevice>/control117",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VFX Control",
+                    "action": "Buttons",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1a05ba83-82f8-46ee-8b95-ab95b04917ea",
+                    "path": "<MidiDevice>/control118",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VFX Control",
+                    "action": "Buttons",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c4b5cd0f-af0b-433d-9871-4122048a4925",
+                    "path": "<MidiDevice>/control119",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VFX Control",
+                    "action": "Buttons",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "LPD8",
+            "id": "512eb41c-2d88-4e90-9e0d-79dca6dbee91",
+            "actions": [
+                {
+                    "name": "Knobs",
+                    "type": "Value",
+                    "id": "52add619-e5fc-4063-828f-6de7bb2e92c7",
+                    "expectedControlType": "MidiValue",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Pads",
+                    "type": "Value",
+                    "id": "dd424963-8c30-41c9-ab07-ac7ca84e637a",
+                    "expectedControlType": "MidiNote",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "0be78ef8-36fb-4762-9a0e-1906a9a150c8",
+                    "path": "<MidiDevice>/control001",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VFX Control",
+                    "action": "Knobs",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4cc0adc2-e2b6-4648-af79-9d86e7ce95d8",
+                    "path": "<MidiDevice>/control002",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VFX Control",
+                    "action": "Knobs",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3adffb69-9b82-40fc-bc0e-31c9c259f2dd",
+                    "path": "<MidiDevice>/control003",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VFX Control",
+                    "action": "Knobs",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7d456116-ed24-4770-a735-b84bf43870e5",
+                    "path": "<MidiDevice>/control004",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VFX Control",
+                    "action": "Knobs",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6408851d-b7f9-4ff7-811d-8c46799dd7c1",
+                    "path": "<MidiDevice>/control005",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VFX Control",
+                    "action": "Knobs",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a9c95d52-0a31-4a65-a686-fe0f369a298a",
+                    "path": "<MidiDevice>/control006",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VFX Control",
+                    "action": "Knobs",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b975eff3-d715-4cda-93b4-385eeb7fc060",
+                    "path": "<MidiDevice>/control007",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VFX Control",
+                    "action": "Knobs",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5b943281-ae5e-4390-9a61-dff08d459961",
+                    "path": "<MidiDevice>/control008",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VFX Control",
+                    "action": "Knobs",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ec3f19bc-b3ed-4c91-b2da-51de6631a2da",
+                    "path": "<MidiDevice>/note036",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VFX Control",
+                    "action": "Pads",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "82de43c3-4d41-46cb-b848-f4fe64014c84",
+                    "path": "<MidiDevice>/note037",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VFX Control",
+                    "action": "Pads",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a4eb733b-7036-41fc-9c00-889f4e83bbc2",
+                    "path": "<MidiDevice>/note038",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VFX Control",
+                    "action": "Pads",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7380542f-b20f-4da3-9d44-bc75662776d8",
+                    "path": "<MidiDevice>/note039",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VFX Control",
+                    "action": "Pads",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "abb223b3-7f95-4a6c-b265-3d469a9abef1",
+                    "path": "<MidiDevice>/note040",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VFX Control",
+                    "action": "Pads",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8c85f564-04d6-4d88-a89f-7dafc15d2a9f",
+                    "path": "<MidiDevice>/note041",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VFX Control",
+                    "action": "Pads",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7fa1413f-80b4-4115-a3ee-fe03e96a8e78",
+                    "path": "<MidiDevice>/note042",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VFX Control",
+                    "action": "Pads",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "93d734b6-a6f2-4e9f-b377-236406f762d7",
+                    "path": "<MidiDevice>/note043",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VFX Control",
+                    "action": "Pads",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "VFX Control",
+            "bindingGroup": "VFX Control",
+            "devices": [
+                {
+                    "devicePath": "<MidiDevice>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
