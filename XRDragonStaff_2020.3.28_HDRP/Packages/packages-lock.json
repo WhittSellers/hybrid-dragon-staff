@@ -241,7 +241,7 @@
       "url": "https://packages.unity.com"
     },
     "com.valvesoftware.unity.openvr": {
-      "version": "file:C:/Users/Whitt/Documents/GitHub/unity-xr-plugin/com.valve.openvr",
+      "version": "file:S:\\GitHub\\unity-xr-plugin\\com.valve.openvr",
       "depth": 0,
       "source": "local",
       "dependencies": {
