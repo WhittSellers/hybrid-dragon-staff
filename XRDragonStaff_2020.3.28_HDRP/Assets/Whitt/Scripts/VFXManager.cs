@@ -2,23 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.VFX;
+using UnityEngine.VFX.Utility;
 
 public class VFXManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Update()
+    public List<VisualEffect> vfxList;
+    public List<VFXEventAttribute> eventAttributes;
+
+    public ExposedProperty streamerPlayEvent = "OnStreamerPlay";
+
+    private bool isStreamerPlaying = false;
+    
+    void OnEnable()
     {
-        GetVRDevices();
+        VFXEvents.current.onTriggerButtonPress += OnTriggerButtonPresss;
     }
 
-    void GetVRDevices()
+    //Change this funciton's name to be more universal so it makes sense to call it from an animation timeline
+    void OnTriggerButtonPresss()
     {
-        var inputDevices = new List<UnityEngine.XR.InputDevice>();
-        UnityEngine.XR.InputDevices.GetDevices(inputDevices);
+        vfxList[0].SendEvent(streamerPlayEvent);
+    }
 
-        foreach (var device in inputDevices)
-        {
-            Debug.Log(string.Format("Device found with name '{0}' and role '{1}'", device.name, device.role.ToString()));
-        }
+    void OnDisable()
+    {
+        VFXEvents.current.onTriggerButtonPress -= OnTriggerButtonPresss;
     }
 }

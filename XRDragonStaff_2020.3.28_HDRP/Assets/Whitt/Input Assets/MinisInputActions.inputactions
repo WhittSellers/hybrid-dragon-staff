@@ -11,7 +11,8 @@
                     "id": "d7cea231-d4f0-494d-a72d-b51f4a3f07ab",
                     "expectedControlType": "Axis",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Buttons",
@@ -19,7 +20,8 @@
                     "id": "bbde07ad-4173-4e84-b919-8fd644474cd7",
                     "expectedControlType": "Axis",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -167,7 +169,8 @@
                     "id": "52add619-e5fc-4063-828f-6de7bb2e92c7",
                     "expectedControlType": "MidiValue",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Pads",
@@ -175,7 +178,8 @@
                     "id": "dd424963-8c30-41c9-ab07-ac7ca84e637a",
                     "expectedControlType": "MidiNote",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -352,6 +356,34 @@
                     "processors": "",
                     "groups": "VFX Control",
                     "action": "Pads",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Keyboard",
+            "id": "7563f32e-e4ea-424d-9c8e-b33f50273928",
+            "actions": [
+                {
+                    "name": "StreamerParticles",
+                    "type": "Button",
+                    "id": "85f9270b-a9f2-49ea-a762-a2573d57e678",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "0ffdc313-5741-472a-9c66-080dfd1f87a0",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VFX Control",
+                    "action": "StreamerParticles",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
