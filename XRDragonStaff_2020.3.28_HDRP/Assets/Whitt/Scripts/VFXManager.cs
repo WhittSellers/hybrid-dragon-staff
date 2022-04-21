@@ -22,6 +22,7 @@ public class VFXManager : MonoBehaviour
     void OnTriggerButtonPresss()
     {
         vfxList[0].SendEvent(streamerPlayEvent);
+        Debug.Log("OnStreamerPlay");
     }
 
     void OnDisable()
