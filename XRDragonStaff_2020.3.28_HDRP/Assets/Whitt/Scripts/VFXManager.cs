@@ -9,9 +9,25 @@ public class VFXManager : MonoBehaviour
     public List<VisualEffect> vfxList;
     public List<VFXEventAttribute> eventAttributes;
 
-    public ExposedProperty streamerPlayEvent = "OnStreamerPlay";
+    public ExposedProperty FirePlayEvent = "OnFirePlay";
+    public ExposedProperty EmbersPlayEvent = "OnEmbersPlay";
+    public ExposedProperty HelixPlayEvent = "OnHelixPlay";
+    public ExposedProperty OrbPlayEvent = "OnOrbPlay";
+    public ExposedProperty OrbSplitPlayEvent = "OnOrbSplitPlay";
+    public ExposedProperty EightOrbPlayEvent = "OnEightOrbPlay";
+    public ExposedProperty SparklerPlayEvent = "OnSparklerPlay";
+    public ExposedProperty AudioRingPlayEvent = "OnAudioRingPlay";
+    public ExposedProperty CelestialBodyPlayEvent = "OnCelestialBodyPlay";
+    public ExposedProperty ClimaxPlayEvent = "OnClimaxPlay";
+    public ExposedProperty ClimaxEndPlayEvent = "OnClimaxEndPlay";
+    public ExposedProperty CoolDownPlayEvent = "OnCoolDownPlay";
 
-    private bool isStreamerPlaying = false;
+    public int vfxSequenceNum = 0;
+
+    public bool performanceIntro = false;
+    public bool performanceRisingAction = false;
+    public bool performanceClimax = false;
+    public bool performanceResolution = false;
     
     void OnEnable()
     {
@@ -21,8 +37,11 @@ public class VFXManager : MonoBehaviour
     //Change this funciton's name to be more universal so it makes sense to call it from an animation timeline
     void OnTriggerButtonPresss()
     {
-        vfxList[0].SendEvent(streamerPlayEvent);
-        Debug.Log("OnStreamerPlay");
+        if(vfxSequenceNum == 0)
+        {
+            vfxList[0].SendEvent(FirePlayEvent);
+            Debug.Log(FirePlayEvent);
+        }
     }
 
     void OnDisable()

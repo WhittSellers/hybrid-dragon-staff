@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.5219494, g: 0.6250311, b: 1.3677068, a: 1}
+  m_IndirectSpecularColor: {r: 0.5374143, g: 0.6866678, b: 1.8553034, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -738,7 +738,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 193874667}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 576f101e64cf20c4bac324a26acbf0dd, type: 3}
   m_Name: 
@@ -753,8 +753,31 @@ MonoBehaviour:
   - {fileID: 1153645457}
   - {fileID: 912544602}
   - {fileID: 726459129}
-  streamerPlayEvent:
-    m_Name: OnStreamerPlay
+  FirePlayEvent:
+    m_Name: OnFirePlay
+  EmbersPlayEvent:
+    m_Name: OnEmbersPlay
+  HelixPlayEvent:
+    m_Name: OnHelixPlay
+  OrbPlayEvent:
+    m_Name: OnOrbPlay
+  OrbSplitPlayEvent:
+    m_Name: OnOrbSplitPlay
+  EightOrbPlayEvent:
+    m_Name: OnEightOrbPlay
+  SparklerPlayEvent:
+    m_Name: OnSparklerPlay
+  AudioRingPlayEvent:
+    m_Name: OnAudioRingPlay
+  CelestialBodyPlayEvent:
+    m_Name: OnCelestialBodyPlay
+  ClimaxPlayEvent:
+    m_Name: OnClimaxPlay
+  ClimaxEndPlayEvent:
+    m_Name: OnClimaxEndPlay
+  CoolDownPlayEvent:
+    m_Name: OnCoolDownPlay
+  vfxSequenceNum: 0
 --- !u!114 &193874670
 MonoBehaviour:
   m_ObjectHideFlags: 0
