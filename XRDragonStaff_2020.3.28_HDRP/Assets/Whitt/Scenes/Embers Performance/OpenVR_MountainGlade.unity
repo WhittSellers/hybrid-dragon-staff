@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.5374143, g: 0.6866678, b: 1.8553034, a: 1}
+  m_IndirectSpecularColor: {r: 0.5219494, g: 0.6250311, b: 1.3677068, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -778,6 +778,10 @@ MonoBehaviour:
   CoolDownPlayEvent:
     m_Name: OnCoolDownPlay
   vfxSequenceNum: 0
+  performanceIntro: 0
+  performanceRisingAction: 0
+  performanceClimax: 0
+  performanceResolution: 0
 --- !u!114 &193874670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2189,7 +2193,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &760578617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3996,7 +4000,7 @@ VisualEffect:
       m_Array: []
     m_Vector3f:
       m_Array:
-      - m_Value: {x: 0.15, y: 5.53, z: 0.65}
+      - m_Value: {x: -0.04, y: 5.53, z: 0.65}
         m_Name: Attractive Target Pos
         m_Overridden: 1
     m_Vector4f:
@@ -4240,7 +4244,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1489944943}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.15, y: 5.53, z: 0.65}
+  m_LocalPosition: {x: -0.04, y: 5.53, z: 0.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 193874668}

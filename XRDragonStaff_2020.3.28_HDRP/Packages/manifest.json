@@ -13,9 +13,17 @@
       "scopes": [
         "jp.keijiro"
       ]
+    },
+    {
+      "name": "Ben Kuper",
+      "url": "https://package.openupm.com",
+      "scopes": [
+        "com.benkuper"
+      ]
     }
   ],
   "dependencies": {
+    "com.benkuper.oscquery": "1.0.9",
     "com.unity.cinemachine": "2.6.10",
     "com.unity.collab-proxy": "1.15.7",
     "com.unity.ide.rider": "2.0.7",
