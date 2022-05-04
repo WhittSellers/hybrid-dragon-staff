@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.52222466, g: 0.6253504, b: 1.3684031, a: 1}
+  m_IndirectSpecularColor: {r: 0.53298265, g: 0.682409, b: 1.8296453, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -440,6 +440,7 @@ GameObject:
   m_Component:
   - component: {fileID: 30061523}
   - component: {fileID: 30061524}
+  - component: {fileID: 30061525}
   m_Layer: 0
   m_Name: Zone3
   m_TagString: Untagged
@@ -455,8 +456,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 30061522}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 1.5, z: -2}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalPosition: {x: 0, y: 1, z: -2.5}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 424386620}
   m_RootOrder: 3
@@ -474,6 +475,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &30061525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30061522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b9a548befcb6b947b5c39feeb513fb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioRingPulse: {fileID: 312708865}
 --- !u!1 &96491164
 GameObject:
   m_ObjectHideFlags: 0
@@ -686,13 +700,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 111894333}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.79, z: -5.2}
+  m_LocalRotation: {x: 0.13052616, y: 0, z: 0, w: 0.9914449}
+  m_LocalPosition: {x: 0, y: 5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 15, y: 0, z: 0}
 --- !u!1 &120678732
 GameObject:
   m_ObjectHideFlags: 0
@@ -844,11 +858,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vfxList:
-  - {fileID: 0}
+  - {fileID: 312708865}
   - {fileID: 1627158656}
   - {fileID: 1219786805}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 389970156}
+  - {fileID: 389970156}
   - {fileID: 448887376}
   - {fileID: 1153645457}
   - {fileID: 912544602}
@@ -867,8 +881,8 @@ MonoBehaviour:
     m_Name: OnEightOrbPlay
   SparklerPlayEvent:
     m_Name: OnSparklerPlay
-  AudioRingPlayEvent:
-    m_Name: OnAudioRingPlay
+  AudioFireRingPlayEvent:
+    m_Name: OnAudioFireRingPlay
   CelestialBodyPlayEvent:
     m_Name: OnCelestialBodyPlay
   ClimaxPlayEvent:
@@ -889,7 +903,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 193874667}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c9b410c968d301349a7ff6a8fac6be04, type: 3}
   m_Name: 
@@ -1093,6 +1107,8 @@ GameObject:
   - component: {fileID: 312708863}
   - component: {fileID: 312708865}
   - component: {fileID: 312708864}
+  - component: {fileID: 312708867}
+  - component: {fileID: 312708866}
   m_Layer: 0
   m_Name: AudioFireRing
   m_TagString: Untagged
@@ -1162,8 +1178,8 @@ VisualEffect:
   m_GameObject: {fileID: 312708862}
   m_Enabled: 1
   m_Asset: {fileID: 8926484042661614526, guid: 12931d7a4952704408fdab8bf3f0af8b, type: 3}
-  m_InitialEventName: OnPlay
-  m_InitialEventNameOverriden: 0
+  m_InitialEventName: OnAudioFireRingPlay
+  m_InitialEventNameOverriden: 1
   m_StartSeed: 0
   m_ResetSeedOnPlay: 1
   m_ResourceVersion: 1
@@ -1180,7 +1196,7 @@ VisualEffect:
       m_Array: []
     m_Vector3f:
       m_Array:
-      - m_Value: {x: 0, y: 1, z: 0}
+      - m_Value: {x: 0, y: 0, z: 2}
         m_Name: Force Vector
         m_Overridden: 1
     m_Vector4f:
@@ -1199,6 +1215,41 @@ VisualEffect:
       m_Array: []
     m_Bool:
       m_Array: []
+--- !u!114 &312708866
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312708862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47cc030d3da32fc4b8dff44fae12f661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ButtonProperty:
+    m_Name: ButtonDown
+  m_ButtonSmoothProperty:
+    m_Name: TargetRadius
+  ButtonName: Trigger
+  SmoothSpeed: 2
+  UseButtonSmooth: 1
+--- !u!114 &312708867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312708862}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdafc37f32b176349b1684c4455b98e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ExecuteInEditor: 1
+  m_Bindings:
+  - {fileID: 312708866}
+  m_VisualEffect: {fileID: 312708865}
 --- !u!1 &389970153
 GameObject:
   m_ObjectHideFlags: 0
@@ -1293,7 +1344,7 @@ VisualEffect:
       - m_Value: 0.3
         m_Name: Spawn Area_radius
         m_Overridden: 1
-      - m_Value: 1
+      - m_Value: 2
         m_Name: Initial Flame Size
         m_Overridden: 1
       - m_Value: 0.3
@@ -1340,7 +1391,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &424386620
 Transform:
   m_ObjectHideFlags: 0
@@ -1390,7 +1441,7 @@ VFXRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 448887374}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -1438,7 +1489,7 @@ VisualEffect:
   m_PropertySheet:
     m_Float:
       m_Array:
-      - m_Value: 1
+      - m_Value: 2
         m_Name: ParticleLifeTime
         m_Overridden: 1
       - m_Value: 0.1
@@ -1446,6 +1497,9 @@ VisualEffect:
         m_Overridden: 1
       - m_Value: 0
         m_Name: AttractiveForceDrag
+        m_Overridden: 1
+      - m_Value: 0.1
+        m_Name: TurbulenceIntensity
         m_Overridden: 1
     m_Vector2f:
       m_Array: []
@@ -1460,19 +1514,19 @@ VisualEffect:
       - m_Value: {x: 1, y: 1, z: 1}
         m_Name: Transform_scale
         m_Overridden: 1
-      - m_Value: {x: 90, y: 0, z: 0}
+      - m_Value: {x: -0, y: 0, z: 0}
         m_Name: OffsetTransform_angles
         m_Overridden: 1
-      - m_Value: {x: 0, y: 0, z: 0}
+      - m_Value: {x: 0, y: 3, z: 0}
         m_Name: OffsetTransform_position
         m_Overridden: 1
       - m_Value: {x: 1, y: 1, z: 1}
         m_Name: OffsetTransform_scale
         m_Overridden: 1
-      - m_Value: {x: 90, y: 0, z: 0}
+      - m_Value: {x: -0, y: 0, z: 0}
         m_Name: TargetTransform_angles
         m_Overridden: 1
-      - m_Value: {x: 1, y: 0, z: 0}
+      - m_Value: {x: -4, y: 3, z: 0}
         m_Name: TargetTransform_position
         m_Overridden: 1
       - m_Value: {x: 1, y: 1, z: 1}
@@ -1481,7 +1535,7 @@ VisualEffect:
       - m_Value: {x: -0, y: 0, z: 0}
         m_Name: TrackerTransform_angles
         m_Overridden: 1
-      - m_Value: {x: 0, y: 0, z: 0}
+      - m_Value: {x: 0, y: 3, z: 0}
         m_Name: TrackerTransform_position
         m_Overridden: 1
       - m_Value: {x: 1, y: 1, z: 1}
@@ -1493,7 +1547,7 @@ VisualEffect:
       - m_Value: {x: -0, y: 0, z: 0}
         m_Name: AttractiveForceObject_angles
         m_Overridden: 1
-      - m_Value: {x: 0, y: -0.775, z: 0}
+      - m_Value: {x: 0, y: 3, z: 0}
         m_Name: AttractiveForceObject_position
         m_Overridden: 1
       - m_Value: {x: 1, y: 1, z: 1}
@@ -1543,7 +1597,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Property:
     m_Name: TargetTransform
-  Target: {fileID: 1820646123}
+  Target: {fileID: 1919832317}
 --- !u!114 &448887379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1577,7 +1631,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Property:
     m_Name: OffsetTransform
-  Target: {fileID: 1089538839}
+  Target: {fileID: 972600265}
 --- !u!114 &448887381
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1592,7 +1646,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Property:
     m_Name: TrackerTransform
-  Target: {fileID: 817962726}
+  Target: {fileID: 1686518891}
 --- !u!114 &448887382
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1607,7 +1661,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Property:
     m_Name: AttractiveForceObject
-  Target: {fileID: 2073282602}
+  Target: {fileID: 1686518891}
 --- !u!1 &517707479
 GameObject:
   m_ObjectHideFlags: 0
@@ -2036,7 +2090,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Property:
     m_Name: AttractiveForceObject
-  Target: {fileID: 2073282602}
+  Target: {fileID: 1686518891}
 --- !u!114 &726459124
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2051,7 +2105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Property:
     m_Name: TrackerTransform
-  Target: {fileID: 817962726}
+  Target: {fileID: 1686518891}
 --- !u!114 &726459125
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2066,7 +2120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Property:
     m_Name: OffsetTransform
-  Target: {fileID: 1089538839}
+  Target: {fileID: 972600265}
 --- !u!114 &726459126
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2081,7 +2135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Property:
     m_Name: TargetTransform
-  Target: {fileID: 1470720227}
+  Target: {fileID: 924370064}
 --- !u!114 &726459127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2109,7 +2163,7 @@ VFXRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 726459121}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -2157,8 +2211,11 @@ VisualEffect:
   m_PropertySheet:
     m_Float:
       m_Array:
-      - m_Value: 1
+      - m_Value: 2
         m_Name: ParticleLifeTime
+        m_Overridden: 1
+      - m_Value: 0.1
+        m_Name: TurbulenceIntensity
         m_Overridden: 1
     m_Vector2f:
       m_Array: []
@@ -2173,19 +2230,19 @@ VisualEffect:
       - m_Value: {x: 1, y: 1, z: 1}
         m_Name: Transform_scale
         m_Overridden: 1
-      - m_Value: {x: 90, y: 0, z: 0}
+      - m_Value: {x: -0, y: 0, z: 0}
         m_Name: OffsetTransform_angles
         m_Overridden: 1
-      - m_Value: {x: 0, y: 0, z: 0}
+      - m_Value: {x: 0, y: 3, z: 0}
         m_Name: OffsetTransform_position
         m_Overridden: 1
       - m_Value: {x: 1, y: 1, z: 1}
         m_Name: OffsetTransform_scale
         m_Overridden: 1
-      - m_Value: {x: 90, y: 0, z: 0}
+      - m_Value: {x: -0, y: 0, z: 0}
         m_Name: TargetTransform_angles
         m_Overridden: 1
-      - m_Value: {x: 0, y: 1.0000001, z: 0.00000011920929}
+      - m_Value: {x: 0, y: 3, z: -4}
         m_Name: TargetTransform_position
         m_Overridden: 1
       - m_Value: {x: 1, y: 1, z: 1}
@@ -2194,7 +2251,7 @@ VisualEffect:
       - m_Value: {x: -0, y: 0, z: 0}
         m_Name: TrackerTransform_angles
         m_Overridden: 1
-      - m_Value: {x: 0, y: 0, z: 0}
+      - m_Value: {x: 0, y: 3, z: 0}
         m_Name: TrackerTransform_position
         m_Overridden: 1
       - m_Value: {x: 1, y: 1, z: 1}
@@ -2203,7 +2260,7 @@ VisualEffect:
       - m_Value: {x: -0, y: 0, z: 0}
         m_Name: AttractiveForceObject_angles
         m_Overridden: 1
-      - m_Value: {x: 0, y: -0.775, z: 0}
+      - m_Value: {x: 0, y: 3, z: 0}
         m_Name: AttractiveForceObject_position
         m_Overridden: 1
       - m_Value: {x: 1, y: 1, z: 1}
@@ -2298,7 +2355,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 760578616}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bb2733293e9173c43b1747589472e908, type: 3}
   m_Name: 
@@ -2375,6 +2432,7 @@ GameObject:
   - component: {fileID: 817962728}
   - component: {fileID: 817962727}
   - component: {fileID: 817962729}
+  - component: {fileID: 817962730}
   m_Layer: 0
   m_Name: DragonStaffTransformObjects
   m_TagString: Untagged
@@ -2640,6 +2698,22 @@ MonoBehaviour:
   m_TrackingType: 0
   m_UpdateType: 0
   m_UseRelativeTransform: 0
+--- !u!54 &817962730
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817962725}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &844053743
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2877,7 +2951,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Property:
     m_Name: AttractiveForceObject
-  Target: {fileID: 2073282602}
+  Target: {fileID: 1686518891}
 --- !u!114 &912544597
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2892,7 +2966,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Property:
     m_Name: TrackerTransform
-  Target: {fileID: 817962726}
+  Target: {fileID: 1686518891}
 --- !u!114 &912544598
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2907,7 +2981,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Property:
     m_Name: OffsetTransform
-  Target: {fileID: 1089538839}
+  Target: {fileID: 972600265}
 --- !u!114 &912544599
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2922,7 +2996,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Property:
     m_Name: TargetTransform
-  Target: {fileID: 805108136}
+  Target: {fileID: 1490419228}
 --- !u!114 &912544600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2950,7 +3024,7 @@ VFXRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 912544594}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -2998,7 +3072,7 @@ VisualEffect:
   m_PropertySheet:
     m_Float:
       m_Array:
-      - m_Value: 1
+      - m_Value: 2
         m_Name: ParticleLifeTime
         m_Overridden: 1
       - m_Value: 0.1
@@ -3006,6 +3080,9 @@ VisualEffect:
         m_Overridden: 1
       - m_Value: 0
         m_Name: AttractiveForceDrag
+        m_Overridden: 1
+      - m_Value: 0.1
+        m_Name: TurbulenceIntensity
         m_Overridden: 1
     m_Vector2f:
       m_Array: []
@@ -3020,19 +3097,19 @@ VisualEffect:
       - m_Value: {x: 1, y: 1, z: 1}
         m_Name: Transform_scale
         m_Overridden: 1
-      - m_Value: {x: 90, y: 0, z: 0}
+      - m_Value: {x: -0, y: 0, z: 0}
         m_Name: OffsetTransform_angles
         m_Overridden: 1
-      - m_Value: {x: 0, y: 0, z: 0}
+      - m_Value: {x: 0, y: 3, z: 0}
         m_Name: OffsetTransform_position
         m_Overridden: 1
       - m_Value: {x: 1, y: 1, z: 1}
         m_Name: OffsetTransform_scale
         m_Overridden: 1
-      - m_Value: {x: 90, y: 0, z: 0}
+      - m_Value: {x: -0, y: 0, z: 0}
         m_Name: TargetTransform_angles
         m_Overridden: 1
-      - m_Value: {x: -1, y: 0, z: 0}
+      - m_Value: {x: 0, y: 3, z: 4}
         m_Name: TargetTransform_position
         m_Overridden: 1
       - m_Value: {x: 1, y: 1, z: 1}
@@ -3041,7 +3118,7 @@ VisualEffect:
       - m_Value: {x: -0, y: 0, z: 0}
         m_Name: TrackerTransform_angles
         m_Overridden: 1
-      - m_Value: {x: 0, y: 0, z: 0}
+      - m_Value: {x: 0, y: 3, z: 0}
         m_Name: TrackerTransform_position
         m_Overridden: 1
       - m_Value: {x: 1, y: 1, z: 1}
@@ -3053,7 +3130,7 @@ VisualEffect:
       - m_Value: {x: -0, y: 0, z: 0}
         m_Name: AttractiveForceObject_angles
         m_Overridden: 1
-      - m_Value: {x: 0, y: -0.775, z: 0}
+      - m_Value: {x: 0, y: 3, z: 0}
         m_Name: AttractiveForceObject_position
         m_Overridden: 1
       - m_Value: {x: 1, y: 1, z: 1}
@@ -3093,7 +3170,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &924370064
 Transform:
   m_ObjectHideFlags: 0
@@ -3102,7 +3179,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 924370063}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 972600265}
@@ -3514,6 +3591,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1009829306}
   - component: {fileID: 1009829307}
+  - component: {fileID: 1009829308}
   m_Layer: 0
   m_Name: Zone1
   m_TagString: Untagged
@@ -3529,8 +3607,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1009829305}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: 1.5, z: 2}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalPosition: {x: 0, y: 1, z: 2.5}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 424386620}
   m_RootOrder: 1
@@ -3548,6 +3626,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1009829308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1009829305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b9a548befcb6b947b5c39feeb513fb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioRingPulse: {fileID: 312708865}
 --- !u!1 &1089538838
 GameObject:
   m_ObjectHideFlags: 0
@@ -3558,6 +3649,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1089538839}
   - component: {fileID: 1089538840}
+  - component: {fileID: 1089538841}
   m_Layer: 0
   m_Name: RightSide
   m_TagString: Untagged
@@ -3598,6 +3690,19 @@ MonoBehaviour:
   targetObject: {fileID: 1089538839}
   angularVelocity: {x: 0, y: 0, z: 0}
   deltaPosition: {x: 0, y: 0, z: 0}
+--- !u!65 &1089538841
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1089538838}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 0.05, z: 0.3}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1153645452
 GameObject:
   m_ObjectHideFlags: 0
@@ -3649,7 +3754,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Property:
     m_Name: TargetTransform
-  Target: {fileID: 804195647}
+  Target: {fileID: 1933340916}
 --- !u!114 &1153645455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3677,7 +3782,7 @@ VFXRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1153645452}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -3725,8 +3830,11 @@ VisualEffect:
   m_PropertySheet:
     m_Float:
       m_Array:
-      - m_Value: 1
+      - m_Value: 2
         m_Name: ParticleLifeTime
+        m_Overridden: 1
+      - m_Value: 0.1
+        m_Name: TurbulenceIntensity
         m_Overridden: 1
     m_Vector2f:
       m_Array: []
@@ -3741,19 +3849,19 @@ VisualEffect:
       - m_Value: {x: 1, y: 1, z: 1}
         m_Name: Transform_scale
         m_Overridden: 1
-      - m_Value: {x: 90, y: 0, z: 0}
+      - m_Value: {x: -0, y: 0, z: 0}
         m_Name: OffsetTransform_angles
         m_Overridden: 1
-      - m_Value: {x: 0, y: 0, z: 0}
+      - m_Value: {x: 0, y: 3, z: 0}
         m_Name: OffsetTransform_position
         m_Overridden: 1
       - m_Value: {x: 1, y: 1, z: 1}
         m_Name: OffsetTransform_scale
         m_Overridden: 1
-      - m_Value: {x: 90, y: 0, z: 0}
+      - m_Value: {x: -0, y: 0, z: 0}
         m_Name: TargetTransform_angles
         m_Overridden: 1
-      - m_Value: {x: 0, y: -1.0000001, z: -0.00000011920929}
+      - m_Value: {x: 4, y: 3, z: 0}
         m_Name: TargetTransform_position
         m_Overridden: 1
       - m_Value: {x: 1, y: 1, z: 1}
@@ -3762,7 +3870,7 @@ VisualEffect:
       - m_Value: {x: -0, y: 0, z: 0}
         m_Name: TrackerTransform_angles
         m_Overridden: 1
-      - m_Value: {x: 0, y: 0, z: 0}
+      - m_Value: {x: 0, y: 3, z: 0}
         m_Name: TrackerTransform_position
         m_Overridden: 1
       - m_Value: {x: 1, y: 1, z: 1}
@@ -3771,7 +3879,7 @@ VisualEffect:
       - m_Value: {x: -0, y: 0, z: 0}
         m_Name: AttractiveForceObject_angles
         m_Overridden: 1
-      - m_Value: {x: 0, y: -0.775, z: 0}
+      - m_Value: {x: 0, y: 3, z: 0}
         m_Name: AttractiveForceObject_position
         m_Overridden: 1
       - m_Value: {x: 1, y: 1, z: 1}
@@ -3807,7 +3915,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Property:
     m_Name: OffsetTransform
-  Target: {fileID: 1089538839}
+  Target: {fileID: 972600265}
 --- !u!114 &1153645459
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3822,7 +3930,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Property:
     m_Name: TrackerTransform
-  Target: {fileID: 817962726}
+  Target: {fileID: 1686518891}
 --- !u!114 &1153645460
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3837,7 +3945,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Property:
     m_Name: AttractiveForceObject
-  Target: {fileID: 2073282602}
+  Target: {fileID: 1686518891}
 --- !u!1001 &1169407753
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3997,7 +4105,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1219786801
 Transform:
   m_ObjectHideFlags: 0
@@ -4040,7 +4148,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ExecuteInEditor: 1
-  m_Bindings: []
+  m_Bindings:
+  - {fileID: 1219786802}
   m_VisualEffect: {fileID: 1219786805}
 --- !u!73398921 &1219786804
 VFXRenderer:
@@ -4050,7 +4159,7 @@ VFXRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1219786800}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -4123,7 +4232,7 @@ VisualEffect:
       m_Array: []
     m_Vector3f:
       m_Array:
-      - m_Value: {x: 0, y: 7.04, z: 0}
+      - m_Value: {x: 0, y: 5, z: 0}
         m_Name: Attractive Target Pos
         m_Overridden: 1
     m_Vector4f:
@@ -4214,6 +4323,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1302604383}
   - component: {fileID: 1302604384}
+  - component: {fileID: 1302604385}
   m_Layer: 0
   m_Name: LeftSide
   m_TagString: Untagged
@@ -4254,6 +4364,19 @@ MonoBehaviour:
   targetObject: {fileID: 1302604383}
   angularVelocity: {x: 0, y: 0, z: 0}
   deltaPosition: {x: 0, y: 0, z: 0}
+--- !u!65 &1302604385
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302604382}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 0.05, z: 0.3}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1313548474
 GameObject:
   m_ObjectHideFlags: 0
@@ -4264,6 +4387,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1313548475}
   - component: {fileID: 1313548476}
+  - component: {fileID: 1313548477}
   m_Layer: 0
   m_Name: Zone0
   m_TagString: Untagged
@@ -4279,8 +4403,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1313548474}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 1.5, z: 2}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalPosition: {x: 2.5, y: 1, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 424386620}
   m_RootOrder: 0
@@ -4298,6 +4422,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1313548477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313548474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b9a548befcb6b947b5c39feeb513fb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioRingPulse: {fileID: 312708865}
 --- !u!1 &1374569341
 GameObject:
   m_ObjectHideFlags: 0
@@ -4424,7 +4561,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1490419228
 Transform:
   m_ObjectHideFlags: 0
@@ -4433,7 +4570,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1490419227}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 972600265}
@@ -4607,7 +4744,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1627158653}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.04, z: 0}
+  m_LocalPosition: {x: 0, y: 5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 120678733}
@@ -4797,7 +4934,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1686518890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4810,9 +4947,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0070bc30f992d8b41a3f11000ef3b786, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RotationSpeed: 50
+  RotationSpeed: 25
   RotateAxisX: 0
-  RotateAxisY: 0
+  RotateAxisY: 1
   RotateAxisZ: 0
 --- !u!4 &1686518891
 Transform:
@@ -4821,14 +4958,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1686518889}
-  m_LocalRotation: {x: 0, y: 0.38268343, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 4, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 972600265}
   m_Father: {fileID: 193874668}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1718164188
 GameObject:
   m_ObjectHideFlags: 0
@@ -4869,6 +5006,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1820242311}
   - component: {fileID: 1820242312}
+  - component: {fileID: 1820242313}
   m_Layer: 0
   m_Name: Zone2
   m_TagString: Untagged
@@ -4884,8 +5022,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1820242310}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: 1.5, z: -2}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalPosition: {x: -2.5, y: 1, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 424386620}
   m_RootOrder: 2
@@ -4903,6 +5041,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1820242313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820242310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b9a548befcb6b947b5c39feeb513fb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioRingPulse: {fileID: 312708865}
 --- !u!1 &1820646122
 GameObject:
   m_ObjectHideFlags: 0
@@ -5026,7 +5177,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!135 &1919832314
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5097,7 +5248,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1919832313}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: 0, z: 0}
+  m_LocalPosition: {x: -4, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 972600265}
@@ -5121,7 +5272,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1933340916
 Transform:
   m_ObjectHideFlags: 0
@@ -5130,7 +5281,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1933340915}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 0, z: 0}
+  m_LocalPosition: {x: 4, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 972600265}

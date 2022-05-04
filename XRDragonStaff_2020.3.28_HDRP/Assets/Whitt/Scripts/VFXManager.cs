@@ -16,7 +16,7 @@ public class VFXManager : MonoBehaviour
     public ExposedProperty OrbSplitPlayEvent = "OnOrbSplitPlay";
     public ExposedProperty EightOrbPlayEvent = "OnEightOrbPlay";
     public ExposedProperty SparklerPlayEvent = "OnSparklerPlay";
-    public ExposedProperty AudioRingPlayEvent = "OnAudioRingPlay";
+    public ExposedProperty AudioFireRingPlayEvent = "OnAudioFireRingPlay";
     public ExposedProperty CelestialBodyPlayEvent = "OnCelestialBodyPlay";
     public ExposedProperty ClimaxPlayEvent = "OnClimaxPlay";
     public ExposedProperty ClimaxEndPlayEvent = "OnClimaxEndPlay";
@@ -31,21 +31,22 @@ public class VFXManager : MonoBehaviour
     
     void OnEnable()
     {
-        VFXEvents.current.onTriggerButtonPress += OnTriggerButtonPresss;
+        VFXEvents.current.onTriggerButtonPress += OnTriggerButtonPress;
     }
 
     //Change this funciton's name to be more universal so it makes sense to call it from an animation timeline
-    void OnTriggerButtonPresss()
+    void OnTriggerButtonPress()
     {
         if(vfxSequenceNum == 0)
         {
-            vfxList[0].SendEvent(FirePlayEvent);
-            Debug.Log(FirePlayEvent);
+            vfxList[0].SendEvent(AudioFireRingPlayEvent);
+            Debug.Log("TriggerEvent");
+            // vfxSequenceNum++;
         }
     }
 
     void OnDisable()
     {
-        VFXEvents.current.onTriggerButtonPress -= OnTriggerButtonPresss;
+        VFXEvents.current.onTriggerButtonPress -= OnTriggerButtonPress;
     }
 }
