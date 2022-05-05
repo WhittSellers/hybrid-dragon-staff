@@ -1129,8 +1129,8 @@
                 },
                 {
                     "name": "first",
-                    "id": "bbbb0b43-ff99-4bf9-863a-c022fcbe7aba",
-                    "path": "<XRInputV1::HTC::HTCViveTrackerOpenXR>/deviceRotation",
+                    "id": "2def23fb-65f8-4f92-a527-b94a80cd8d4d",
+                    "path": "<XRViveTracker>{Left Foot}/deviceRotation",
                     "interactions": "",
                     "processors": "",
                     "groups": "Generic XR Controller",
@@ -1140,7 +1140,7 @@
                 },
                 {
                     "name": "second",
-                    "id": "2def23fb-65f8-4f92-a527-b94a80cd8d4d",
+                    "id": "bbbb0b43-ff99-4bf9-863a-c022fcbe7aba",
                     "path": "<XRInputV1::HTC::HTCViveTrackerOpenXR>/deviceRotation",
                     "interactions": "",
                     "processors": "",
@@ -1174,7 +1174,7 @@
                 {
                     "name": "first",
                     "id": "324612c6-ee89-4eb5-9c22-616f6053b725",
-                    "path": "<XRViveTracker>/devicePosition",
+                    "path": "<XRViveTracker>{Left Foot}/devicePosition",
                     "interactions": "",
                     "processors": "",
                     "groups": "Generic XR Controller",
@@ -1218,7 +1218,7 @@
                 {
                     "name": "",
                     "id": "fbf85153-25a7-4c3b-a4a0-29d16d9398ac",
-                    "path": "<XRViveTracker>/trackingState",
+                    "path": "<XRViveTracker>{Left Foot}/trackingState",
                     "interactions": "",
                     "processors": "",
                     "groups": "Generic XR Controller",

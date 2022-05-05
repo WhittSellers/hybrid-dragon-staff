@@ -7,6 +7,7 @@ public class AngularVelocity : MonoBehaviour
 {
     public Vector3 angularVelocity;
     public Transform parentObject;
+    public string vfxPropertyName = null;
 
     private VisualEffect visualEffect;
 
@@ -18,7 +19,7 @@ public class AngularVelocity : MonoBehaviour
     private void Awake()
     {
         visualEffect = GetComponent<VisualEffect>();
-        Debug.Log(visualEffect);
+        //Debug.Log(visualEffect);
     }
     
     private void Start()
@@ -38,8 +39,10 @@ public class AngularVelocity : MonoBehaviour
         
         angularVelocity = (1.0f / Time.deltaTime) * angle * axis;
 
-        visualEffect.SetVector3("Angular Velocity", angularVelocity);
-
+        if(vfxPropertyName != null)
+        {
+            visualEffect.SetVector3(vfxPropertyName, angularVelocity);
+        }
         // var deltaRot = transform.rotation * Quaternion.Inverse(previousRotation);
         // var eulerRot = new Vector3( Mathf.DeltaAngle( 0, deltaRot.eulerAngles.x ), Mathf.DeltaAngle( 0, deltaRot.eulerAngles.y ),Mathf.DeltaAngle( 0, deltaRot.eulerAngles.z ) );
      
