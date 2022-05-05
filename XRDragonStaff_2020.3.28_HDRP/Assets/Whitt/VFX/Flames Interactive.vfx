@@ -211,21 +211,21 @@ MonoBehaviour:
   stickyNoteInfos: []
   categories:
   - name: Emission
-    collapsed: 0
+    collapsed: 1
   - name: Velocity and Forces
-    collapsed: 0
+    collapsed: 1
   - name: Color
-    collapsed: 0
+    collapsed: 1
   - name: Size And Angle
-    collapsed: 0
+    collapsed: 1
   - name: Texture
-    collapsed: 0
+    collapsed: 1
   uiBounds:
     serializedVersion: 2
     x: -374
     y: -154
-    width: 1514
-    height: 2418
+    width: 1546
+    height: 2438
 --- !u!114 &114350483966674976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4796,7 +4796,7 @@ MonoBehaviour:
       inputSlot: {fileID: 8926484042661614761}
     position: {x: 57, y: 1348}
     expandedSlots: []
-    expanded: 0
+    expanded: 1
 --- !u!114 &8926484042661615288
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -21,7 +21,19 @@ MonoBehaviour:
       y: 272
       width: 261
       height: 100
-    contents: Add by what you would need to multiple the scale to have it equal 1(?)
+    contents: Add the quotient of 1/spawn scale to spawn scale
+    theme: Classic
+    textSize: Small
+  - title: Orb Size
+    position:
+      serializedVersion: 2
+      x: -303
+      y: -305
+      width: 113
+      height: 100
+    contents: 'Make sure this is the same as the spawn point scales
+
+'
     theme: Classic
     textSize: Small
   categories: []
@@ -20607,7 +20619,7 @@ MonoBehaviour:
       inputSlot: {fileID: 8926484042661615656}
     - outputSlot: {fileID: 8926484042661615898}
       inputSlot: {fileID: 8926484042661615761}
-    position: {x: -243, y: -360}
+    position: {x: -323, y: -360}
     expandedSlots: []
     expanded: 0
 --- !u!114 &8926484042661615898
