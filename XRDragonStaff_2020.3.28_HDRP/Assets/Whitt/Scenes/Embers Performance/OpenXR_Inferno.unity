@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.5230651, g: 0.62586915, b: 1.3693745, a: 1}
+  m_IndirectSpecularColor: {r: 0.5329456, g: 0.6824088, b: 1.8297421, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -310,7 +310,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8357051}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &8357056
 Camera:
   m_ObjectHideFlags: 0
@@ -428,7 +428,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &30061523
 Transform:
   m_ObjectHideFlags: 0
@@ -468,7 +468,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b9a548befcb6b947b5c39feeb513fb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioRingPulse: {fileID: 312708865}
+--- !u!1 &76004948
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 76004949}
+  m_Layer: 0
+  m_Name: WindZones
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &76004949
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76004948}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2122068018}
+  m_Father: {fileID: 900569083}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &96491164
 GameObject:
   m_ObjectHideFlags: 0
@@ -510,6 +540,7 @@ GameObject:
   - component: {fileID: 111894337}
   - component: {fileID: 111894336}
   - component: {fileID: 111894334}
+  - component: {fileID: 111894335}
   m_Layer: 0
   m_Name: Projection Camera
   m_TagString: Untagged
@@ -631,6 +662,14 @@ MonoBehaviour:
       data1: 0
       data2: 0
   defaultFrameSettings: 0
+--- !u!81 &111894335
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111894333}
+  m_Enabled: 1
 --- !u!20 &111894336
 Camera:
   m_ObjectHideFlags: 0
@@ -681,13 +720,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 111894333}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.46, z: -6.91}
+  m_LocalRotation: {x: 0.2164396, y: 0, z: 0, w: 0.97629607}
+  m_LocalPosition: {x: 0, y: 5.5, z: -9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 25, y: 0, z: 0}
 --- !u!1 &120678732
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,6 +826,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc903cbce6bde3d4c8a4c93d2742bcdf, type: 3}
+--- !u!1 &180378942
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 180378943}
+  m_Layer: 0
+  m_Name: Lights
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &180378943
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180378942}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 517707481}
+  - {fileID: 964239862}
+  m_Father: {fileID: 949951428}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &193874667
 GameObject:
   m_ObjectHideFlags: 0
@@ -796,11 +867,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 193874668}
-  - component: {fileID: 193874670}
-  - component: {fileID: 193874672}
-  - component: {fileID: 193874669}
   m_Layer: 0
-  m_Name: VFX Manager
+  m_Name: VFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -828,87 +896,6 @@ Transform:
   m_Father: {fileID: 949951428}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &193874669
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 193874667}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 576f101e64cf20c4bac324a26acbf0dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vfxList:
-  - {fileID: 389970156}
-  - {fileID: 1219786805}
-  - {fileID: 1627158656}
-  - {fileID: 312708865}
-  - {fileID: 1682919485}
-  - {fileID: 1272893948}
-  FirePlayEvent:
-    m_Name: OnFirePlay
-  EmbersPlayEvent:
-    m_Name: OnEmbersPlay
-  DragonOrbPlayEvent:
-    m_Name: OnDragonOrbPlay
-  SparklerPlayEvent:
-    m_Name: OnSparklerPlay
-  FireRingPlayEvent:
-    m_Name: OnFireRingPlay
-  MatrixRingPlayEvent:
-    m_Name: OnMatrixRingPlay
-  CelestialBodiesPlayEvent:
-    m_Name: OnCelestialBodiesPlay
-  performanceIntro: 0
-  performanceRisingAction: 0
-  performanceClimax: 0
-  performanceResolution: 0
-  fireIsPlaying: 0
-  embersIsPlaying: 0
-  helixIsPlaying: 0
-  dragonOrbIsPlaying: 0
-  dragonOrbSplit: 0
-  sparklerIsPlaying: 0
-  fireRingIsPlaying: 0
-  matrixRingIsRing: 0
-  celestialBodiesIsPlaying: 0
-  vfxSequenceNum: 0
---- !u!114 &193874670
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 193874667}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9b410c968d301349a7ff6a8fac6be04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  localPort: 9010
-  serverName: Unity-OSCQuery
-  rootObject: {fileID: 0}
-  objectFilterMode: 2
-  filteredObjects: []
-  componentFilterMode: 1
-  filteredComponentNames:
-  - VFXEvents
-  - VFXManager
-  excludeInternalUnityParams: 0
---- !u!114 &193874672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 193874667}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1342aaef7bf8374bb886a9d223afb8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &208113724
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1014,7 +1001,7 @@ Transform:
   m_LocalScale: {x: 2, y: 1, z: 2}
   m_Children: []
   m_Father: {fileID: 900569083}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!64 &269469247
 MeshCollider:
@@ -1090,14 +1077,13 @@ GameObject:
   - component: {fileID: 312708863}
   - component: {fileID: 312708865}
   - component: {fileID: 312708864}
-  - component: {fileID: 312708867}
   m_Layer: 0
   m_Name: Fire Ring
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &312708863
 Transform:
   m_ObjectHideFlags: 0
@@ -1120,7 +1106,7 @@ VFXRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 312708862}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -1160,7 +1146,7 @@ VisualEffect:
   m_GameObject: {fileID: 312708862}
   m_Enabled: 1
   m_Asset: {fileID: 8926484042661614526, guid: 12931d7a4952704408fdab8bf3f0af8b, type: 3}
-  m_InitialEventName: OnAudioFireRingPlay
+  m_InitialEventName: OnFireRingPlay
   m_InitialEventNameOverriden: 1
   m_StartSeed: 0
   m_ResetSeedOnPlay: 1
@@ -1168,7 +1154,7 @@ VisualEffect:
   m_PropertySheet:
     m_Float:
       m_Array:
-      - m_Value: 5
+      - m_Value: 7
         m_Name: TargetRadius
         m_Overridden: 1
       - m_Value: 1.5
@@ -1200,21 +1186,6 @@ VisualEffect:
       m_Array: []
     m_Bool:
       m_Array: []
---- !u!114 &312708867
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 312708862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdafc37f32b176349b1684c4455b98e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ExecuteInEditor: 1
-  m_Bindings: []
-  m_VisualEffect: {fileID: 312708865}
 --- !u!1 &389970153
 GameObject:
   m_ObjectHideFlags: 0
@@ -1295,8 +1266,8 @@ VisualEffect:
   m_GameObject: {fileID: 389970153}
   m_Enabled: 1
   m_Asset: {fileID: 8926484042661614526, guid: e0d617b4b2503d84c912d5686923b487, type: 3}
-  m_InitialEventName: OnPlay
-  m_InitialEventNameOverriden: 0
+  m_InitialEventName: OnFirePlay
+  m_InitialEventNameOverriden: 1
   m_StartSeed: 0
   m_ResetSeedOnPlay: 1
   m_ResourceVersion: 1
@@ -1356,7 +1327,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &424386620
 Transform:
   m_ObjectHideFlags: 0
@@ -1373,7 +1344,7 @@ Transform:
   - {fileID: 1820242311}
   - {fileID: 30061523}
   m_Father: {fileID: 949951428}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &448887374
 GameObject:
@@ -1406,7 +1377,7 @@ VFXRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 448887374}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -1446,8 +1417,8 @@ VisualEffect:
   m_GameObject: {fileID: 448887374}
   m_Enabled: 1
   m_Asset: {fileID: 8926484042661614526, guid: 652255a2b304f5f45ac19cf7143e790a, type: 3}
-  m_InitialEventName: OnPlay
-  m_InitialEventNameOverriden: 0
+  m_InitialEventName: OnCelestialBodiesPlay
+  m_InitialEventNameOverriden: 1
   m_StartSeed: 0
   m_ResetSeedOnPlay: 1
   m_ResourceVersion: 1
@@ -1491,7 +1462,7 @@ VisualEffect:
       - m_Value: {x: -0, y: 0, z: 0}
         m_Name: TargetTransform_angles
         m_Overridden: 1
-      - m_Value: {x: -4, y: 3, z: 0}
+      - m_Value: {x: -5, y: 3, z: 0}
         m_Name: TargetTransform_position
         m_Overridden: 1
       - m_Value: {x: 1, y: 1, z: 1}
@@ -1512,7 +1483,7 @@ VisualEffect:
       - m_Value: {x: -0, y: 0, z: 0}
         m_Name: AttractiveForceObject_angles
         m_Overridden: 1
-      - m_Value: {x: 0, y: 3, z: -4}
+      - m_Value: {x: 0, y: 3, z: -5}
         m_Name: AttractiveForceObject_position
         m_Overridden: 1
       - m_Value: {x: 1, y: 1, z: 1}
@@ -1718,8 +1689,8 @@ Transform:
   m_LocalPosition: {x: 0.5216216, y: 3.1871126, z: -0.025343018}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 900569083}
-  m_RootOrder: 1
+  m_Father: {fileID: 180378943}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 30, y: 109.6, z: 0}
 --- !u!114 &517707482
 MonoBehaviour:
@@ -2090,6 +2061,130 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &725506978
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 725506982}
+  - component: {fileID: 725506979}
+  - component: {fileID: 725506981}
+  - component: {fileID: 725506980}
+  - component: {fileID: 725506983}
+  m_Layer: 0
+  m_Name: Show Control
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &725506979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725506978}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9b410c968d301349a7ff6a8fac6be04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localPort: 9010
+  serverName: Unity-OSCQuery
+  rootObject: {fileID: 0}
+  objectFilterMode: 2
+  filteredObjects: []
+  componentFilterMode: 2
+  filteredComponentNames:
+  - MeshRenderer
+  - MeshFilter
+  - BoxCollider
+  - MeshCollider
+  excludeInternalUnityParams: 0
+--- !u!114 &725506980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725506978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 576f101e64cf20c4bac324a26acbf0dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vfxList:
+  - {fileID: 389970156}
+  - {fileID: 1219786805}
+  - {fileID: 1627158656}
+  - {fileID: 1682919485}
+  - {fileID: 1272893948}
+  - {fileID: 312708865}
+  - {fileID: 1687803929}
+  performanceIntro: 0
+  performanceRisingAction: 0
+  performanceClimax: 0
+  performanceResolution: 0
+  fireIsPlaying: 0
+  embersIsPlaying: 0
+  helixIsPlaying: 0
+  dragonOrbIsPlaying: 0
+  dragonOrbSplit: 0
+  fireRingIsPlaying: 0
+  matrixRingIsPlaying: 0
+  celestialBodiesIsPlaying: 0
+  vfxSequenceNum: 0
+  fireSource: {fileID: 780488794}
+  musicSource: {fileID: 1982889116}
+--- !u!114 &725506981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725506978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1342aaef7bf8374bb886a9d223afb8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &725506982
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725506978}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.92290354, y: -4.350424, z: 5.0130205}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &725506983
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725506978}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1327acfe59a88bf42b16ec69e8905223, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &726459121
 GameObject:
   m_ObjectHideFlags: 0
@@ -2214,7 +2309,7 @@ VFXRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 726459121}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -2254,8 +2349,8 @@ VisualEffect:
   m_GameObject: {fileID: 726459121}
   m_Enabled: 1
   m_Asset: {fileID: 8926484042661614526, guid: 652255a2b304f5f45ac19cf7143e790a, type: 3}
-  m_InitialEventName: OnPlay
-  m_InitialEventNameOverriden: 0
+  m_InitialEventName: OnCelestialBodiesPlay
+  m_InitialEventNameOverriden: 1
   m_StartSeed: 0
   m_ResetSeedOnPlay: 1
   m_ResourceVersion: 1
@@ -2293,7 +2388,7 @@ VisualEffect:
       - m_Value: {x: -0, y: 0, z: 0}
         m_Name: TargetTransform_angles
         m_Overridden: 1
-      - m_Value: {x: 0, y: 3, z: -4}
+      - m_Value: {x: 0, y: 3, z: -5}
         m_Name: TargetTransform_position
         m_Overridden: 1
       - m_Value: {x: 1, y: 1, z: 1}
@@ -2311,7 +2406,7 @@ VisualEffect:
       - m_Value: {x: -0, y: 0, z: 0}
         m_Name: AttractiveForceObject_angles
         m_Overridden: 1
-      - m_Value: {x: 4, y: 3, z: 0}
+      - m_Value: {x: 5, y: 3, z: 0}
         m_Name: AttractiveForceObject_position
         m_Overridden: 1
       - m_Value: {x: 1, y: 1, z: 1}
@@ -2382,7 +2477,7 @@ Transform:
   m_Children:
   - {fileID: 5801710}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &760578619
 MonoBehaviour:
@@ -2406,11 +2501,156 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 760578616}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bb2733293e9173c43b1747589472e908, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &780488792
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 780488793}
+  - component: {fileID: 780488794}
+  m_Layer: 0
+  m_Name: Fire Source
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &780488793
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780488792}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 894846270}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &780488794
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780488792}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d0c6919941b3f7d4b982b4fa3398895a, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.5
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 10
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.2
+      value: 1
+      inSlope: -5.0019917
+      outSlope: -5.0019917
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.38876954
+      value: 0.49172974
+      inSlope: -1.4706687
+      outSlope: -1.4706687
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.25179207
+    - serializedVersion: 3
+      time: 0.66328126
+      value: 0.17004395
+      inSlope: -0.902593
+      outSlope: -0.902593
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.32855454
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.99438477
+      value: 0
+      inSlope: -0.20007975
+      outSlope: -0.20007975
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &804195646
 GameObject:
   m_ObjectHideFlags: 0
@@ -2801,7 +3041,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &885812283 stripped
 Transform:
@@ -2837,8 +3077,9 @@ Transform:
   m_Children:
   - {fileID: 1888932408}
   - {fileID: 1982889115}
+  - {fileID: 780488793}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &900569082
 GameObject:
@@ -2868,11 +3109,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1479100608}
-  - {fileID: 517707481}
   - {fileID: 269469246}
   - {fileID: 1169407754}
   - {fileID: 1493055351}
-  - {fileID: 2122068018}
+  - {fileID: 76004949}
   m_Father: {fileID: 949951428}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3000,7 +3240,7 @@ VFXRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 912544594}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -3040,8 +3280,8 @@ VisualEffect:
   m_GameObject: {fileID: 912544594}
   m_Enabled: 1
   m_Asset: {fileID: 8926484042661614526, guid: 652255a2b304f5f45ac19cf7143e790a, type: 3}
-  m_InitialEventName: OnPlay
-  m_InitialEventNameOverriden: 0
+  m_InitialEventName: OnCelestialBodiesPlay
+  m_InitialEventNameOverriden: 1
   m_StartSeed: 0
   m_ResetSeedOnPlay: 1
   m_ResourceVersion: 1
@@ -3085,7 +3325,7 @@ VisualEffect:
       - m_Value: {x: -0, y: 0, z: 0}
         m_Name: TargetTransform_angles
         m_Overridden: 1
-      - m_Value: {x: 0, y: 3, z: 4}
+      - m_Value: {x: 0, y: 3, z: 5}
         m_Name: TargetTransform_position
         m_Overridden: 1
       - m_Value: {x: 1, y: 1, z: 1}
@@ -3106,7 +3346,7 @@ VisualEffect:
       - m_Value: {x: -0, y: 0, z: 0}
         m_Name: AttractiveForceObject_angles
         m_Overridden: 1
-      - m_Value: {x: -4, y: 3, z: 0}
+      - m_Value: {x: -5, y: 3, z: 0}
         m_Name: AttractiveForceObject_position
         m_Overridden: 1
       - m_Value: {x: 1, y: 1, z: 1}
@@ -3155,7 +3395,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 924370063}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -4}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 972600265}
@@ -3252,9 +3492,10 @@ Transform:
   m_Children:
   - {fileID: 900569083}
   - {fileID: 193874668}
+  - {fileID: 180378943}
   - {fileID: 424386620}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &964239861
 GameObject:
@@ -3268,7 +3509,7 @@ GameObject:
   - component: {fileID: 964239864}
   - component: {fileID: 964239863}
   m_Layer: 0
-  m_Name: Point Light
+  m_Name: Campfire Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3281,12 +3522,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 964239861}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.0028, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.000000081460335, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.339, z: 0}
+  m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
-  m_Father: {fileID: 1169407754}
-  m_RootOrder: 0
+  m_Father: {fileID: 180378943}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &964239863
 MonoBehaviour:
@@ -3465,7 +3706,7 @@ Light:
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.5, y: 0.5}
   m_BounceIntensity: 0
-  m_ColorTemperature: 6570
+  m_ColorTemperature: 1500
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
@@ -3574,7 +3815,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1009829306
 Transform:
   m_ObjectHideFlags: 0
@@ -3614,7 +3855,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b9a548befcb6b947b5c39feeb513fb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioRingPulse: {fileID: 312708865}
 --- !u!1 &1089538838
 GameObject:
   m_ObjectHideFlags: 0
@@ -3742,7 +3982,7 @@ VFXRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1153645452}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -3782,8 +4022,8 @@ VisualEffect:
   m_GameObject: {fileID: 1153645452}
   m_Enabled: 1
   m_Asset: {fileID: 8926484042661614526, guid: 652255a2b304f5f45ac19cf7143e790a, type: 3}
-  m_InitialEventName: OnPlay
-  m_InitialEventNameOverriden: 0
+  m_InitialEventName: OnCelestialBodiesPlay
+  m_InitialEventNameOverriden: 1
   m_StartSeed: 0
   m_ResetSeedOnPlay: 1
   m_ResourceVersion: 1
@@ -3821,7 +4061,7 @@ VisualEffect:
       - m_Value: {x: -0, y: 0, z: 0}
         m_Name: TargetTransform_angles
         m_Overridden: 1
-      - m_Value: {x: 4, y: 3, z: 0}
+      - m_Value: {x: 5, y: 3, z: 0}
         m_Name: TargetTransform_position
         m_Overridden: 1
       - m_Value: {x: 1, y: 1, z: 1}
@@ -3839,7 +4079,7 @@ VisualEffect:
       - m_Value: {x: -0, y: 0, z: 0}
         m_Name: AttractiveForceObject_angles
         m_Overridden: 1
-      - m_Value: {x: 0, y: 3, z: 4}
+      - m_Value: {x: 0, y: 3, z: 5}
         m_Name: AttractiveForceObject_position
         m_Overridden: 1
       - m_Value: {x: 1, y: 1, z: 1}
@@ -3915,7 +4155,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: a8600e81e215ce64caa68f31570009c9, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a8600e81e215ce64caa68f31570009c9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4163,8 +4403,8 @@ VisualEffect:
   m_GameObject: {fileID: 1219786800}
   m_Enabled: 1
   m_Asset: {fileID: 8926484042661614526, guid: 3d31ad81c17d5304fb083076b5f2a04a, type: 3}
-  m_InitialEventName: OnPlay
-  m_InitialEventNameOverriden: 0
+  m_InitialEventName: OnEmbersPlay
+  m_InitialEventNameOverriden: 1
   m_StartSeed: 0
   m_ResetSeedOnPlay: 1
   m_ResourceVersion: 1
@@ -4335,7 +4575,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1272893947
 Transform:
   m_ObjectHideFlags: 0
@@ -4360,8 +4600,8 @@ VisualEffect:
   m_GameObject: {fileID: 1272893946}
   m_Enabled: 1
   m_Asset: {fileID: 8926484042661614526, guid: c49b498941c56264ab74ee52fbff3d2c, type: 3}
-  m_InitialEventName: OnPlay
-  m_InitialEventNameOverriden: 0
+  m_InitialEventName: OnDragonOrbPlay
+  m_InitialEventNameOverriden: 1
   m_StartSeed: 0
   m_ResetSeedOnPlay: 1
   m_ResourceVersion: 1
@@ -4610,7 +4850,7 @@ VFXRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1272893946}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -4715,7 +4955,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1313548474}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.5, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 2.5, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 424386620}
@@ -4732,7 +4972,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 5, y: 0.5, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1313548477
 MonoBehaviour:
@@ -4746,7 +4986,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b9a548befcb6b947b5c39feeb513fb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioRingPulse: {fileID: 312708865}
 --- !u!1 &1374569341
 GameObject:
   m_ObjectHideFlags: 0
@@ -4882,7 +5121,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1490419227}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 4}
+  m_LocalPosition: {x: 0, y: 0, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 972600265}
@@ -4980,7 +5219,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 900569083}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!154 &1493055352
 TerrainCollider:
@@ -5111,8 +5350,8 @@ VisualEffect:
   m_GameObject: {fileID: 1627158653}
   m_Enabled: 1
   m_Asset: {fileID: 8926484042661614526, guid: 17d8c145775764647a00fb669f43a043, type: 3}
-  m_InitialEventName: OnPlay
-  m_InitialEventNameOverriden: 0
+  m_InitialEventName: OnSwarmPlay
+  m_InitialEventNameOverriden: 1
   m_StartSeed: 0
   m_ResetSeedOnPlay: 1
   m_ResourceVersion: 1
@@ -5256,7 +5495,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1682919484
 Transform:
   m_ObjectHideFlags: 0
@@ -5281,8 +5520,8 @@ VisualEffect:
   m_GameObject: {fileID: 1682919483}
   m_Enabled: 1
   m_Asset: {fileID: 8926484042661614526, guid: c49b498941c56264ab74ee52fbff3d2c, type: 3}
-  m_InitialEventName: OnPlay
-  m_InitialEventNameOverriden: 0
+  m_InitialEventName: OnDragonOrbPlay
+  m_InitialEventNameOverriden: 1
   m_StartSeed: 0
   m_ResetSeedOnPlay: 1
   m_ResourceVersion: 1
@@ -5531,7 +5770,7 @@ VFXRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1682919483}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -5573,12 +5812,12 @@ GameObject:
   - component: {fileID: 1686518891}
   - component: {fileID: 1686518890}
   m_Layer: 0
-  m_Name: TrackerPivot
+  m_Name: Celestial Bodies Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1686518890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5625,7 +5864,6 @@ GameObject:
   - component: {fileID: 1687803926}
   - component: {fileID: 1687803929}
   - component: {fileID: 1687803928}
-  - component: {fileID: 1687803927}
   m_Layer: 0
   m_Name: Matrix Ring
   m_TagString: Untagged
@@ -5641,27 +5879,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1687803925}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 193874668}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!114 &1687803927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1687803925}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdafc37f32b176349b1684c4455b98e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ExecuteInEditor: 1
-  m_Bindings: []
-  m_VisualEffect: {fileID: 1687803929}
 --- !u!73398921 &1687803928
 VFXRenderer:
   serializedVersion: 1
@@ -5710,18 +5933,18 @@ VisualEffect:
   m_GameObject: {fileID: 1687803925}
   m_Enabled: 1
   m_Asset: {fileID: 8926484042661614526, guid: 21e2677210af5e941bcaabd65aa59bc9, type: 3}
-  m_InitialEventName: OnAudioFireRingPlay
-  m_InitialEventNameOverriden: 1
+  m_InitialEventName: OnMatrixRingPlay
+  m_InitialEventNameOverriden: 0
   m_StartSeed: 0
   m_ResetSeedOnPlay: 1
   m_ResourceVersion: 1
   m_PropertySheet:
     m_Float:
       m_Array:
-      - m_Value: 5
+      - m_Value: 7
         m_Name: TargetRadius
         m_Overridden: 1
-      - m_Value: 1
+      - m_Value: 1.5
         m_Name: Speed
         m_Overridden: 1
       - m_Value: 0.25
@@ -5797,7 +6020,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1820242311
 Transform:
   m_ObjectHideFlags: 0
@@ -5837,7 +6060,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b9a548befcb6b947b5c39feeb513fb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioRingPulse: {fileID: 312708865}
 --- !u!1 &1820646122
 GameObject:
   m_ObjectHideFlags: 0
@@ -6032,7 +6254,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1919832313}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4, y: 0, z: 0}
+  m_LocalPosition: {x: -5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 972600265}
@@ -6065,7 +6287,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1933340915}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4, y: 0, z: 0}
+  m_LocalPosition: {x: 5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 972600265}
@@ -6175,7 +6397,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -6315,13 +6537,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2122068017}
-  m_LocalRotation: {x: -0, y: -0.38268343, z: -0, w: 0.92387956}
-  m_LocalPosition: {x: 5, y: 5, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 10, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 900569083}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: -45, z: 0}
+  m_Father: {fileID: 76004949}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!182 &2122068019
 WindZone:
   m_ObjectHideFlags: 0
@@ -6331,7 +6553,7 @@ WindZone:
   m_GameObject: {fileID: 2122068017}
   m_Enabled: 1
   m_Mode: 0
-  m_Radius: 20
+  m_Radius: 21
   m_WindMain: 1
   m_WindTurbulence: 1
   m_WindPulseMagnitude: 0.5

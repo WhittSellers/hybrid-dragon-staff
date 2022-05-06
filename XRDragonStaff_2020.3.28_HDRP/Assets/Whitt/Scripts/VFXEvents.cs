@@ -12,12 +12,30 @@ public class VFXEvents : MonoBehaviour
         current = this;
     }
 
-    public event Action onTriggerButtonPress;
+    public static event Action onTriggerButtonPress;
     public void TriggerButtonPress()
     {
         if (onTriggerButtonPress != null)
         {
             onTriggerButtonPress();
+        }
+    }
+
+    public static event Action onMatrixTriggerEnter;
+    public void MatrixTriggerEnter()
+    {
+        if (onMatrixTriggerEnter != null)
+        {
+            onMatrixTriggerEnter();
+        }
+    }
+
+    public static event Action onMatrixTriggerExit;
+    public void MatrixTriggerExit()
+    {
+        if (onMatrixTriggerExit != null)
+        {
+            onMatrixTriggerExit();
         }
     }
 }

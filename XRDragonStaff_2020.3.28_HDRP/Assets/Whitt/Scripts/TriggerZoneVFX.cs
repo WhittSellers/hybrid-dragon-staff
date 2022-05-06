@@ -6,9 +6,13 @@ using UnityEngine.VFX.Utility;
 
 public class TriggerZoneVFX : MonoBehaviour
 {
-    public VisualEffect audioRingPulse;
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter()
     {
-        audioRingPulse.Play();
+        VFXEvents.current.MatrixTriggerEnter();
+    }
+
+    private void OnTriggerExit()
+    {
+        VFXEvents.current.MatrixTriggerExit();
     }
 }
