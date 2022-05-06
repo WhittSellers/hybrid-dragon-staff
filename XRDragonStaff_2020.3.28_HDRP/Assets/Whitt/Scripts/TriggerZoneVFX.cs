@@ -10,9 +10,4 @@ public class TriggerZoneVFX : MonoBehaviour
     {
         VFXEvents.current.MatrixTriggerEnter();
     }
-
-    private void OnTriggerExit()
-    {
-        VFXEvents.current.MatrixTriggerExit();
-    }
 }
