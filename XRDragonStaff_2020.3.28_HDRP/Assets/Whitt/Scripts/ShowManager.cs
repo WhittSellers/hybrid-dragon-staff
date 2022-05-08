@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.VFX;
 using UnityEngine.VFX.Utility;
+using Cinemachine;
 
 public class ShowManager : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class ShowManager : MonoBehaviour
     ExposedProperty DragonOrbPlayEvent = "OnDragonOrbPlay";
     ExposedProperty FireRingPlayEvent = "OnFireRingPlay";
     ExposedProperty MatrixRingPlayEvent = "OnMatrixRingPlay";
-    //ExposedProperty CelestialBodiesPlayEvent = "OnCelestialBodiesPlay";
+    ExposedProperty CelestialBodiesPlayEvent = "OnCelestialBodiesPlay";
 
     // Fire VFX Stop Events
     ExposedProperty FireStopEvent = "OnFireStop";
@@ -26,7 +27,7 @@ public class ShowManager : MonoBehaviour
     ExposedProperty DragonOrbStopEvent = "OnDragonOrbStop";
     ExposedProperty FireRingStopEvent = "OnFireRingStop";
     ExposedProperty MatrixRingStopEvent = "OnMatrixRingStop";
-    //ExposedProperty CelestialBodiesStopEvent = "OnCelestialBodiesStop";
+    ExposedProperty CelestialBodiesStopEvent = "OnCelestialBodiesStop";
 
     [Header ("Boolean State Tracking Variables")]
     public bool performanceIntro = false;
@@ -34,15 +35,13 @@ public class ShowManager : MonoBehaviour
     public bool performanceClimax = false;
     public bool performanceResolution = false;
 
-    public bool fireIsPlaying = false;
-    public bool embersIsPlaying = false;
-    public bool swarmIsPlaying = false;
-    public bool dragonOrbIsPlaying = false;
-    public bool fireRingIsPlaying = false;
-    public bool matrixRingIsPlaying = false;
-    //public bool celestialBodiesIsPlaying = false;
-
-    public int vfxSequenceNum = 0;
+    bool fireIsPlaying = false;
+    bool embersIsPlaying = false;
+    bool swarmIsPlaying = false;
+    bool dragonOrbIsPlaying = false;
+    bool fireRingIsPlaying = false;
+    bool matrixRingIsPlaying = false;
+    bool celestialBodiesIsPlaying = false;
 
     [Header ("Audio Sources")]
     public AudioSource fireSource;
@@ -52,6 +51,10 @@ public class ShowManager : MonoBehaviour
     public Animator showAnimator;
     public bool MusicStart = false;
 
+    [Header ("Cinemachine")]
+    public CinemachineBrain ProjectionCamera;
+    public List<CinemachineVirtualCamera> vCamList;
+
     void OnEnable()
     {
         VFXEvents.onMatrixTriggerEnter += PlayMatrixRing;
@@ -59,24 +62,118 @@ public class ShowManager : MonoBehaviour
 
     private void Start()
     {
-        ResetEffects();
+        ResetSequence();
         showAnimator = GetComponent<Animator>();
-    }
-    
-    public void ResetEffects()
-    {
-        foreach(VisualEffect vfx in vfxList)
-        {
-            vfx.enabled = false;
-        }
     }
 
     // This should be triggered by the trigger button on the staff
     public void StartShow()
     {
+        PlayCampfire();
         showAnimator.SetBool("MusicStart", true);
         musicSource.Play();
         MusicStart = true;
+    }
+
+    public void WhirlingDrone()
+    {
+        PlayEmbers();
+        PlayFireRing();
+    }
+
+    public void DroneDrum()
+    {
+        PlayFireRing();
+    }
+
+    public void SynthBuild()
+    {
+        PlayFireRing();
+    }
+
+    public void RisingActionTechDrop()
+    {
+        vCamList[0].Priority = 0;
+        vCamList[1].Priority = 1;
+        PlayDragonOrb();
+        PlaySwarm();
+        PlayFireRing();
+    }
+    public void Tamberine()
+    {
+
+    }
+
+    public void FullBeatDrop()
+    {
+
+    }
+
+    public void Vocals()
+    {
+
+    }
+
+    public void FullBeatDrone()
+    {
+
+    }
+
+    public void VocalsDeepDrop()
+    {
+
+    }
+
+    public void EtherealDrop()
+    {
+
+    }
+
+    public void ClimaxStart()
+    {
+        vCamList[1].Priority = 0;
+        vCamList[2].Priority = 1;
+        PlayCelestialBodies();
+    }
+
+    public void ClimaxDeepDrop()
+    {
+
+    }
+
+    public void ClimaxBuild()
+    {
+
+    }
+
+    public void ClimaxDrop()
+    {
+        PlayMatrixRing();
+    }
+
+    public void ResolutionOscillatorStart()
+    {
+        StopCelestialBodies();
+    }
+
+    public void OscillatorPeak()
+    {
+
+    }
+
+    public void SynthPitchDown()
+    {
+
+    }
+
+    public void FadeOutStart()
+    {
+
+    }
+
+    public void SongEnd()
+    {
+
     }
 
     // Campfire, vfx[0]
@@ -109,8 +206,6 @@ public class ShowManager : MonoBehaviour
             vfxList[1].enabled = true;
             vfxList[1].SendEvent(EmbersPlayEvent);
             embersIsPlaying = true;
-
-            PlayFireRing();
         }
     }
 
@@ -143,7 +238,7 @@ public class ShowManager : MonoBehaviour
         }
     }
 
-    //Dragon Staff Orbs
+    //Dragon Staff Orbs, vfx[3,4]
     public void PlayDragonOrb()
     {
         if(dragonOrbIsPlaying == false)
@@ -165,6 +260,38 @@ public class ShowManager : MonoBehaviour
             vfxList[3].enabled = false;
             vfxList[4].enabled = false;
             dragonOrbIsPlaying = false;
+        }
+    }
+
+    public void PlayCelestialBodies()
+    {
+        if(dragonOrbIsPlaying == false)
+        {
+            vfxList[7].enabled = true;
+            vfxList[8].enabled = true;
+            vfxList[9].enabled = true;
+            vfxList[10].enabled = true;
+            vfxList[7].SendEvent(CelestialBodiesPlayEvent);
+            vfxList[8].SendEvent(CelestialBodiesPlayEvent);
+            vfxList[9].SendEvent(CelestialBodiesPlayEvent);
+            vfxList[10].SendEvent(CelestialBodiesPlayEvent);
+            celestialBodiesIsPlaying = true;
+        }
+    }
+
+    public void StopCelestialBodies()
+    {
+        if(dragonOrbIsPlaying == true)
+        {
+            vfxList[7].enabled = true;
+            vfxList[8].enabled = true;
+            vfxList[9].enabled = true;
+            vfxList[10].enabled = true;
+            vfxList[7].SendEvent(CelestialBodiesStopEvent);
+            vfxList[8].SendEvent(CelestialBodiesStopEvent);
+            vfxList[9].SendEvent(CelestialBodiesStopEvent);
+            vfxList[10].SendEvent(CelestialBodiesStopEvent);
+            celestialBodiesIsPlaying = false;
         }
     }
     
@@ -207,6 +334,20 @@ public class ShowManager : MonoBehaviour
         matrixRingIsPlaying = false;
     }
 
+    public void ResetSequence()
+    {
+        foreach(VisualEffect vfx in vfxList)
+        {
+            vfx.enabled = false;
+        }
+
+        foreach(CinemachineVirtualCamera vCam in vCamList)
+        {
+            vCam.Priority = 0;
+        }
+        vCamList[0].Priority = 1;
+
+    }
     void OnDisable()
     {
         VFXEvents.onMatrixTriggerEnter -= PlayMatrixRing;
