@@ -2,30 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// I would like for this script to broadcast when Angular Velocity values change sign (+/-) 
+// and when a Delta Position value spikes above certain threshold, but haven't built that in yet.
+// I would then like to create a companion script(s) that can be attached to other objects 
+// that will read the transform values here and listen for the events fired from this script
+
 public class DragonStaffObjectProperties : MonoBehaviour
 {
-    public Transform targetObject;
     public Vector3 angularVelocity;
     public Vector3 deltaPosition;
     private Vector3 lastPostion;
+    private Transform _transform;
 
-    Quaternion itemRotation;
     Quaternion previousRotation;
     
     // Start is called before the first frame update
     void Start()
     {
-        previousRotation = targetObject.rotation;
-        lastPostion = targetObject.position;
+        previousRotation = _transform.rotation;
+        lastPostion = _transform.position;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
         // Calculate Angular Rotation
-        Quaternion deltaRotation = targetObject.rotation * Quaternion.Inverse(previousRotation);
+        Quaternion deltaRotation = _transform.rotation * Quaternion.Inverse(previousRotation);
         
-        previousRotation = targetObject.rotation;
+        previousRotation = _transform.rotation;
         
         deltaRotation.ToAngleAxis(out var angle, out var axis);
         
@@ -39,7 +43,7 @@ public class DragonStaffObjectProperties : MonoBehaviour
         // angularVelocity = eulerRot / Time.fixedDeltaTime;
 
         //Calculate Change in Position
-        deltaPosition = targetObject.position - lastPostion;
-        lastPostion = targetObject.position;
+        deltaPosition = _transform.position - lastPostion;
+        lastPostion = _transform.position;
     }
 }

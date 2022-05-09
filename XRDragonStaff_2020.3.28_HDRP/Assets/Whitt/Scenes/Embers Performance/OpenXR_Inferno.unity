@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.52208245, g: 0.62494814, b: 1.3674697, a: 1}
+  m_IndirectSpecularColor: {r: 0.52208245, g: 0.62492335, b: 1.3674889, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -492,8 +492,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 54250640}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 5, z: -10}
+  m_LocalRotation: {x: 0.08715578, y: 0, z: 0, w: 0.9961947}
+  m_LocalPosition: {x: 0, y: 4.5, z: -8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1177121384}
@@ -516,7 +516,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 0
+  m_Priority: 1
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
@@ -612,6 +612,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 105937343}
+  - component: {fileID: 105937344}
   m_Layer: 0
   m_Name: Virtual Cameras
   m_TagString: Untagged
@@ -636,6 +637,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &105937344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105937342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fb5fb097ec2bff4fb1bd324ed222565, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ProjectionCamera: {fileID: 111894338}
+  vCamList:
+  - {fileID: 112005044}
+  - {fileID: 54250642}
+  - {fileID: 1799692382}
 --- !u!1 &111894333
 GameObject:
   m_ObjectHideFlags: 0
@@ -1051,6 +1069,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 180378943}
+  - component: {fileID: 180378944}
   m_Layer: 0
   m_Name: Lights
   m_TagString: Untagged
@@ -1075,6 +1094,23 @@ Transform:
   m_Father: {fileID: 949951428}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &180378944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180378942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4de83fdd628039e4ca89010b3addcf89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spotLightRing: {fileID: 668361279}
+  lightIntensity: 0
+  lightConeAngle: 0
+  ringSpinSpeed: 0
+  lightMoveSpeed: 0
 --- !u!1 &193874667
 GameObject:
   m_ObjectHideFlags: 0
@@ -1084,6 +1120,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 193874668}
+  - component: {fileID: 193874669}
   m_Layer: 0
   m_Name: VFX
   m_TagString: Untagged
@@ -1113,6 +1150,30 @@ Transform:
   m_Father: {fileID: 949951428}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &193874669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193874667}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bdc2deb69b02d0438e6268bdf555d32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vfxList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1001 &208113724
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3182,8 +3243,8 @@ GameObject:
   m_Component:
   - component: {fileID: 725506982}
   - component: {fileID: 725506979}
-  - component: {fileID: 725506981}
   - component: {fileID: 725506980}
+  - component: {fileID: 725506981}
   - component: {fileID: 725506983}
   m_Layer: 0
   m_Name: Show Control
@@ -3876,6 +3937,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 817962726}
+  - component: {fileID: 817962728}
   - component: {fileID: 817962730}
   - component: {fileID: 817962727}
   m_Layer: 0
@@ -4066,6 +4128,20 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 7779212132400271959, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_ButtonPressPoint: 0.5
+--- !u!114 &817962728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817962725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 255d8254bf3fedd49b6f04010cf1a461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  angularVelocity: {x: 0, y: 0, z: 0}
+  deltaPosition: {x: 0, y: 0, z: 0}
 --- !u!54 &817962730
 Rigidbody:
   m_ObjectHideFlags: 0

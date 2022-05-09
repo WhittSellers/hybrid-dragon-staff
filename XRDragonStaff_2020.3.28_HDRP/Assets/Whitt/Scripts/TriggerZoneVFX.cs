@@ -8,6 +8,6 @@ public class TriggerZoneVFX : MonoBehaviour
 {
     private void OnTriggerEnter()
     {
-        VFXEvents.current.MatrixTriggerEnter();
+        PerformanceEvents.current.MatrixTriggerEnter();
     }
 }

@@ -3,18 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.VFX;
 using UnityEngine.VFX.Utility;
-using Cinemachine;
 
-// I would like to break this script up into small subscripts that do their own thing at the command of this script/animations
-// This one can probably keep track of audio too since I'm not doing too much with that for this performance besides playing music and a few SFX
+// Right now this script is not enabled in game, this is just holding everything I want it to hold that I have written so far
+// Still Open to the best way to call these methods
+// Would like to have a way to keep better track off which effects are in which spots in the list without hard coding references if possible
 
-public class ShowManager : MonoBehaviour
+// Also for the particle bursts, I would like to be able to burst them more frequently, but unless I disable and re-enable it the burst ring radius won't reset and it will be messed up
+
+public class VFXManager : MonoBehaviour
 {
-    [Header ("Visual Effects")]
     public List<VisualEffect> vfxList;
-    //public List<VFXEventAttribute> eventAttributes;
 
-    // Fire VFX Play Events
     ExposedProperty FirePlayEvent = "OnFirePlay";
     ExposedProperty EmbersPlayEvent = "OnEmbersPlay";
     ExposedProperty SwarmPlayEvent = "OnSwarmPlay";
@@ -32,12 +31,6 @@ public class ShowManager : MonoBehaviour
     ExposedProperty MatrixRingStopEvent = "OnMatrixRingStop";
     ExposedProperty CelestialBodiesStopEvent = "OnCelestialBodiesStop";
 
-    [Header ("Boolean State Tracking Variables")]
-    public bool performanceIntro = false;
-    public bool performanceRisingAction = false;
-    public bool performanceClimax = false;
-    public bool performanceResolution = false;
-
     bool fireIsPlaying = false;
     bool embersIsPlaying = false;
     bool swarmIsPlaying = false;
@@ -46,148 +39,15 @@ public class ShowManager : MonoBehaviour
     bool matrixRingIsPlaying = false;
     bool celestialBodiesIsPlaying = false;
 
-    [Header ("Audio Sources")]
-    public AudioSource fireSource;
-    public AudioSource musicSource;
-
-    [Header ("Animation")]
-    public Animator showAnimator;
-    public bool MusicStart = false;
-
-    [Header ("Cinemachine")]
-    public CinemachineBrain ProjectionCamera;
-    public List<CinemachineVirtualCamera> vCamList;
-
     void OnEnable()
     {
         PerformanceEvents.onMatrixTriggerEnter += PlayMatrixRing;
     }
 
-    private void Start()
+    void OnDisable()
     {
-        ResetSequence();
-        showAnimator = GetComponent<Animator>();
+        PerformanceEvents.onMatrixTriggerEnter -= PlayMatrixRing;
     }
-
-    // This should be triggered by the trigger button on the staff
-    public void StartShow()
-    {
-        PlayCampfire();
-        showAnimator.SetBool("MusicStart", true);
-        musicSource.Play();
-        MusicStart = true;
-    }
-
-    // These Next methods are called in descending order at specific times during song,
-    // i.e. WhirlingDrone at 00:13, DroneDrum at 00:24, etc
-    // They each call sub-methods for playing VFX and adjusting public properties, etc
-    // Not sure if it would be better for them to broadcast an event like "DroneDrumEvent" and have
-    // other scripts due things on "DroneDrumEvent", or have each method call out multiple more specific events,
-    // like "LightsUpEvent", "DragonOrbOnEvent", "DragonOrbOffEvent", etc
-    // or if I should just get references to LightingManager,VFXManager,CinemachineManager, and call specific methods(maybe with overloads?)
-
-    public void WhirlingDrone()
-    {
-        PlayEmbers();
-        PlayFireRing();
-    }
-
-    public void DroneDrum()
-    {
-        PlayFireRing();
-    }
-
-    public void SynthBuild()
-    {
-        PlayFireRing();
-    }
-
-    public void RisingActionTechDrop()
-    {
-        vCamList[0].Priority = 0;
-        vCamList[1].Priority = 1;
-        PlayDragonOrb();
-        PlaySwarm();
-        PlayFireRing();
-    }
-    public void Tamberine()
-    {
-
-    }
-
-    public void FullBeatDrop()
-    {
-
-    }
-
-    public void Vocals()
-    {
-
-    }
-
-    public void FullBeatDrone()
-    {
-
-    }
-
-    public void VocalsDeepDrop()
-    {
-
-    }
-
-    public void EtherealDrop()
-    {
-
-    }
-
-    public void ClimaxStart()
-    {
-        vCamList[1].Priority = 0;
-        vCamList[2].Priority = 1;
-        PlayCelestialBodies();
-    }
-
-    public void ClimaxDeepDrop()
-    {
-
-    }
-
-    public void ClimaxBuild()
-    {
-
-    }
-
-    public void ClimaxDrop()
-    {
-        PlayMatrixRing();
-    }
-
-    public void ResolutionOscillatorStart()
-    {
-        StopCelestialBodies();
-    }
-
-    public void OscillatorPeak()
-    {
-
-    }
-
-    public void SynthPitchDown()
-    {
-
-    }
-
-    public void FadeOutStart()
-    {
-
-    }
-
-    public void SongEnd()
-    {
-
-    }
-
-    // Start of Individual VFX play/stop methods
 
     // Campfire, vfx[0]
     public void PlayCampfire()
@@ -197,7 +57,6 @@ public class ShowManager : MonoBehaviour
         if(fireIsPlaying == false)
         {
             vfxList[0].SendEvent(FirePlayEvent);
-            fireSource.Play();
             fireIsPlaying = true;
         }
     }
@@ -207,7 +66,6 @@ public class ShowManager : MonoBehaviour
         if(fireIsPlaying == true)
         {
             vfxList[0].SendEvent(FireStopEvent);
-            fireSource.Stop();
             fireIsPlaying = false;
         }
     }
@@ -344,23 +202,11 @@ public class ShowManager : MonoBehaviour
         matrixRingIsPlaying = false;
     }
 
-    
-    // Reset all VFX and cinemachine virtual cameras
-    public void ResetSequence()
+    public void ResetVFX()
     {
         foreach(VisualEffect vfx in vfxList)
         {
             vfx.enabled = false;
         }
-
-        foreach(CinemachineVirtualCamera vCam in vCamList)
-        {
-            vCam.Priority = 0;
-        }
-        vCamList[0].Priority = 1;
-    }
-    void OnDisable()
-    {
-        PerformanceEvents.onMatrixTriggerEnter -= PlayMatrixRing;
     }
 }
