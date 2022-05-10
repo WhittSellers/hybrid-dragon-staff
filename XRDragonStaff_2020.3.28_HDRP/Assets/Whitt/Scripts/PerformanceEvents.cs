@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VFXEvents : MonoBehaviour
+public class PerformanceEvents : MonoBehaviour
 {
-    public static VFXEvents current;
+    public static PerformanceEvents current;
 
     private void Awake()
     {
