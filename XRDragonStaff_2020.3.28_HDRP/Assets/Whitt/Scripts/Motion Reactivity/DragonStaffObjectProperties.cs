@@ -19,6 +19,7 @@ public class DragonStaffObjectProperties : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _transform = GetComponent<Transform>();
         previousRotation = _transform.rotation;
         lastPostion = _transform.position;
     }

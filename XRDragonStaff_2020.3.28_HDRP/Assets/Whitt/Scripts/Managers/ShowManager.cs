@@ -52,7 +52,7 @@ public class ShowManager : MonoBehaviour
         
         PerformanceEvents.current.MatrixRingVFXEvent();
         PerformanceEvents.current.FireRingVFXEvent();
-        _lightingManager.SpotLightBounce();
+        _lightingManager.SpinRing();
     }
 
     public void SynthBuild()
@@ -68,7 +68,7 @@ public class ShowManager : MonoBehaviour
         PerformanceEvents.current.FireRingVFXEvent();
         PerformanceEvents.current.SwarmVFXEvent();
         PerformanceEvents.current.DragonOrbVFXEvent();
-        PerformanceEvents.current.MatrixRingVFXEvent();
+        //PerformanceEvents.current.MatrixRingVFXEvent();
     }
     public void Tamberine()
     {
@@ -105,6 +105,7 @@ public class ShowManager : MonoBehaviour
         PerformanceEvents.current.PerformanceClimax();
         PerformanceEvents.current.BlendToNextCamEvent();
         PerformanceEvents.current.CelestialBodiesVFXEvent();
+        PerformanceEvents.current.MatrixRingVFXEvent();
     }
 
     public void ClimaxDeepDrop()
