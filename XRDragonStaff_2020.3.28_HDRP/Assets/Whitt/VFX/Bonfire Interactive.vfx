@@ -349,7 +349,6 @@ MonoBehaviour:
   - {fileID: 8926484042661614526, guid: e11a1b664f0d6c946b709339f97a2374, type: 3}
   - {fileID: 5371698745253816930, guid: 186d94d3e4d1c7c4ebf5b424b469bc0f, type: 3}
   - {fileID: 5371698745253816930, guid: d8ff9be84dd2a834fb05e31929151426, type: 3}
-  - {fileID: 5371698745253816930, guid: e1e88e70bd346a545a876003a5d7f463, type: 3}
   m_CategoryPath: 
 --- !u!2058629511 &8926484042661614527
 VisualEffectResource:
@@ -12264,7 +12263,7 @@ MonoBehaviour:
       slotIndex: 0
     - context: {fileID: 8926484042661614618}
       slotIndex: 0
-  eventName: OnFirePlay
+  eventName: OnPlay
 --- !u!114 &8926484042661615663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12278,7 +12277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_UIIgnoredErrors: []
-  m_Parent: {fileID: 0}
+  m_Parent: {fileID: 114350483966674976}
   m_Children: []
   m_UIPosition: {x: 0, y: 0}
   m_UICollapsed: 1
@@ -12318,7 +12317,7 @@ MonoBehaviour:
       slotIndex: 1
     - context: {fileID: 8926484042661614618}
       slotIndex: 1
-  eventName: OnFireStop
+  eventName: OnStop
 --- !u!114 &8926484042661615665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12332,7 +12331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_UIIgnoredErrors: []
-  m_Parent: {fileID: 0}
+  m_Parent: {fileID: 114350483966674976}
   m_Children: []
   m_UIPosition: {x: 0, y: 0}
   m_UICollapsed: 1

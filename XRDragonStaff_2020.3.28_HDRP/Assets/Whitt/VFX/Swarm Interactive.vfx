@@ -4536,7 +4536,7 @@ MonoBehaviour:
   - link:
     - context: {fileID: 8926484042661614598}
       slotIndex: 0
-  eventName: OnSwarmPlay
+  eventName: OnPlay
 --- !u!114 &8926484042661614813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4586,7 +4586,7 @@ MonoBehaviour:
   - link:
     - context: {fileID: 8926484042661614598}
       slotIndex: 1
-  eventName: OnSwarmStop
+  eventName: OnStop
 --- !u!114 &8926484042661614815
 MonoBehaviour:
   m_ObjectHideFlags: 0

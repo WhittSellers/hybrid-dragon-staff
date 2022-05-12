@@ -13,6 +13,23 @@ public class CinemachineManager : MonoBehaviour
     private int sequenceTrackingNum = 0;
     private float blendSpeed = 3.0f;
     
+    void OnEnable()
+    {
+        PerformanceEvents.OnBlendToNextCamEvent += BlendToNextVCam;
+        PerformanceEvents.OnResetVCamEvent += ResetVCams;
+    }
+
+    void OnDisable()
+    {
+        PerformanceEvents.OnBlendToNextCamEvent -= BlendToNextVCam;
+        PerformanceEvents.OnResetVCamEvent -= ResetVCams;
+    }
+
+    private void Start()
+    {
+        ResetVCams();
+    }
+
     public void ResetVCams()
     {
         foreach(CinemachineVirtualCamera vCam in vCamList)
@@ -25,7 +42,7 @@ public class CinemachineManager : MonoBehaviour
 
     public void BlendToNextVCam()
     {
-        if(vCamList.Count > 0)
+        if(vCamList.Count == 3)
         {
             if(sequenceTrackingNum == 0)
             {
@@ -33,19 +50,19 @@ public class CinemachineManager : MonoBehaviour
                 vCamList[1].Priority = 1;
                 sequenceTrackingNum++;
             }
-            if(sequenceTrackingNum == 1)
+            else if(sequenceTrackingNum == 1)
             {
                 vCamList[1].Priority = 0;
                 vCamList[2].Priority = 1;
                 sequenceTrackingNum++;
             }
-            if(sequenceTrackingNum == 2)
+            else if(sequenceTrackingNum == 2)
             {
                 vCamList[2].Priority = 0;
                 vCamList[1].Priority = 1;
                 sequenceTrackingNum++;
             }
-            if(sequenceTrackingNum <= 3)
+            else if(sequenceTrackingNum <= 3)
             {
                 vCamList[1].Priority = 0;
                 vCamList[0].Priority = 1;

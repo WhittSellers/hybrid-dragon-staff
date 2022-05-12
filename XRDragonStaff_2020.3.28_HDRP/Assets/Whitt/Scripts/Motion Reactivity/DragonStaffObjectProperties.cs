@@ -46,4 +46,33 @@ public class DragonStaffObjectProperties : MonoBehaviour
         deltaPosition = _transform.position - lastPostion;
         lastPostion = _transform.position;
     }
+
+    // Not sure where best to call this method
+    void SendVelocityEvents()
+    {
+        if(angularVelocity.x < 0)
+        {
+            PerformanceEvents.current.DragonStaffXVelNeg();
+        }
+        if(angularVelocity.x > 0)
+        {
+            PerformanceEvents.current.DragonStaffXVelPos();
+        }
+        if(angularVelocity.y < 0)
+        {
+            PerformanceEvents.current.DragonStaffYVelNeg();
+        }
+        if(angularVelocity.y > 0)
+        {
+            PerformanceEvents.current.DragonStaffYVelPos();
+        }
+        if(angularVelocity.z < 0)
+        {
+            PerformanceEvents.current.DragonStaffZVelNeg();
+        }
+        if(angularVelocity.z > 0)
+        {
+            PerformanceEvents.current.DragonStaffZVelPos();
+        }
+    }
 }
