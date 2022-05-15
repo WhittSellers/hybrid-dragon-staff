@@ -7,15 +7,17 @@ using UnityEngine.VFX.Utility;
 public class MatrixRingBehavior : MonoBehaviour
 {
     private bool isPlaying = false;
-    private bool burst = true;
+    public bool burst = true;
     private VisualEffect _vfx;
     private ExposedProperty PlayEvent = "OnPlay";
     private ExposedProperty StopEvent = "OnStop";
     private int _narrativeArcSequence = 0;
     public List<string> vfxPropertyNames;
-    public DragonStaffObjectProperties _DragonStaffProp;
+    public DragonStaffObjectProperties _dragonStaffProps;
     public Vector3 _forceDirection;
     private Vector3 _angularVelocity;
+    private GameObject _dragonStaff;
+
     // Start is called before the first frame update
     void OnEnable()
     {
@@ -24,6 +26,8 @@ public class MatrixRingBehavior : MonoBehaviour
         PerformanceEvents.OnPerformanceRising += SetRisingActionSettings;
         PerformanceEvents.OnPerformanceClimax += SetClimaxSettings;
         PerformanceEvents.OnPerformanceResolution += SetResolutionSettings;
+        PerformanceEvents.OnOverHeadCamEvent += AdjustForceDirection;
+        PerformanceEvents.OnResetVFXEvent += ResetExposedProperties;
     }
 
     void OnDisable()
@@ -33,17 +37,31 @@ public class MatrixRingBehavior : MonoBehaviour
         PerformanceEvents.OnPerformanceRising -= SetRisingActionSettings;
         PerformanceEvents.OnPerformanceClimax -= SetClimaxSettings;
         PerformanceEvents.OnPerformanceResolution -= SetResolutionSettings;
+        PerformanceEvents.OnOverHeadCamEvent -= AdjustForceDirection;
+        PerformanceEvents.OnResetVFXEvent -= ResetExposedProperties;
     }
 
     void Start()
     {
         _vfx = GetComponent<VisualEffect>();
-        _angularVelocity = _DragonStaffProp.angularVelocity;
+        _dragonStaff = GameObject.Find("DragonStaffTracker");
+        
+        if(_dragonStaff != null)
+        {
+            _dragonStaffProps = _dragonStaff.GetComponent<DragonStaffObjectProperties>();
+            _angularVelocity = _dragonStaffProps.angularVelocity;
+        }
     }
 
     void SetIntroSettings()
     {
         burst = true;
+        _forceDirection = new Vector3(0,0,0);
+        if(vfxPropertyNames != null)
+        {
+            _vfx.SetVector3(vfxPropertyNames[1], _forceDirection);
+            _vfx.SetFloat(vfxPropertyNames[2], 100);
+        }
     }
     
     void SetRisingActionSettings()
@@ -53,28 +71,44 @@ public class MatrixRingBehavior : MonoBehaviour
         if(vfxPropertyNames != null)
         {
             _vfx.SetVector3(vfxPropertyNames[1], _forceDirection);
+        }
+    }
 
+    void AdjustForceDirection() // This is quick fix, should figure out a better way to trigger this 
+    {
+        burst = false;
+        _forceDirection = new Vector3(0,0,-1);
+        if(vfxPropertyNames != null)
+        {
+            _vfx.SetVector3(vfxPropertyNames[1], _forceDirection);
         }
     }
 
     void SetClimaxSettings()
     {
         burst = false;
-        _forceDirection = new Vector3(0,0,-1);
+        _forceDirection = new Vector3(0,0,-10);
         if(vfxPropertyNames != null)
         {
             _vfx.SetVector3(vfxPropertyNames[0], _angularVelocity);
-            //_vfx.SetVector3(vfxPropertyNames[1], _forceDirection);
+            _vfx.SetVector3(vfxPropertyNames[1], _forceDirection);
+            _vfx.SetFloat(vfxPropertyNames[2], 1);
         }
     }
 
     void SetResolutionSettings()
     {
-        burst = true;
         if(vfxPropertyNames != null)
         {
-            //_vfx.SetVector3(vfxPropertyNames[0], _angularVelocity);
+            _vfx.SetVector3(vfxPropertyNames[0], _angularVelocity);
         }
+    }
+
+    void ResetExposedProperties()
+    {
+        _vfx.SetVector3(vfxPropertyNames[0], new Vector3(0,0,0));
+        _vfx.SetVector3(vfxPropertyNames[1], new Vector3(0,0,0));
+        _vfx.SetFloat(vfxPropertyNames[2], 100);
     }
     
     void MatrixRingPlay()

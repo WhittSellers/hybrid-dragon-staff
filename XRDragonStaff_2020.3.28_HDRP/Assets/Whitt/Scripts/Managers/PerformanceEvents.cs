@@ -142,6 +142,15 @@ public class PerformanceEvents : MonoBehaviour
         }
     }
 
+    public static event Action OnOverHeadCamEvent;
+    public void OverHeadCamEvent()
+    {
+        if (OnOverHeadCamEvent != null)
+        {
+            OnOverHeadCamEvent();
+        }
+    }
+
     // Lighting Events
 
     public static event Action OnToggleLightsEvent;
@@ -209,57 +218,30 @@ public class PerformanceEvents : MonoBehaviour
             onTriggerButtonPress();
         }
     }
-    public static event Action OnDragonStaffXVelPos;
-    public void DragonStaffXVelPos()
+    public static event Action OnDragonStaffXPosChange;
+    public void DragonStaffXPosChange()
     {
-        if (OnDragonStaffXVelPos != null)
+        if (OnDragonStaffXPosChange != null)
         {
-            OnDragonStaffXVelPos();
+            OnDragonStaffXPosChange();
         }
     }
 
-    public static event Action OnDragonStaffXVelNeg;
-    public void DragonStaffXVelNeg()
+    public static event Action OnDragonStaffYPosChange;
+    public void DragonStaffYPosChange()
     {
-        if (OnDragonStaffXVelNeg != null)
+        if (OnDragonStaffYPosChange != null)
         {
-            OnDragonStaffXVelNeg();
+            OnDragonStaffYPosChange();
         }
     }
 
-    public static event Action OnDragonStaffYVelPos;
-    public void DragonStaffYVelPos()
+    public static event Action OnDragonStaffZPosChange;
+    public void DragonStaffZPosChange()
     {
-        if (OnDragonStaffYVelPos != null)
+        if (OnDragonStaffZPosChange != null)
         {
-            OnDragonStaffYVelPos();
-        }
-    }
-
-    public static event Action OnDragonStaffYVelNeg;
-    public void DragonStaffYVelNeg()
-    {
-        if (OnDragonStaffYVelNeg != null)
-        {
-            OnDragonStaffYVelNeg();
-        }
-    }
-
-    public static event Action OnDragonStaffZVelPos;
-    public void DragonStaffZVelPos()
-    {
-        if (OnDragonStaffZVelPos != null)
-        {
-            OnDragonStaffZVelPos();
-        }
-    }
-
-    public static event Action OnDragonStaffZVelNeg;
-    public void DragonStaffZVelNeg()
-    {
-        if (OnDragonStaffZVelNeg != null)
-        {
-            OnDragonStaffZVelNeg();
+            OnDragonStaffZPosChange();
         }
     }
 }

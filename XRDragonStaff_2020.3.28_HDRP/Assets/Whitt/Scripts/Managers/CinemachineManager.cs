@@ -42,7 +42,7 @@ public class CinemachineManager : MonoBehaviour
 
     public void BlendToNextVCam()
     {
-        if(vCamList.Count == 3)
+        if(vCamList.Count == 4)
         {
             if(sequenceTrackingNum == 0)
             {
@@ -59,10 +59,15 @@ public class CinemachineManager : MonoBehaviour
             else if(sequenceTrackingNum == 2)
             {
                 vCamList[2].Priority = 0;
-                vCamList[1].Priority = 1;
+                vCamList[3].Priority = 1;
                 sequenceTrackingNum++;
             }
-            else if(sequenceTrackingNum <= 3)
+            else if(sequenceTrackingNum == 3)
+            {
+                vCamList[3].Priority = 0;
+                vCamList[0].Priority = 1;
+            }
+            else if(sequenceTrackingNum >= 4)
             {
                 vCamList[1].Priority = 0;
                 vCamList[0].Priority = 1;

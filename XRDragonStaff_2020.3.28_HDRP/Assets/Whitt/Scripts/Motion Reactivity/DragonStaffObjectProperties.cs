@@ -15,6 +15,7 @@ public class DragonStaffObjectProperties : MonoBehaviour
     private Transform _transform;
 
     Quaternion previousRotation;
+    Quaternion deltaRotation;
     
     // Start is called before the first frame update
     void Start()
@@ -28,7 +29,7 @@ public class DragonStaffObjectProperties : MonoBehaviour
     void FixedUpdate()
     {
         // Calculate Angular Rotation
-        Quaternion deltaRotation = _transform.rotation * Quaternion.Inverse(previousRotation);
+        deltaRotation = _transform.rotation * Quaternion.Inverse(previousRotation);
         
         previousRotation = _transform.rotation;
         
@@ -46,34 +47,27 @@ public class DragonStaffObjectProperties : MonoBehaviour
         //Calculate Change in Position
         deltaPosition = _transform.position - lastPostion;
         lastPostion = _transform.position;
+
+        SendVelocityEvents();
     }
 
     // Not sure where best to call this method
     void SendVelocityEvents()
     {
-        if(angularVelocity.x < 0)
+        if(deltaPosition.x > -.01f && deltaPosition.x <.01f)
         {
-            PerformanceEvents.current.DragonStaffXVelNeg();
+            PerformanceEvents.current.DragonStaffXPosChange();
+            //Debug.Log("X Vel Change");
         }
-        if(angularVelocity.x > 0)
+        if(deltaPosition.y > -.01f && deltaPosition.y <.01f)
         {
-            PerformanceEvents.current.DragonStaffXVelPos();
+            PerformanceEvents.current.DragonStaffYPosChange();
+            //Debug.Log("X Vel Change");
         }
-        if(angularVelocity.y < 0)
+        if(deltaPosition.z > -.01f && deltaPosition.z <.01f)
         {
-            PerformanceEvents.current.DragonStaffYVelNeg();
-        }
-        if(angularVelocity.y > 0)
-        {
-            PerformanceEvents.current.DragonStaffYVelPos();
-        }
-        if(angularVelocity.z < 0)
-        {
-            PerformanceEvents.current.DragonStaffZVelNeg();
-        }
-        if(angularVelocity.z > 0)
-        {
-            PerformanceEvents.current.DragonStaffZVelPos();
+            PerformanceEvents.current.DragonStaffZPosChange();
+            //Debug.Log("X Vel Change");
         }
     }
 }
