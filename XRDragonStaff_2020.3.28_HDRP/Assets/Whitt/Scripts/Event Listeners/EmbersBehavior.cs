@@ -6,15 +6,13 @@ using UnityEngine.VFX.Utility;
 
 public class EmbersBehavior : MonoBehaviour
 {
-    public DragonStaffObjectProperties _dragonStaffProps;
-
-    [Header ("Attractive Targets")]
-    public List<Transform> forceTargetList;
     public List<string> vfxPropertyNames;
-    private GameObject _xROrigin;
-
     private bool isPlaying = false;
-    private GameObject _dragonStaff;
+    private bool _centerIsOff = true;
+    private bool _armAreOff = false;
+    private float _attractiveDrag;
+    private float _attractiveForceStrength;
+    private float _particleNum;
     private VisualEffect _vfx;
     private ExposedProperty PlayEvent = "OnPlay";
     private ExposedProperty StopEvent = "OnStop";
@@ -22,29 +20,24 @@ public class EmbersBehavior : MonoBehaviour
     void OnEnable()
     {
         PerformanceEvents.OnEmbersVFXEvent += ToggleEmbers;
-        PerformanceEvents.OnPerformanceIntro += SetAttractiveTargetsIntro;
-        PerformanceEvents.OnPerformanceRising += SetAttractiveTargetsRising;
-        PerformanceEvents.OnPerformanceResolution += SetAttractiveTargetsResolution;
+        PerformanceEvents.OnPerformanceIntro += SetPropertiesIntro;
+        PerformanceEvents.OnPerformanceRising += SetPropertiesRising;
+        PerformanceEvents.OnPerformanceClimax += SetPropertiesClimax;
+        PerformanceEvents.OnPerformanceResolution += SetPropertiesResolution;
     }
 
     void OnDisable()
     {
         PerformanceEvents.OnEmbersVFXEvent -= ToggleEmbers;
-        PerformanceEvents.OnPerformanceIntro -= SetAttractiveTargetsIntro;
-        PerformanceEvents.OnPerformanceRising -= SetAttractiveTargetsRising;
-        PerformanceEvents.OnPerformanceResolution -= SetAttractiveTargetsResolution;
+        PerformanceEvents.OnPerformanceIntro -= SetPropertiesIntro;
+        PerformanceEvents.OnPerformanceRising -= SetPropertiesRising;
+        PerformanceEvents.OnPerformanceClimax -= SetPropertiesClimax;
+        PerformanceEvents.OnPerformanceResolution -= SetPropertiesResolution;
     }
 
     void Start()
     {
         _vfx = GetComponent<VisualEffect>();
-        _dragonStaff = GameObject.Find("DragonStaffTracker");
-        _xROrigin = GameObject.Find("XR Origin");
-        if(_dragonStaff != null)
-        {
-            _dragonStaffProps = _dragonStaff.GetComponent<DragonStaffObjectProperties>();
-            _vfx.SetFloat(vfxPropertyNames[2], _dragonStaffProps.angularVelocity.y);
-        }
     }
     
     void ToggleEmbers()
@@ -74,30 +67,75 @@ public class EmbersBehavior : MonoBehaviour
         }
     }
 
-    void SetAttractiveTargetsIntro()
+    void SetPropertiesIntro()
     {
-        if(vfxPropertyNames.Count >= 2 && forceTargetList.Count == 3)
+        if(vfxPropertyNames.Count >= 5)
         {
-            _vfx.SetVector3(vfxPropertyNames[0], forceTargetList[0].position + _xROrigin.transform.position);
-            _vfx.SetVector3(vfxPropertyNames[1], forceTargetList[1].position + _xROrigin.transform.position);
+            _particleNum = 500f;
+            _attractiveDrag = 1.5f;
+            _attractiveForceStrength = 1.5f;
+            _centerIsOff = true;
+            _armAreOff = false;
+
+            _vfx.SetFloat(vfxPropertyNames[0], _particleNum);
+            _vfx.SetFloat(vfxPropertyNames[1], _attractiveDrag);
+            _vfx.SetFloat(vfxPropertyNames[2], _attractiveForceStrength);
+            _vfx.SetBool(vfxPropertyNames[3], _centerIsOff);
+            _vfx.SetBool(vfxPropertyNames[4], _armAreOff);
         }
     }
 
-    void SetAttractiveTargetsRising()
+    void SetPropertiesRising()
     {
-        if(vfxPropertyNames.Count >= 2 && forceTargetList.Count == 3)
+        if(vfxPropertyNames.Count >= 5)
         {
-            _vfx.SetVector3(vfxPropertyNames[0], forceTargetList[2].position);
-            _vfx.SetVector3(vfxPropertyNames[1], forceTargetList[2].position);
+            _particleNum = 200f;
+            _attractiveDrag = 1f;
+            _attractiveForceStrength = 1.5f;
+            _centerIsOff = false;
+            _armAreOff = false;
+            
+            _vfx.SetFloat(vfxPropertyNames[0], _particleNum);
+            _vfx.SetFloat(vfxPropertyNames[1], _attractiveDrag);
+            _vfx.SetFloat(vfxPropertyNames[2], _attractiveForceStrength);
+            _vfx.SetBool(vfxPropertyNames[3], _centerIsOff);
+            _vfx.SetBool(vfxPropertyNames[4], _armAreOff);
         }
     }
 
-    void SetAttractiveTargetsResolution()
+    void SetPropertiesClimax()
     {
-        if(vfxPropertyNames.Count >= 2 && forceTargetList.Count == 3)
+        if(vfxPropertyNames.Count >= 5)
         {
-            _vfx.SetVector3(vfxPropertyNames[0], forceTargetList[0].position + _xROrigin.transform.position);
-            _vfx.SetVector3(vfxPropertyNames[1], forceTargetList[1].position + _xROrigin.transform.position);
+            _particleNum = 100f;
+            _attractiveDrag = .5f;
+            _attractiveForceStrength = .5f;
+            _centerIsOff = false;
+            _armAreOff = true;
+            
+            _vfx.SetFloat(vfxPropertyNames[0], _particleNum);
+            _vfx.SetFloat(vfxPropertyNames[1], _attractiveDrag);
+            _vfx.SetFloat(vfxPropertyNames[2], _attractiveForceStrength);
+            _vfx.SetBool(vfxPropertyNames[3], _centerIsOff);
+            _vfx.SetBool(vfxPropertyNames[4], _armAreOff);
+        }
+    }
+
+    void SetPropertiesResolution()
+    {
+        if(vfxPropertyNames.Count >= 5)
+        {
+            _particleNum = 500f;
+            _attractiveDrag = 1.5f;
+            _attractiveForceStrength = 1.5f;
+            _centerIsOff = true;
+            _armAreOff = false;
+            
+            _vfx.SetFloat(vfxPropertyNames[0], _particleNum);
+            _vfx.SetFloat(vfxPropertyNames[1], _attractiveDrag);
+            _vfx.SetFloat(vfxPropertyNames[2], _attractiveForceStrength);
+            _vfx.SetBool(vfxPropertyNames[3], _centerIsOff);
+            _vfx.SetBool(vfxPropertyNames[4], _armAreOff);
         }
     }
 }

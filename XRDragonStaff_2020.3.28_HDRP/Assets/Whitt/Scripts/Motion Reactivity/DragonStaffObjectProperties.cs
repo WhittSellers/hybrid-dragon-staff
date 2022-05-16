@@ -11,6 +11,7 @@ public class DragonStaffObjectProperties : MonoBehaviour
 {
     public Vector3 angularVelocity;
     public Vector3 deltaPosition;
+    public float _threshold;
     private Vector3 lastPostion;
     private Transform _transform;
 
@@ -54,19 +55,19 @@ public class DragonStaffObjectProperties : MonoBehaviour
     // Not sure where best to call this method
     void SendVelocityEvents()
     {
-        if(deltaPosition.x > -.01f && deltaPosition.x <.01f)
+        if(Mathf.Abs(angularVelocity.x) < Mathf.Abs(angularVelocity.y) && Mathf.Abs(angularVelocity.x) < Mathf.Abs(angularVelocity.z) && angularVelocity.x != 0f)
         {
-            PerformanceEvents.current.DragonStaffXPosChange();
+            PerformanceEvents.current.DragonStaffXVelChange();
             //Debug.Log("X Vel Change");
         }
-        if(deltaPosition.y > -.01f && deltaPosition.y <.01f)
+        if(Mathf.Abs(angularVelocity.y) < Mathf.Abs(angularVelocity.x) && Mathf.Abs(angularVelocity.y) < Mathf.Abs(angularVelocity.z) && angularVelocity.y != 0f)
         {
-            PerformanceEvents.current.DragonStaffYPosChange();
+            PerformanceEvents.current.DragonStaffYVelChange();
             //Debug.Log("X Vel Change");
         }
-        if(deltaPosition.z > -.01f && deltaPosition.z <.01f)
+        if(Mathf.Abs(angularVelocity.z) < Mathf.Abs(angularVelocity.x) && Mathf.Abs(angularVelocity.z) < Mathf.Abs(angularVelocity.y) && angularVelocity.z != 0f)
         {
-            PerformanceEvents.current.DragonStaffZPosChange();
+            PerformanceEvents.current.DragonStaffZVelChange();
             //Debug.Log("X Vel Change");
         }
     }

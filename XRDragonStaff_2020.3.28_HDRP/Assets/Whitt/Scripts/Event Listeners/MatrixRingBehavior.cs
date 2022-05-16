@@ -86,7 +86,7 @@ public class MatrixRingBehavior : MonoBehaviour
 
     void SetClimaxSettings()
     {
-        burst = false;
+        burst = true;
         _forceDirection = new Vector3(0,0,-10);
         if(vfxPropertyNames != null)
         {

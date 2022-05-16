@@ -59,8 +59,9 @@ public class ShowManager : MonoBehaviour
 
     public void RisingActionTechDrop()
     {
-        PerformanceEvents.current.PerformanceRising();
         PerformanceEvents.current.BlendToNextCamEvent(); // Camera (1), Pulled Back
+        PerformanceEvents.current.PerformanceRising();
+        PerformanceEvents.current.DollyCamEvent();
         PerformanceEvents.current.FireRingVFXEvent();
         PerformanceEvents.current.SwarmVFXEvent();
         PerformanceEvents.current.DragonOrbVFXEvent();
@@ -68,17 +69,20 @@ public class ShowManager : MonoBehaviour
     }
     public void Tamberine()
     {
-        PerformanceEvents.current.MatrixRingVFXEvent();
+        PerformanceEvents.current.DollyCamEvent();
+        //PerformanceEvents.current.MatrixRingVFXEvent();
     }
 
     public void FullBeatDrop()
     {
-        PerformanceEvents.current.MatrixRingVFXEvent();
+        PerformanceEvents.current.DollyCamEvent();
+        //PerformanceEvents.current.MatrixRingVFXEvent();
     }
 
     public void Vocals()
     {
-        PerformanceEvents.current.MatrixRingVFXEvent();
+        PerformanceEvents.current.DollyCamEvent();
+        //PerformanceEvents.current.MatrixRingVFXEvent();
     }
 
     public void FullBeatDrone()
@@ -92,11 +96,13 @@ public class ShowManager : MonoBehaviour
     public void VocalsDeepDrop()
     {
         PerformanceEvents.current.MatrixRingVFXEvent();
+        PerformanceEvents.current.FireRingVFXEvent();
     }
 
     public void EtherealDrop()
     {
         PerformanceEvents.current.MatrixRingVFXEvent();
+        PerformanceEvents.current.FireRingVFXEvent();
     }
 
     public void ClimaxStart()
@@ -104,38 +110,41 @@ public class ShowManager : MonoBehaviour
         PerformanceEvents.current.PerformanceClimax();
         PerformanceEvents.current.BlendToNextCamEvent(); // Camera (3), In the Fire
         PerformanceEvents.current.MatrixRingVFXEvent();
+        PerformanceEvents.current.FireRingVFXEvent();
     }
 
     public void ClimaxDeepDrop()
     {
-
+        PerformanceEvents.current.FireRingVFXEvent();
     }
 
     public void ClimaxBuild()
     {
-
+        //PerformanceEvents.current.FireRingVFXEvent();
     }
 
     public void ClimaxDrop()
     {
-        
+        PerformanceEvents.current.FireRingVFXEvent();
     }
 
     public void ResolutionOscillatorStart()
     {
-        PerformanceEvents.current.PerformanceResolution();
         PerformanceEvents.current.MatrixRingVFXEvent();
+        PerformanceEvents.current.FireRingVFXEvent();
     }
 
     public void OscillatorPeak()
     {
         PerformanceEvents.current.FireVFXEvent();
+        PerformanceEvents.current.PerformanceResolution();
         PerformanceEvents.current.ResetVCamEvent(); // Back to Camera (0)
+        PerformanceEvents.current.FireRingVFXEvent();
     }
 
     public void SynthPitchDown()
     {
-        PerformanceEvents.current.MatrixRingVFXEvent();
+        //PerformanceEvents.current.MatrixRingVFXEvent();
         PerformanceEvents.current.CelestialBodiesVFXEvent();
     }
 

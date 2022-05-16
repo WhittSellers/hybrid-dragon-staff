@@ -9,6 +9,9 @@ public class CinemachineManager : MonoBehaviour
 {
     public CinemachineBrain ProjectionCamera;
     public List<CinemachineVirtualCamera> vCamList;
+    public float _targetSpeed;
+    private CinemachineDollyCart _dolly;
+    public bool _dollyClockwise;
 
     private int sequenceTrackingNum = 0;
     private float blendSpeed = 3.0f;
@@ -17,17 +20,23 @@ public class CinemachineManager : MonoBehaviour
     {
         PerformanceEvents.OnBlendToNextCamEvent += BlendToNextVCam;
         PerformanceEvents.OnResetVCamEvent += ResetVCams;
+        PerformanceEvents.OnDollyCamEvent += SetDollySpeed;
     }
 
     void OnDisable()
     {
         PerformanceEvents.OnBlendToNextCamEvent -= BlendToNextVCam;
         PerformanceEvents.OnResetVCamEvent -= ResetVCams;
+        PerformanceEvents.OnDollyCamEvent -= SetDollySpeed;
     }
 
     private void Start()
     {
         ResetVCams();
+        if(vCamList[1].GetComponent<CinemachineDollyCart>().enabled == true)
+        {
+            _dolly = vCamList[1].GetComponent<CinemachineDollyCart>();
+        }
     }
 
     public void ResetVCams()
@@ -38,6 +47,23 @@ public class CinemachineManager : MonoBehaviour
         }
         vCamList[0].Priority = 1;
         sequenceTrackingNum = 0;
+    }
+
+    public void SetDollySpeed()
+    {
+        if(_dollyClockwise)
+        {
+            _targetSpeed = Mathf.Lerp(_targetSpeed, -2f, 1);
+            _dollyClockwise = false;
+        }
+        else if(!_dollyClockwise)
+        {
+            _targetSpeed = Mathf.Lerp(_targetSpeed, 2f, 1);
+            _dollyClockwise = true;
+        }
+        
+        _dolly.m_Speed = _targetSpeed;
+        Debug.Log("Dolly speed is " + _dolly.m_Speed);
     }
 
     public void BlendToNextVCam()
@@ -70,6 +96,8 @@ public class CinemachineManager : MonoBehaviour
             else if(sequenceTrackingNum >= 4)
             {
                 vCamList[1].Priority = 0;
+                vCamList[2].Priority = 0;
+                vCamList[3].Priority = 0;
                 vCamList[0].Priority = 1;
             }
         }

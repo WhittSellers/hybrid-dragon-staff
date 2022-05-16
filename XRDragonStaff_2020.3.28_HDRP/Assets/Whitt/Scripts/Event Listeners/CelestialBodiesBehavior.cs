@@ -19,13 +19,13 @@ public class CelestialBodiesBehavior : MonoBehaviour
     void OnEnable()
     {
         PerformanceEvents.OnCelestialBodiesVFXEvent += ToggleCelestialBodies;
-        PerformanceEvents.OnDragonStaffYPosChange += SwitchRotationDirection;
+        PerformanceEvents.OnDragonStaffYVelChange += SwitchRotationDirection;
     }
 
     void OnDisable()
     {
         PerformanceEvents.OnCelestialBodiesVFXEvent -= ToggleCelestialBodies;
-        PerformanceEvents.OnDragonStaffYPosChange -= SwitchRotationDirection;
+        PerformanceEvents.OnDragonStaffYVelChange -= SwitchRotationDirection;
     }
 
     void Start()

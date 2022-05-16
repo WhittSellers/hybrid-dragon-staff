@@ -151,6 +151,15 @@ public class PerformanceEvents : MonoBehaviour
         }
     }
 
+    public static event Action OnDollyCamEvent;
+    public void DollyCamEvent()
+    {
+        if (OnDollyCamEvent != null)
+        {
+            OnDollyCamEvent();
+        }
+    }
+
     // Lighting Events
 
     public static event Action OnToggleLightsEvent;
@@ -218,30 +227,30 @@ public class PerformanceEvents : MonoBehaviour
             onTriggerButtonPress();
         }
     }
-    public static event Action OnDragonStaffXPosChange;
-    public void DragonStaffXPosChange()
+    public static event Action OnDragonStaffXVelChange;
+    public void DragonStaffXVelChange()
     {
-        if (OnDragonStaffXPosChange != null)
+        if (OnDragonStaffXVelChange != null)
         {
-            OnDragonStaffXPosChange();
+            OnDragonStaffXVelChange();
         }
     }
 
-    public static event Action OnDragonStaffYPosChange;
-    public void DragonStaffYPosChange()
+    public static event Action OnDragonStaffYVelChange;
+    public void DragonStaffYVelChange()
     {
-        if (OnDragonStaffYPosChange != null)
+        if (OnDragonStaffYVelChange != null)
         {
-            OnDragonStaffYPosChange();
+            OnDragonStaffYVelChange();
         }
     }
 
-    public static event Action OnDragonStaffZPosChange;
-    public void DragonStaffZPosChange()
+    public static event Action OnDragonStaffZVelChange;
+    public void DragonStaffZVelChange()
     {
-        if (OnDragonStaffZPosChange != null)
+        if (OnDragonStaffZVelChange != null)
         {
-            OnDragonStaffZPosChange();
+            OnDragonStaffZVelChange();
         }
     }
 }
