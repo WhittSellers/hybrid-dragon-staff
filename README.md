@@ -24,6 +24,7 @@ Inferno Scene-
 This scene is largely identical, but does not run off of an animation timeline and is designed to be used for interactive installations or improvised/free-style performances, as well as for live viewing in VR. Currently still needs some more work to be totally controlled by a midi/osc interface. It also includes more functionality for the dragon staff spinner to trigger effects using colliders positioned around performer. There are also GUI buttons to trigger certain transitions/parameter changes, but a little more tweaking is needed to make sure things reset correctly.
 
 Continued Development & Loose Roadmap
+
 Continued Development for the project sees me continue to flesh out the Unity enviroment with more lighting and VFX and integrating OSC/Midi control, integrate Unity with external software like Chateigne for FlowToy LED control, to while also developing the hardware/physical interface of the dragon staff to create more modes of interaction.
 
 Unity-
