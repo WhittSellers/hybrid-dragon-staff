@@ -45,6 +45,7 @@ Adding Full Body tracking for performer avatars
 Figure out how to make this a social vr experience for VRChat
 
 
+
 External Software-
 
 Create custom TouchOSC interface on Ipad and successfully send messages to Unity & Chataigne
@@ -54,6 +55,7 @@ Integrate with OSC messages from Chataigne to trigger effects and adjust paramet
 Continue Debugging VAC virtual audio cable input for audio reactivity
 
 
+
 Dragon Staff-
 
 create capacitive touch zones along the staff grip to act as buttons
@@ -61,5 +63,7 @@ create capacitive touch zones along the staff grip to act as buttons
 design new hubs/spoke ends that integrate VR tracker attachment point and experiment with 3 spoke and 4 spoke designs incorporating Flowtoys Capsules lights
 
 creating a custom ESP32 device with IMU remove reliance on VR hardware and open the posibility of using the project with fire props
+
+
 
 Thanks for checking out my project and feel free to reach out with questions!
