@@ -31,39 +31,25 @@ Continued Development for the project sees me continue to flesh out the Unity en
 
 
 Unity-
-
-Create flame throwers and particle strips vfx tied to staff spoke positions
-
-Recieve messages from TouchOSC or Midi board, either directly or through OSC Querry
-
-Program movement patterns for stage lighting ring and create methods to trigger each pattern with adjustable parameters
-
-Integrate LIV for mixed reality recording/streaming
-
-Adding Full Body tracking for performer avatars
-
-Figure out how to make this a social vr experience for VRChat
-
+Create flame throwers and particle strips vfx tied to staff spoke positions,
+Recieve messages from TouchOSC or Midi board, either directly or through OSC Querry,
+Program movement patterns for stage lighting ring and create methods to trigger each pattern with adjustable parameters,
+Integrate LIV for mixed reality recording/streaming,
+Adding Full Body tracking for performer avatars,
+Figure out how to make this a social vr experience for VRChat.
 
 
 External Software-
-
-Create custom TouchOSC interface on Ipad and successfully send messages to Unity & Chataigne
-
-Integrate with OSC messages from Chataigne to trigger effects and adjust parameters in Unity while simultaneously controlling Dragon Staff FlowToys capsule LEDs
-
-Continue Debugging VAC virtual audio cable input for audio reactivity
+Create custom TouchOSC interface on Ipad and successfully send messages to Unity & Chataigne,
+Integrate with OSC messages from Chataigne to trigger effects and adjust parameters in Unity while simultaneously controlling Dragon Staff FlowToys capsule LEDs,
+Continue Debugging VAC virtual audio cable input for audio reactivity.
 
 
 
 Dragon Staff-
-
-create capacitive touch zones along the staff grip to act as buttons
-
-design new hubs/spoke ends that integrate VR tracker attachment point and experiment with 3 spoke and 4 spoke designs incorporating Flowtoys Capsules lights
-
-creating a custom ESP32 device with IMU remove reliance on VR hardware and open the posibility of using the project with fire props
-
+create capacitive touch zones along the staff grip to act as buttons,
+design new hubs/spoke ends that integrate VR tracker attachment point and experiment with 3 spoke and 4 spoke designs incorporating Flowtoys Capsules lights,
+creating a custom ESP32 device with IMU remove reliance on VR hardware and open the posibility of using the project with fire props.
 
 
 Thanks for checking out my project and feel free to reach out with questions!
