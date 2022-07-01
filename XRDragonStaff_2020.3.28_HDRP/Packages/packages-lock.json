@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.benkuper.oscquery": {
-      "version": "1.0.9",
+      "version": "1.1.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
@@ -270,7 +270,7 @@
       "url": "https://packages.unity.com"
     },
     "com.valvesoftware.unity.openvr": {
-      "version": "file:C:/GitHub/unity-xr-plugin/com.valve.openvr",
+      "version": "file:S:/GitHub/unity-xr-plugin/com.valve.openvr",
       "depth": 0,
       "source": "local",
       "dependencies": {

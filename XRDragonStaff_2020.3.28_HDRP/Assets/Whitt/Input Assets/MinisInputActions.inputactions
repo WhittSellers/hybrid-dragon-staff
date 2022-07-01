@@ -388,6 +388,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "TouchOSC Ipad",
+            "id": "7abc7b68-4764-4487-b320-a0d694835139",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "7e9c9208-20e4-455c-863b-56fc932f5885",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "e9d91ba4-319d-439f-8bc2-2c85c798b717",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [
