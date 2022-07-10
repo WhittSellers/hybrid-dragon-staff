@@ -19,8 +19,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 52
     y: 12
-    width: 2740
-    height: 3737
+    width: 2660
+    height: 2396
 --- !u!114 &114350483966674976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -318,8 +318,7 @@ MonoBehaviour:
   m_ImportDependencies: []
   m_GraphVersion: 6
   m_ResourceVersion: 1
-  m_SubgraphDependencies:
-  - {fileID: 5371698748595113096, guid: a2130c5e66415864eb87d77596ecb008, type: 3}
+  m_SubgraphDependencies: []
   m_CategoryPath: 
 --- !u!2058629511 &8926484042661614527
 VisualEffectResource:
@@ -4912,7 +4911,7 @@ MonoBehaviour:
   - link:
     - context: {fileID: 8926484042661614962}
       slotIndex: 0
-  eventName: OnFireRingPlay
+  eventName: OnPlay
 --- !u!114 &8926484042661615325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7058,7 +7057,7 @@ MonoBehaviour:
   - link:
     - context: {fileID: 8926484042661614962}
       slotIndex: 1
-  eventName: OnFireRingStop
+  eventName: OnStop
 --- !u!114 &8926484042661615585
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -572,7 +572,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 54250640}
-  m_LocalRotation: {x: 6.565481e-10, y: 0.9975862, z: 0.06943924, w: -0.000000009432182}
+  m_LocalRotation: {x: -0.0009521646, y: -0.707181, z: -0.0009523659, w: 0.70703137}
   m_LocalPosition: {x: 0, y: 1, z: 8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1245,8 +1245,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 111894333}
-  m_LocalRotation: {x: 6.565481e-10, y: 0.9975862, z: 0.06943924, w: -0.000000009432182}
-  m_LocalPosition: {x: 0, y: 1, z: 8}
+  m_LocalRotation: {x: -0.0000000012315698, y: 0.9975862, z: 0.06943924, w: 0.000000017693123}
+  m_LocalPosition: {x: 0, y: 1, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2242,7 +2242,7 @@ VisualEffect:
   m_GameObject: {fileID: 312708862}
   m_Enabled: 1
   m_Asset: {fileID: 8926484042661614526, guid: 12931d7a4952704408fdab8bf3f0af8b, type: 3}
-  m_InitialEventName: OnFireRingPlay
+  m_InitialEventName: OnPlay
   m_InitialEventNameOverriden: 1
   m_StartSeed: 0
   m_ResetSeedOnPlay: 1
@@ -3904,10 +3904,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 725506982}
-  - component: {fileID: 725506979}
-  - component: {fileID: 725506980}
   - component: {fileID: 725506981}
+  - component: {fileID: 725506980}
   - component: {fileID: 725506983}
+  - component: {fileID: 725506979}
   m_Layer: 0
   m_Name: Show Control
   m_TagString: Untagged
@@ -3922,12 +3922,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 725506978}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c9b410c968d301349a7ff6a8fac6be04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  localPort: 9010
+  localPort: 9020
   serverName: Unity-OSCQuery
   rootObject: {fileID: 0}
   objectFilterMode: 2
@@ -3938,6 +3938,9 @@ MonoBehaviour:
   - MeshFilter
   - BoxCollider
   - MeshCollider
+  - AudioSource
+  - VFXTransformBinder
+  - VFXAudioLevelBinder
   excludeInternalUnityParams: 0
 --- !u!114 &725506980
 MonoBehaviour:
@@ -11354,10 +11357,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   windZone: {fileID: 2122068019}
-  windStrength: 0
-  windDirection: 0
-  windPulse: 0
-  windTurbulence: 0
+  windStrength: 1
+  windDirection: 30
+  windPulse: 0.1
+  windTurbulence: 0.2
   windRandomness: 1
   BillboardWind: 0
   BillboardWindInfluence: 0.5
