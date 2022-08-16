@@ -17,7 +17,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.cinemachine": {
-      "version": "2.6.10",
+      "version": "2.6.15",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
@@ -161,7 +161,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.test-framework": {
-      "version": "1.1.29",
+      "version": "1.1.33",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -221,7 +221,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.interaction.toolkit": {
-      "version": "2.0.1",
+      "version": "2.0.3",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -270,7 +270,7 @@
       "url": "https://packages.unity.com"
     },
     "com.valvesoftware.unity.openvr": {
-      "version": "file:C:/GitHub/unity-xr-plugin/com.valve.openvr",
+      "version": "file:S:/GitHub/unity-xr-plugin/com.valve.openvr",
       "depth": 0,
       "source": "local",
       "dependencies": {
@@ -317,7 +317,7 @@
       "url": "https://registry.npmjs.com"
     },
     "jp.keijiro.libsoundio": {
-      "version": "1.0.3",
+      "version": "1.0.4",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
@@ -331,6 +331,13 @@
         "jp.keijiro.rtmidi": "1.0.4",
         "com.unity.inputsystem": "1.0.1"
       },
+      "url": "https://registry.npmjs.com"
+    },
+    "jp.keijiro.noiseshader": {
+      "version": "2.0.0",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
       "url": "https://registry.npmjs.com"
     },
     "jp.keijiro.pcx": {
@@ -348,11 +355,12 @@
       "url": "https://registry.npmjs.com"
     },
     "jp.keijiro.shadergraphassets": {
-      "version": "1.0.5",
+      "version": "1.0.10",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.shadergraph": "10.0.0"
+        "com.unity.shadergraph": "10.0.0",
+        "jp.keijiro.noiseshader": "2.0.0"
       },
       "url": "https://registry.npmjs.com"
     },
@@ -364,7 +372,7 @@
       "url": "https://registry.npmjs.com"
     },
     "jp.keijiro.vfxgraphassets": {
-      "version": "1.0.8",
+      "version": "1.1.1",
       "depth": 0,
       "source": "registry",
       "dependencies": {
