@@ -572,7 +572,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 54250640}
-  m_LocalRotation: {x: 0.0000000029282379, y: -0.99758625, z: -0.069439255, w: -0.000000042138932}
+  m_LocalRotation: {x: -0.0009521646, y: -0.707181, z: -0.0009523659, w: 0.70703137}
   m_LocalPosition: {x: 0, y: 1, z: 8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1066,6 +1066,7 @@ GameObject:
   - component: {fileID: 111894336}
   - component: {fileID: 111894334}
   - component: {fileID: 111894335}
+  - component: {fileID: 111894339}
   m_Layer: 0
   m_Name: Projection Camera
   m_TagString: Untagged
@@ -1245,7 +1246,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 111894333}
-  m_LocalRotation: {x: -0.0000000012315698, y: 0.9975862, z: 0.06943924, w: 0.000000017693123}
+  m_LocalRotation: {x: 0.0000000012315694, y: 0.9975862, z: 0.06943924, w: -0.000000017693118}
   m_LocalPosition: {x: 0, y: 1, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1286,6 +1287,24 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &111894339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111894333}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45099d624c1e6c14e9514f4e5ea1ed9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spoutName: Spout Sender
+  _keepAlpha: 0
+  _captureMethod: 0
+  _sourceCamera: {fileID: 0}
+  _sourceTexture: {fileID: 0}
+  _resources: {fileID: 11400000, guid: f449ebbe2051c2e4d993eaa773a410de, type: 2}
 --- !u!1 &112005042
 GameObject:
   m_ObjectHideFlags: 0
@@ -1312,7 +1331,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 112005042}
-  m_LocalRotation: {x: -0.0000000012315698, y: 0.9975862, z: 0.06943924, w: 0.000000017693123}
+  m_LocalRotation: {x: 0.0000000012315694, y: 0.9975862, z: 0.06943924, w: -0.000000017693118}
   m_LocalPosition: {x: 0, y: 1, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4381,7 +4400,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 760578616}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bb2733293e9173c43b1747589472e908, type: 3}
   m_Name: 
