@@ -4485,7 +4485,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &760578617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7756,7 +7756,6 @@ GameObject:
   - component: {fileID: 1272893952}
   - component: {fileID: 1272893951}
   - component: {fileID: 1272893950}
-  - component: {fileID: 1272893949}
   - component: {fileID: 1272893958}
   m_Layer: 0
   m_Name: Dragon Staff VFX Left
@@ -7787,7 +7786,7 @@ VisualEffect:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1272893946}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Asset: {fileID: 8926484042661614526, guid: c49b498941c56264ab74ee52fbff3d2c, type: 3}
   m_InitialEventName: OnPlay
   m_InitialEventNameOverriden: 1
@@ -7799,6 +7798,15 @@ VisualEffect:
       m_Array:
       - m_Value: 0.5
         m_Name: ParticleLifeTime
+        m_Overridden: 1
+      - m_Value: 1
+        m_Name: TurbulenceIntensity
+        m_Overridden: 1
+      - m_Value: 0.2
+        m_Name: TurbulenceDrag
+        m_Overridden: 1
+      - m_Value: 0.5
+        m_Name: VortexDrag
         m_Overridden: 1
     m_Vector2f:
       m_Array: []
@@ -7888,6 +7896,9 @@ VisualEffect:
       - m_Value: {x: 0.25, y: 0.25, z: 0.25}
         m_Name: Orb Size
         m_Overridden: 1
+      - m_Value: {x: 0, y: 0, z: 0}
+        m_Name: ForceVector
+        m_Overridden: 1
     m_Vector4f:
       m_Array: []
     m_Uint:
@@ -7904,21 +7915,6 @@ VisualEffect:
       m_Array: []
     m_Bool:
       m_Array: []
---- !u!114 &1272893949
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1272893946}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fdfea1f838247c40921a07afedde962, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Property:
-    m_Name: Attractive Force Target
-  Target: {fileID: 1302604383}
 --- !u!114 &1272893950
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -8029,7 +8025,6 @@ MonoBehaviour:
   - {fileID: 1272893952}
   - {fileID: 1272893951}
   - {fileID: 1272893950}
-  - {fileID: 1272893949}
   m_VisualEffect: {fileID: 1272893948}
 --- !u!73398921 &1272893957
 VFXRenderer:
@@ -8039,7 +8034,7 @@ VFXRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1272893946}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -9252,7 +9247,6 @@ GameObject:
   - component: {fileID: 1682919489}
   - component: {fileID: 1682919488}
   - component: {fileID: 1682919487}
-  - component: {fileID: 1682919486}
   - component: {fileID: 1682919495}
   m_Layer: 0
   m_Name: Dragon Staff VFX Right
@@ -9283,7 +9277,7 @@ VisualEffect:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1682919483}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Asset: {fileID: 8926484042661614526, guid: c49b498941c56264ab74ee52fbff3d2c, type: 3}
   m_InitialEventName: OnPlay
   m_InitialEventNameOverriden: 1
@@ -9295,6 +9289,15 @@ VisualEffect:
       m_Array:
       - m_Value: 0.5
         m_Name: ParticleLifeTime
+        m_Overridden: 1
+      - m_Value: 0.2
+        m_Name: TurbulenceDrag
+        m_Overridden: 1
+      - m_Value: 0.5
+        m_Name: VortexDrag
+        m_Overridden: 1
+      - m_Value: 1
+        m_Name: TurbulenceIntensity
         m_Overridden: 1
     m_Vector2f:
       m_Array: []
@@ -9384,6 +9387,9 @@ VisualEffect:
       - m_Value: {x: 0.25, y: 0.25, z: 0.25}
         m_Name: Orb Size
         m_Overridden: 1
+      - m_Value: {x: 0, y: 0, z: 0}
+        m_Name: ForceVector
+        m_Overridden: 1
     m_Vector4f:
       m_Array: []
     m_Uint:
@@ -9400,21 +9406,6 @@ VisualEffect:
       m_Array: []
     m_Bool:
       m_Array: []
---- !u!114 &1682919486
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1682919483}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fdfea1f838247c40921a07afedde962, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Property:
-    m_Name: Attractive Force Target
-  Target: {fileID: 1089538839}
 --- !u!114 &1682919487
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -9525,7 +9516,6 @@ MonoBehaviour:
   - {fileID: 1682919489}
   - {fileID: 1682919488}
   - {fileID: 1682919487}
-  - {fileID: 1682919486}
   m_VisualEffect: {fileID: 1682919485}
 --- !u!73398921 &1682919494
 VFXRenderer:
@@ -9535,7 +9525,7 @@ VFXRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1682919483}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
