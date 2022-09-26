@@ -42,7 +42,7 @@ MonoBehaviour:
     x: -2740
     y: -1546
     width: 4813
-    height: 3078
+    height: 3058
 --- !u!114 &114350483966674976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -124,6 +124,7 @@ MonoBehaviour:
   - {fileID: 8926484042661616254}
   - {fileID: 8926484042661616256}
   - {fileID: 8926484042661616258}
+  - {fileID: 8926484042661616266}
   m_UIPosition: {x: 0, y: 0}
   m_UICollapsed: 1
   m_UISuperCollapsed: 0
@@ -181,6 +182,20 @@ MonoBehaviour:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
       m_SerializableObject: 0.5
+    min: -Infinity
+    max: Infinity
+    enumValues: []
+    descendantCount: 0
+  - name: EmberGradient
+    path: EmberGradient
+    tooltip: 
+    sheetType: m_Gradient
+    realType: Gradient
+    defaultValue:
+      m_Type:
+        m_SerializableType: UnityEngine.Gradient, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      m_SerializableObject: '{"colorKeys":[{"color":{"r":11.98431396484375,"g":11.98431396484375,"b":11.98431396484375,"a":1.0},"time":0.0},{"color":{"r":5.992156982421875,"g":5.992156982421875,"b":5.992156982421875,"a":1.0},"time":0.0117647061124444},{"color":{"r":5.992156982421875,"g":5.270588397979736,"b":0.0,"a":1.0},"time":0.2235294133424759},{"color":{"r":2.9960784912109377,"g":1.003921627998352,"b":0.0,"a":1.0},"time":0.47940793633461},{"color":{"r":1.4980392456054688,"g":0.0313725508749485,"b":0.0,"a":1.0},"time":0.7323567271232605},{"color":{"r":0.0,"g":0.0,"b":0.0,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":0.800000011920929,"time":0.3764705955982208},{"alpha":0.0,"time":1.0}],"gradientMode":0}'
     min: -Infinity
     max: Infinity
     enumValues: []
@@ -2286,7 +2301,8 @@ MonoBehaviour:
       m_SerializableType: UnityEngine.Gradient, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   m_Direction: 0
-  m_LinkedSlots: []
+  m_LinkedSlots:
+  - {fileID: 8926484042661616267}
 --- !u!114 &8926484042661614676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5443,7 +5459,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615188}
   m_ExposedName: Texture3D
   m_Exposed: 1
-  m_Order: 5
+  m_Order: 6
   m_Category: 
   m_Min:
     m_Type:
@@ -5638,7 +5654,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615392}
   m_ExposedName: Spawn 1 Target
   m_Exposed: 1
-  m_Order: 6
+  m_Order: 7
   m_Category: 
   m_Min:
     m_Type:
@@ -6140,7 +6156,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615406}
   m_ExposedName: Spawn 2 Target
   m_Exposed: 1
-  m_Order: 7
+  m_Order: 8
   m_Category: 
   m_Min:
     m_Type:
@@ -6641,7 +6657,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615420}
   m_ExposedName: Spawn 3 Target
   m_Exposed: 1
-  m_Order: 8
+  m_Order: 9
   m_Category: 
   m_Min:
     m_Type:
@@ -7142,7 +7158,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615434}
   m_ExposedName: Spawn 4 Target
   m_Exposed: 1
-  m_Order: 9
+  m_Order: 10
   m_Category: 
   m_Min:
     m_Type:
@@ -7643,7 +7659,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615448}
   m_ExposedName: Spoke Center Offset
   m_Exposed: 1
-  m_Order: 11
+  m_Order: 12
   m_Category: 
   m_Min:
     m_Type:
@@ -8132,7 +8148,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615462}
   m_ExposedName: Tracker Offset
   m_Exposed: 1
-  m_Order: 10
+  m_Order: 11
   m_Category: 
   m_Min:
     m_Type:
@@ -8621,7 +8637,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615476}
   m_ExposedName: Attractive Force Target
   m_Exposed: 0
-  m_Order: 12
+  m_Order: 13
   m_Category: 
   m_Min:
     m_Type:
@@ -12629,7 +12645,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615617}
   - {fileID: 8926484042661615619}
   - {fileID: 8926484042661615624}
-  m_UIPosition: {x: 528, y: 708}
+  m_UIPosition: {x: 531, y: 820}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -13031,7 +13047,8 @@ MonoBehaviour:
       m_SerializableType: UnityEngine.Gradient, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   m_Direction: 0
-  m_LinkedSlots: []
+  m_LinkedSlots:
+  - {fileID: 8926484042661616267}
 --- !u!114 &8926484042661615626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15750,7 +15767,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615722}
   - {fileID: 8926484042661615724}
   - {fileID: 8926484042661615729}
-  m_UIPosition: {x: 1082, y: 722}
+  m_UIPosition: {x: 1084, y: 816}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -16152,7 +16169,8 @@ MonoBehaviour:
       m_SerializableType: UnityEngine.Gradient, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   m_Direction: 0
-  m_LinkedSlots: []
+  m_LinkedSlots:
+  - {fileID: 8926484042661616267}
 --- !u!114 &8926484042661615731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18871,7 +18889,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615827}
   - {fileID: 8926484042661615829}
   - {fileID: 8926484042661615834}
-  m_UIPosition: {x: 1649, y: 722}
+  m_UIPosition: {x: 1649, y: 818}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -19273,7 +19291,8 @@ MonoBehaviour:
       m_SerializableType: UnityEngine.Gradient, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   m_Direction: 0
-  m_LinkedSlots: []
+  m_LinkedSlots:
+  - {fileID: 8926484042661616267}
 --- !u!114 &8926484042661615849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20626,7 +20645,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615898}
   m_ExposedName: Orb Size
   m_Exposed: 1
-  m_Order: 13
+  m_Order: 14
   m_Category: 
   m_Min:
     m_Type:
@@ -27665,7 +27684,7 @@ MonoBehaviour:
   - {fileID: 8926484042661616259}
   m_ExposedName: ForceVector
   m_Exposed: 1
-  m_Order: 4
+  m_Order: 5
   m_Category: 
   m_Min:
     m_Type:
@@ -27816,3 +27835,92 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
   m_Direction: 1
   m_LinkedSlots: []
+--- !u!114 &8926484042661616266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 330e0fca1717dde4aaa144f48232aa64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UIIgnoredErrors: []
+  m_Parent: {fileID: 114350483966674976}
+  m_Children: []
+  m_UIPosition: {x: 0, y: 0}
+  m_UICollapsed: 0
+  m_UISuperCollapsed: 0
+  m_InputSlots: []
+  m_OutputSlots:
+  - {fileID: 8926484042661616267}
+  m_ExposedName: EmberGradient
+  m_Exposed: 1
+  m_Order: 4
+  m_Category: 
+  m_Min:
+    m_Type:
+      m_SerializableType: 
+    m_SerializableObject: 
+  m_Max:
+    m_Type:
+      m_SerializableType: 
+    m_SerializableObject: 
+  m_IsOutput: 0
+  m_EnumValues: []
+  m_ValueFilter: 0
+  m_Tooltip: 
+  m_Nodes:
+  - m_Id: 0
+    linkedSlots:
+    - outputSlot: {fileID: 8926484042661616267}
+      inputSlot: {fileID: 8926484042661614659}
+    - outputSlot: {fileID: 8926484042661616267}
+      inputSlot: {fileID: 8926484042661615625}
+    - outputSlot: {fileID: 8926484042661616267}
+      inputSlot: {fileID: 8926484042661615730}
+    - outputSlot: {fileID: 8926484042661616267}
+      inputSlot: {fileID: 8926484042661615835}
+    position: {x: -321, y: 1433}
+    expandedSlots: []
+    expanded: 0
+--- !u!114 &8926484042661616267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76f778ff57c4e8145b9681fe3268d8e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UIIgnoredErrors: []
+  m_Parent: {fileID: 0}
+  m_Children: []
+  m_UIPosition: {x: 0, y: 0}
+  m_UICollapsed: 1
+  m_UISuperCollapsed: 0
+  m_MasterSlot: {fileID: 8926484042661616267}
+  m_MasterData:
+    m_Owner: {fileID: 8926484042661616266}
+    m_Value:
+      m_Type:
+        m_SerializableType: UnityEngine.Gradient, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      m_SerializableObject: '{"colorKeys":[{"color":{"r":11.98431396484375,"g":11.98431396484375,"b":11.98431396484375,"a":1.0},"time":0.0},{"color":{"r":5.992156982421875,"g":5.992156982421875,"b":5.992156982421875,"a":1.0},"time":0.0117647061124444},{"color":{"r":5.992156982421875,"g":5.270588397979736,"b":0.0,"a":1.0},"time":0.2235294133424759},{"color":{"r":2.9960784912109377,"g":1.003921627998352,"b":0.0,"a":1.0},"time":0.47940793633461},{"color":{"r":1.4980392456054688,"g":0.0313725508749485,"b":0.0,"a":1.0},"time":0.7323567271232605},{"color":{"r":0.0,"g":0.0,"b":0.0,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":0.800000011920929,"time":0.3764705955982208},{"alpha":0.0,"time":1.0}],"gradientMode":0}'
+    m_Space: 2147483647
+  m_Property:
+    name: o
+    m_serializedType:
+      m_SerializableType: UnityEngine.Gradient, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  m_Direction: 1
+  m_LinkedSlots:
+  - {fileID: 8926484042661614659}
+  - {fileID: 8926484042661615625}
+  - {fileID: 8926484042661615730}
+  - {fileID: 8926484042661615835}
