@@ -17,7 +17,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.cinemachine": {
-      "version": "2.6.15",
+      "version": "2.6.17",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
@@ -270,7 +270,7 @@
       "url": "https://packages.unity.com"
     },
     "com.valvesoftware.unity.openvr": {
-      "version": "file:C:/GitHub/unity-xr-plugin/com.valve.openvr",
+      "version": "file:S:/GitHub/unity-xr-plugin/com.valve.openvr",
       "depth": 0,
       "source": "local",
       "dependencies": {

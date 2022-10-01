@@ -12,6 +12,7 @@ public class FireRingBehavior : MonoBehaviour
     private ExposedProperty StopEvent = "OnStop";
     private Vector3 _spawnPos;
     private Transform _effectPos;
+    public List<Gradient> vfxGradient;
 
     // Start is called before the first frame update
     void OnEnable()

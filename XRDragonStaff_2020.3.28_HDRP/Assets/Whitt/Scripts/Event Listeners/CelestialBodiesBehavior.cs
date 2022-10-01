@@ -15,17 +15,19 @@ public class CelestialBodiesBehavior : MonoBehaviour
     public float RotationSpeed;
     public bool clockwise = false;
 
+    public List<Gradient> vfxGradient;
+
     // Start is called before the first frame update
     void OnEnable()
     {
         PerformanceEvents.OnCelestialBodiesVFXEvent += ToggleCelestialBodies;
-        PerformanceEvents.OnDragonStaffYVelChange += SwitchRotationDirection;
+        PerformanceEvents.OnDragonStaffHorizontalSpin += SwitchRotationDirection;
     }
 
     void OnDisable()
     {
         PerformanceEvents.OnCelestialBodiesVFXEvent -= ToggleCelestialBodies;
-        PerformanceEvents.OnDragonStaffYVelChange -= SwitchRotationDirection;
+        PerformanceEvents.OnDragonStaffHorizontalSpin -= SwitchRotationDirection;
     }
 
     void Start()

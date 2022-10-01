@@ -227,30 +227,39 @@ public class PerformanceEvents : MonoBehaviour
             onTriggerButtonPress();
         }
     }
-    public static event Action OnDragonStaffXVelChange;
-    public void DragonStaffXVelChange()
+    public static event Action OnDragonStaffChiRollActive;
+    public void DragonStaffChiRollActive()
     {
-        if (OnDragonStaffXVelChange != null)
+        if (OnDragonStaffChiRollActive != null)
         {
-            OnDragonStaffXVelChange();
+            OnDragonStaffChiRollActive();
         }
     }
 
-    public static event Action OnDragonStaffYVelChange;
-    public void DragonStaffYVelChange()
+    public static event Action OnDragonStaffVerticalSpin;
+    public void DragonStaffVerticalSpin()
     {
-        if (OnDragonStaffYVelChange != null)
+        if (OnDragonStaffVerticalSpin != null)
         {
-            OnDragonStaffYVelChange();
+            OnDragonStaffVerticalSpin();
         }
     }
 
-    public static event Action OnDragonStaffZVelChange;
-    public void DragonStaffZVelChange()
+    public static event Action OnDragonStaffHorizontalSpin;
+    public void DragonStaffHorizontalSpin()
     {
-        if (OnDragonStaffZVelChange != null)
+        if (OnDragonStaffHorizontalSpin != null)
         {
-            OnDragonStaffZVelChange();
+            OnDragonStaffHorizontalSpin();
+        }
+    }
+
+    public static event Action OnDragonStaffHorizontalIsolation;
+    public void DragonStaffHorizontalIsolation()
+    {
+        if (OnDragonStaffHorizontalIsolation != null)
+        {
+            OnDragonStaffHorizontalIsolation();
         }
     }
 }

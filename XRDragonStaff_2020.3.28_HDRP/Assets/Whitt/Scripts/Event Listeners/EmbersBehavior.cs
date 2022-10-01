@@ -16,7 +16,9 @@ public class EmbersBehavior : MonoBehaviour
     private VisualEffect _vfx;
     private ExposedProperty PlayEvent = "OnPlay";
     private ExposedProperty StopEvent = "OnStop";
-    // Start is called before the first frame update
+    public List<Gradient> vfxGradient;
+    
+    
     void OnEnable()
     {
         PerformanceEvents.OnEmbersVFXEvent += ToggleEmbers;

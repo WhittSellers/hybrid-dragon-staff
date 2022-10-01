@@ -42,7 +42,7 @@ MonoBehaviour:
     x: -2740
     y: -1546
     width: 4813
-    height: 3058
+    height: 3078
 --- !u!114 &114350483966674976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -186,8 +186,8 @@ MonoBehaviour:
     max: Infinity
     enumValues: []
     descendantCount: 0
-  - name: EmberGradient
-    path: EmberGradient
+  - name: ParticleGradient
+    path: ParticleGradient
     tooltip: 
     sheetType: m_Gradient
     realType: Gradient
@@ -27856,7 +27856,7 @@ MonoBehaviour:
   m_InputSlots: []
   m_OutputSlots:
   - {fileID: 8926484042661616267}
-  m_ExposedName: EmberGradient
+  m_ExposedName: ParticleGradient
   m_Exposed: 1
   m_Order: 4
   m_Category: 

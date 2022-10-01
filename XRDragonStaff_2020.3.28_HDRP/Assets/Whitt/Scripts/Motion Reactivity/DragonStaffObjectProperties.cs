@@ -49,26 +49,24 @@ public class DragonStaffObjectProperties : MonoBehaviour
         deltaPosition = _transform.position - lastPostion;
         lastPostion = _transform.position;
 
-        SendVelocityEvents();
+        //SendVelocityEvents();
     }
 
-    // Not sure where best to call this method
-    void SendVelocityEvents()
-    {
-        if(Mathf.Abs(angularVelocity.x) < Mathf.Abs(angularVelocity.y) && Mathf.Abs(angularVelocity.x) < Mathf.Abs(angularVelocity.z) && angularVelocity.x != 0f)
-        {
-            PerformanceEvents.current.DragonStaffXVelChange();
-            //Debug.Log("X Vel Change");
-        }
-        if(Mathf.Abs(angularVelocity.y) < Mathf.Abs(angularVelocity.x) && Mathf.Abs(angularVelocity.y) < Mathf.Abs(angularVelocity.z) && angularVelocity.y != 0f)
-        {
-            PerformanceEvents.current.DragonStaffYVelChange();
-            //Debug.Log("X Vel Change");
-        }
-        if(Mathf.Abs(angularVelocity.z) < Mathf.Abs(angularVelocity.x) && Mathf.Abs(angularVelocity.z) < Mathf.Abs(angularVelocity.y) && angularVelocity.z != 0f)
-        {
-            PerformanceEvents.current.DragonStaffZVelChange();
-            //Debug.Log("X Vel Change");
-        }
-    }
+    // This functionality has been replaced by data proccessing from TouchDesigner that sends out OSC messages when a movement
+    // state is detected. 
+    // void SendVelocityEvents()
+    // {
+    //     if(Mathf.Abs(angularVelocity.x) < Mathf.Abs(angularVelocity.y) && Mathf.Abs(angularVelocity.x) < Mathf.Abs(angularVelocity.z) && angularVelocity.x != 0f)
+    //     {
+    //         //Debug.Log("X Vel Change");
+    //     }
+    //     if(Mathf.Abs(angularVelocity.y) < Mathf.Abs(angularVelocity.x) && Mathf.Abs(angularVelocity.y) < Mathf.Abs(angularVelocity.z) && angularVelocity.y != 0f)
+    //     {
+    //         //Debug.Log("X Vel Change");
+    //     }
+    //     if(Mathf.Abs(angularVelocity.z) < Mathf.Abs(angularVelocity.x) && Mathf.Abs(angularVelocity.z) < Mathf.Abs(angularVelocity.y) && angularVelocity.z != 0f)
+    //     {
+    //         //Debug.Log("X Vel Change");
+    //     }
+    // }
 }

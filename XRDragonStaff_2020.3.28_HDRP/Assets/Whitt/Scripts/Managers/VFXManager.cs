@@ -12,8 +12,9 @@ using UnityEngine.VFX.Utility;
 
 public class VFXManager : MonoBehaviour
 {
+    public List<Gradient> vfxGradient;
     public List<VisualEffect> vfxList;
-    public int VFXNum = 11;
+    public int VFXNum = 9; 
 
     void OnEnable()
     {
@@ -22,8 +23,8 @@ public class VFXManager : MonoBehaviour
         // PerformanceEvents.SwarmVFXEvent += PlaySwarm;
         // PerformanceEvents.DragonOrbVFXEvent += PlayDragonOrb;
         // PerformanceEvents.FireRingVFXEvent += PlayFireRing;
-        // PerformanceEvents.MatrixRingVFXEvent += PlayMatrixRing;
-        // PerformanceEvents.CelestialBodiesVFXEvent += PlayCelestialBodies;
+        PerformanceEvents.OnDragonStaffVerticalSpin += PlayVerticalSpin;
+        PerformanceEvents.OnDragonStaffChiRollActive += PlayChiRollActive;
         PerformanceEvents.OnResetVFXEvent += ResetVFX;
     }
 
@@ -34,13 +35,23 @@ public class VFXManager : MonoBehaviour
         // PerformanceEvents.SwarmVFXEvent -= PlaySwarm;
         // PerformanceEvents.DragonOrbVFXEvent -= PlayDragonOrb;
         // PerformanceEvents.FireRingVFXEvent -= PlayFireRing;
-        // PerformanceEvents.MatrixRingVFXEvent -= PlayMatrixRing;
-        // PerformanceEvents.CelestialBodiesVFXEvent -= PlayCelestialBodies;
+        PerformanceEvents.OnDragonStaffVerticalSpin += PlayVerticalSpin;
+        PerformanceEvents.OnDragonStaffChiRollActive -= PlayChiRollActive;
         PerformanceEvents.OnResetVFXEvent -= ResetVFX;
     }
 
     void Start() {
-        ResetVFX();
+        
+    }
+
+    void PlayChiRollActive()
+    {
+
+    }
+
+    void PlayVerticalSpin()
+    {
+
     }
 
     public void ResetVFX()

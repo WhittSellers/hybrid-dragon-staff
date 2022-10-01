@@ -17,6 +17,7 @@ public class MatrixRingBehavior : MonoBehaviour
     public Vector3 _forceDirection;
     private Vector3 _angularVelocity;
     private GameObject _dragonStaff;
+    public List<Gradient> vfxGradient;
 
     // Start is called before the first frame update
     void OnEnable()

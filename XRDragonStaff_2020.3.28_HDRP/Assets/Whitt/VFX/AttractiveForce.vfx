@@ -209,8 +209,8 @@ MonoBehaviour:
     max: Infinity
     enumValues: []
     descendantCount: 0
-  - name: Color over Life Gradient
-    path: Color over Life Gradient
+  - name: Particle Gradient
+    path: Particle Gradient
     tooltip: 
     sheetType: m_Gradient
     realType: Gradient
@@ -218,7 +218,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Gradient, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"colorKeys":[{"color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"time":0.0},{"color":{"r":0.5,"g":0.5,"b":0.5,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":0.0,"time":0.0},{"alpha":1.0,"time":0.10000763088464737},{"alpha":0.800000011920929,"time":0.800000011920929},{"alpha":0.0,"time":1.0}],"gradientMode":0}'
+      m_SerializableObject: '{"colorKeys":[{"color":{"r":95.87451171875,"g":95.87451171875,"b":95.87451171875,"a":1.0},"time":0.0},{"color":{"r":23.9686279296875,"g":21.082353591918947,"b":0.0,"a":1.0},"time":0.05882352963089943},{"color":{"r":23.9686279296875,"g":8.031373023986817,"b":0.0,"a":1.0},"time":0.47940793633461},{"color":{"r":23.9686279296875,"g":0.501960813999176,"b":0.0,"a":1.0},"time":0.7323567271232605},{"color":{"r":0.0,"g":0.0,"b":0.0,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":0.800000011920929,"time":0.3764705955982208},{"alpha":0.0,"time":1.0}],"gradientMode":0}'
     min: -Infinity
     max: Infinity
     enumValues: []
@@ -2574,12 +2574,12 @@ MonoBehaviour:
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
   m_UIPosition: {x: 0, y: 0}
-  m_UICollapsed: 1
+  m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots: []
   m_OutputSlots:
   - {fileID: 8926484042661614713}
-  m_ExposedName: Color over Life Gradient
+  m_ExposedName: Particle Gradient
   m_Exposed: 1
   m_Order: 2
   m_Category: 
@@ -2632,7 +2632,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Gradient, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"colorKeys":[{"color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"time":0.0},{"color":{"r":0.5,"g":0.5,"b":0.5,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":0.0,"time":0.0},{"alpha":1.0,"time":0.10000763088464737},{"alpha":0.800000011920929,"time":0.800000011920929},{"alpha":0.0,"time":1.0}],"gradientMode":0}'
+      m_SerializableObject: '{"colorKeys":[{"color":{"r":95.87451171875,"g":95.87451171875,"b":95.87451171875,"a":1.0},"time":0.0},{"color":{"r":23.9686279296875,"g":21.082353591918947,"b":0.0,"a":1.0},"time":0.05882352963089943},{"color":{"r":23.9686279296875,"g":8.031373023986817,"b":0.0,"a":1.0},"time":0.47940793633461},{"color":{"r":23.9686279296875,"g":0.501960813999176,"b":0.0,"a":1.0},"time":0.7323567271232605},{"color":{"r":0.0,"g":0.0,"b":0.0,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":0.800000011920929,"time":0.3764705955982208},{"alpha":0.0,"time":1.0}],"gradientMode":0}'
     m_Space: 2147483647
   m_Property:
     name: o
