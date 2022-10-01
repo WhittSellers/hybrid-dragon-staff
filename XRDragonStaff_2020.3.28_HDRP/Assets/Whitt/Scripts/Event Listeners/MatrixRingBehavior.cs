@@ -17,7 +17,9 @@ public class MatrixRingBehavior : MonoBehaviour
     public Vector3 _forceDirection;
     private Vector3 _angularVelocity;
     private GameObject _dragonStaff;
-    public List<Gradient> vfxGradient;
+    private bool fireGradient = true;
+    private bool rainbowGradient = false;
+    private VFXManager _vfxManager;
 
     // Start is called before the first frame update
     void OnEnable()
@@ -45,12 +47,91 @@ public class MatrixRingBehavior : MonoBehaviour
     void Start()
     {
         _vfx = GetComponent<VisualEffect>();
+        _vfxManager = FindObjectOfType<VFXManager>();
         _dragonStaff = GameObject.Find("DragonStaffTracker");
         
         if(_dragonStaff != null)
         {
             _dragonStaffProps = _dragonStaff.GetComponent<DragonStaffObjectProperties>();
             _angularVelocity = _dragonStaffProps.angularVelocity;
+        }
+    }
+
+    void SetChiRollGradient()
+    {
+        if(_vfxManager.vfxGradient.Count >= 2)
+        {
+            if(rainbowGradient == true)
+            {
+                _vfx.SetGradient(vfxPropertyNames[3], _vfxManager.vfxGradient[2]);
+                fireGradient = true;
+                rainbowGradient = false;
+            }
+            if(fireGradient == true)
+            {
+                return;
+            }
+        }    
+    }
+
+    void SetHorizontalIsolationGradient()
+    {
+        if(_vfxManager.vfxGradient.Count >= 2)
+        {
+            if(rainbowGradient == true)
+            {
+                _vfx.SetGradient(vfxPropertyNames[3], _vfxManager.vfxGradient[2]);
+                fireGradient = true;
+                rainbowGradient = false;
+            }
+            if(fireGradient == true)
+            {
+                return;
+            }
+        } 
+    }
+    
+    void SetHorizontalSpinGradient()
+    {
+        if(_vfxManager.vfxGradient.Count >= 2)
+        {
+            if(fireGradient == true)
+            {
+                _vfx.SetGradient(vfxPropertyNames[3], _vfxManager.vfxGradient[1]);
+                fireGradient = false;
+                rainbowGradient = true;
+            }
+            if(rainbowGradient == true)
+            {
+                return;
+            }
+        } 
+    }
+
+    void SetVerticalSpinGradient()
+    {
+        if(_vfxManager.vfxGradient.Count >= 2)
+        {
+            if(fireGradient == true)
+            {
+                _vfx.SetGradient(vfxPropertyNames[3], _vfxManager.vfxGradient[1]);
+                fireGradient = false;
+                rainbowGradient = true;
+            }
+            if(rainbowGradient == true)
+            {
+                return;
+            }
+        }
+    }
+
+    void AdjustForceDirection() // This is quick fix, should figure out a better way to trigger this 
+    {
+        burst = false;
+        _forceDirection = new Vector3(0,0,-1);
+        if(vfxPropertyNames != null)
+        {
+            _vfx.SetVector3(vfxPropertyNames[1], _forceDirection);
         }
     }
 
@@ -69,16 +150,6 @@ public class MatrixRingBehavior : MonoBehaviour
     {
         burst = true;
         _forceDirection = new Vector3(0,-1,0);
-        if(vfxPropertyNames != null)
-        {
-            _vfx.SetVector3(vfxPropertyNames[1], _forceDirection);
-        }
-    }
-
-    void AdjustForceDirection() // This is quick fix, should figure out a better way to trigger this 
-    {
-        burst = false;
-        _forceDirection = new Vector3(0,0,-1);
         if(vfxPropertyNames != null)
         {
             _vfx.SetVector3(vfxPropertyNames[1], _forceDirection);
@@ -147,7 +218,6 @@ public class MatrixRingBehavior : MonoBehaviour
             }
         }
     }
-
 
     IEnumerator MatrixRingBlast()
     {

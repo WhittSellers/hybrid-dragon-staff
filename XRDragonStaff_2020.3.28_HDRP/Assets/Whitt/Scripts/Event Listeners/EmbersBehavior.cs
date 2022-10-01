@@ -16,12 +16,18 @@ public class EmbersBehavior : MonoBehaviour
     private VisualEffect _vfx;
     private ExposedProperty PlayEvent = "OnPlay";
     private ExposedProperty StopEvent = "OnStop";
-    public List<Gradient> vfxGradient;
+    private bool fireGradient = true;
+    private bool rainbowGradient = false;
+    private VFXManager _vfxManager;
     
     
     void OnEnable()
     {
         PerformanceEvents.OnEmbersVFXEvent += ToggleEmbers;
+        PerformanceEvents.OnDragonStaffChiRollActive += SetChiRollGradient;
+        PerformanceEvents.OnDragonStaffHorizontalIsolation += SetHorizontalIsolationGradient;
+        PerformanceEvents.OnDragonStaffHorizontalSpin += SetHorizontalSpinGradient;
+        PerformanceEvents.OnDragonStaffVerticalSpin += SetVerticalSpinGradient;
         PerformanceEvents.OnPerformanceIntro += SetPropertiesIntro;
         PerformanceEvents.OnPerformanceRising += SetPropertiesRising;
         PerformanceEvents.OnPerformanceClimax += SetPropertiesClimax;
@@ -31,6 +37,10 @@ public class EmbersBehavior : MonoBehaviour
     void OnDisable()
     {
         PerformanceEvents.OnEmbersVFXEvent -= ToggleEmbers;
+        PerformanceEvents.OnDragonStaffChiRollActive -= SetChiRollGradient;
+        PerformanceEvents.OnDragonStaffHorizontalIsolation -= SetHorizontalIsolationGradient;
+        PerformanceEvents.OnDragonStaffHorizontalSpin -= SetHorizontalSpinGradient;
+        PerformanceEvents.OnDragonStaffVerticalSpin -= SetVerticalSpinGradient;
         PerformanceEvents.OnPerformanceIntro -= SetPropertiesIntro;
         PerformanceEvents.OnPerformanceRising -= SetPropertiesRising;
         PerformanceEvents.OnPerformanceClimax -= SetPropertiesClimax;
@@ -40,6 +50,7 @@ public class EmbersBehavior : MonoBehaviour
     void Start()
     {
         _vfx = GetComponent<VisualEffect>();
+        _vfxManager = FindObjectOfType<VFXManager>();
     }
     
     void ToggleEmbers()
@@ -65,6 +76,74 @@ public class EmbersBehavior : MonoBehaviour
             {
                 _vfx.enabled = true;
                 isPlaying = true;
+            }
+        }
+    }
+
+    void SetChiRollGradient()
+    {
+        if(_vfxManager.vfxGradient.Count >= 2)
+        {
+            if(rainbowGradient == true)
+            {
+                _vfx.SetGradient(vfxPropertyNames[5], _vfxManager.vfxGradient[0]);
+                fireGradient = true;
+                rainbowGradient = false;
+            }
+            if(fireGradient == true)
+            {
+                return;
+            }
+        }    
+    }
+
+    void SetHorizontalIsolationGradient()
+    {
+        if(_vfxManager.vfxGradient.Count >= 2)
+        {
+            if(rainbowGradient == true)
+            {
+                _vfx.SetGradient(vfxPropertyNames[5], _vfxManager.vfxGradient[0]);
+                fireGradient = true;
+                rainbowGradient = false;
+            }
+            if(fireGradient == true)
+            {
+                return;
+            }
+        } 
+    }
+    
+    void SetHorizontalSpinGradient()
+    {
+        if(_vfxManager.vfxGradient.Count >= 2)
+        {
+            if(fireGradient == true)
+            {
+                _vfx.SetGradient(vfxPropertyNames[5], _vfxManager.vfxGradient[1]);
+                fireGradient = false;
+                rainbowGradient = true;
+            }
+            if(rainbowGradient == true)
+            {
+                return;
+            }
+        } 
+    }
+
+    void SetVerticalSpinGradient()
+    {
+        if(_vfxManager.vfxGradient.Count >= 2)
+        {
+            if(fireGradient == true)
+            {
+                _vfx.SetGradient(vfxPropertyNames[5], _vfxManager.vfxGradient[1]);
+                fireGradient = false;
+                rainbowGradient = true;
+            }
+            if(rainbowGradient == true)
+            {
+                return;
             }
         }
     }

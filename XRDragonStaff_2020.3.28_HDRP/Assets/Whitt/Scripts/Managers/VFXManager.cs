@@ -14,44 +14,16 @@ public class VFXManager : MonoBehaviour
 {
     public List<Gradient> vfxGradient;
     public List<VisualEffect> vfxList;
-    public int VFXNum = 9; 
+    public float turbulenceIntensity = 0.1f;
 
     void OnEnable()
     {
-        // PerformanceEvents.FireVFXEvent += PlayCampfire;
-        // PerformanceEvents.EmbersVFXEvent += PlayEmbers;
-        // PerformanceEvents.SwarmVFXEvent += PlaySwarm;
-        // PerformanceEvents.DragonOrbVFXEvent += PlayDragonOrb;
-        // PerformanceEvents.FireRingVFXEvent += PlayFireRing;
-        PerformanceEvents.OnDragonStaffVerticalSpin += PlayVerticalSpin;
-        PerformanceEvents.OnDragonStaffChiRollActive += PlayChiRollActive;
         PerformanceEvents.OnResetVFXEvent += ResetVFX;
     }
 
     void OnDisable()
     {
-        // PerformanceEvents.FireVFXEvent -= PlayCampfire;
-        // PerformanceEvents.EmbersVFXEvent -= PlayEmbers;
-        // PerformanceEvents.SwarmVFXEvent -= PlaySwarm;
-        // PerformanceEvents.DragonOrbVFXEvent -= PlayDragonOrb;
-        // PerformanceEvents.FireRingVFXEvent -= PlayFireRing;
-        PerformanceEvents.OnDragonStaffVerticalSpin += PlayVerticalSpin;
-        PerformanceEvents.OnDragonStaffChiRollActive -= PlayChiRollActive;
         PerformanceEvents.OnResetVFXEvent -= ResetVFX;
-    }
-
-    void Start() {
-        
-    }
-
-    void PlayChiRollActive()
-    {
-
-    }
-
-    void PlayVerticalSpin()
-    {
-
     }
 
     public void ResetVFX()

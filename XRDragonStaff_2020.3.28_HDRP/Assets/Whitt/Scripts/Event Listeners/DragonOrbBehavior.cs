@@ -12,9 +12,9 @@ public class DragonOrbBehavior : MonoBehaviour
     private ExposedProperty StopEvent = "OnStop";
     private bool fireGradient = true;
     private bool rainbowGradient = false;
-    public List<Gradient> vfxGradient;
+    private VFXManager _vfxManager;
     public List<string> VFXPropertyNames;
-    // Start is called before the first frame update
+
     void OnEnable()
     {
         PerformanceEvents.OnDragonOrbVFXEvent += ToggleDragonOrb;
@@ -36,6 +36,7 @@ public class DragonOrbBehavior : MonoBehaviour
     void Start()
     {
         _vfx = GetComponent<VisualEffect>();
+        _vfxManager = FindObjectOfType<VFXManager>();
     }
     
     void ToggleDragonOrb()
@@ -66,11 +67,11 @@ public class DragonOrbBehavior : MonoBehaviour
 
     void SetChiRollGradient()
     {
-        if(vfxGradient.Count > 0)
+        if(_vfxManager.vfxGradient.Count >= 2)
         {
             if(rainbowGradient == true)
             {
-                _vfx.SetGradient(VFXPropertyNames[0], vfxGradient[0]);
+                _vfx.SetGradient(VFXPropertyNames[0], _vfxManager.vfxGradient[0]);
                 fireGradient = true;
                 rainbowGradient = false;
             }
@@ -83,11 +84,11 @@ public class DragonOrbBehavior : MonoBehaviour
 
     void SetHorizontalIsolationGradient()
     {
-        if(vfxGradient.Count > 0)
+        if(_vfxManager.vfxGradient.Count >= 2)
         {
             if(rainbowGradient == true)
             {
-                _vfx.SetGradient(VFXPropertyNames[0], vfxGradient[0]);
+                _vfx.SetGradient(VFXPropertyNames[0], _vfxManager.vfxGradient[0]);
                 fireGradient = true;
                 rainbowGradient = false;
             }
@@ -100,11 +101,11 @@ public class DragonOrbBehavior : MonoBehaviour
     
     void SetHorizontalSpinGradient()
     {
-        if(vfxGradient.Count > 0)
+        if(_vfxManager.vfxGradient.Count >= 2)
         {
             if(fireGradient == true)
             {
-                _vfx.SetGradient(VFXPropertyNames[0], vfxGradient[1]);
+                _vfx.SetGradient(VFXPropertyNames[0], _vfxManager.vfxGradient[1]);
                 fireGradient = false;
                 rainbowGradient = true;
             }
@@ -117,11 +118,11 @@ public class DragonOrbBehavior : MonoBehaviour
 
     void SetVerticalSpinGradient()
     {
-        if(vfxGradient.Count > 0)
+        if(_vfxManager.vfxGradient.Count >= 2)
         {
             if(fireGradient == true)
             {
-                _vfx.SetGradient(VFXPropertyNames[0], vfxGradient[1]);
+                _vfx.SetGradient(VFXPropertyNames[0], _vfxManager.vfxGradient[1]);
                 fireGradient = false;
                 rainbowGradient = true;
             }
