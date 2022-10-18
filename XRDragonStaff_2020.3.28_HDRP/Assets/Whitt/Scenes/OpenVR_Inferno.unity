@@ -572,7 +572,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 54250640}
-  m_LocalRotation: {x: 6.565481e-10, y: 0.9975862, z: 0.06943924, w: -0.000000009432182}
+  m_LocalRotation: {x: 0.0000000029282379, y: -0.99758625, z: -0.069439255, w: -0.000000042138932}
   m_LocalPosition: {x: 0, y: 1, z: 8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1246,8 +1246,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 111894333}
-  m_LocalRotation: {x: 6.565481e-10, y: 0.9975862, z: 0.06943924, w: -0.000000009432182}
-  m_LocalPosition: {x: 0, y: 1, z: 8}
+  m_LocalRotation: {x: -0.0000000012315698, y: 0.9975862, z: 0.06943924, w: 0.000000017693123}
+  m_LocalPosition: {x: 0, y: 1, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -8091,7 +8091,7 @@ VisualEffect:
       - m_Value: 1
         m_Name: ParticleLifeTime
         m_Overridden: 1
-      - m_Value: 5
+      - m_Value: 4
         m_Name: TurbulenceIntensity
         m_Overridden: 1
       - m_Value: 0.5
@@ -9652,7 +9652,7 @@ VisualEffect:
       - m_Value: 0.5
         m_Name: VortexDrag
         m_Overridden: 1
-      - m_Value: 5
+      - m_Value: 4
         m_Name: TurbulenceIntensity
         m_Overridden: 1
     m_Vector2f:
