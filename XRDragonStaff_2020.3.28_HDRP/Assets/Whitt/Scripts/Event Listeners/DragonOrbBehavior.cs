@@ -38,6 +38,14 @@ public class DragonOrbBehavior : MonoBehaviour
         _vfx = GetComponent<VisualEffect>();
         _vfxManager = FindObjectOfType<VFXManager>();
     }
+
+    void Update()
+    {
+        if(VFXPropertyNames.Count > 1)
+        {
+            _vfx.SetFloat(VFXPropertyNames[1],_vfxManager.turbulenceIntensity);
+        }
+    }
     
     void ToggleDragonOrb()
     {
