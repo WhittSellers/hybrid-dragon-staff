@@ -1130,7 +1130,7 @@
                 {
                     "name": "first",
                     "id": "2def23fb-65f8-4f92-a527-b94a80cd8d4d",
-                    "path": "<XRViveTracker>{Left Foot}/deviceRotation",
+                    "path": "<XRViveTracker>{Keyboard}/deviceRotation",
                     "interactions": "",
                     "processors": "",
                     "groups": "Generic XR Controller",
@@ -1141,7 +1141,7 @@
                 {
                     "name": "second",
                     "id": "bbbb0b43-ff99-4bf9-863a-c022fcbe7aba",
-                    "path": "<XRInputV1::HTC::HTCViveTrackerOpenXR>/deviceRotation",
+                    "path": "<XRViveTracker>{Keyboard}/deviceRotation",
                     "interactions": "",
                     "processors": "",
                     "groups": "Generic XR Controller",
@@ -1174,7 +1174,7 @@
                 {
                     "name": "first",
                     "id": "324612c6-ee89-4eb5-9c22-616f6053b725",
-                    "path": "<XRViveTracker>{Left Foot}/devicePosition",
+                    "path": "<XRViveTracker>{Keyboard}/devicePosition",
                     "interactions": "",
                     "processors": "",
                     "groups": "Generic XR Controller",
@@ -1185,7 +1185,7 @@
                 {
                     "name": "second",
                     "id": "d137c204-463a-4d5d-8c63-e122b7dfa008",
-                    "path": "<XRInputV1::HTC::HTCViveTrackerOpenXR>/devicePosition",
+                    "path": "<XRViveTracker>{Keyboard}/devicePosition",
                     "interactions": "",
                     "processors": "",
                     "groups": "Generic XR Controller",
