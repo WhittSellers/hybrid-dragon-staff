@@ -1,4 +1,4 @@
-Shader /*ase_name*/ "Hidden/HD/Unlit" /*end*/
+Shader /*ase_name*/ "Hidden/HDRP/Unlit" /*end*/
 {
 	Properties
 	{
@@ -6,48 +6,56 @@ Shader /*ase_name*/ "Hidden/HD/Unlit" /*end*/
 		[HideInInspector]_RenderQueueType("Render Queue Type", Float) = 1
 		[HideInInspector][ToggleUI]_AddPrecomputedVelocity("Add Precomputed Velocity", Float) = 1
 		[HideInInspector]_ShadowMatteFilter("Shadow Matte Filter", Float) = 2.006836
-		[HideInInspector]_StencilRef("Stencil Ref", Int) = 0
-		[HideInInspector]_StencilWriteMask("StencilWrite Mask", Int) = 6
-		[HideInInspector]_StencilRefDepth("StencilRefDepth", Int) = 0
-		[HideInInspector]_StencilWriteMaskDepth("_StencilWriteMaskDepth", Int) = 8
-		[HideInInspector]_StencilRefMV("_StencilRefMV", Int) = 32
-		[HideInInspector]_StencilWriteMaskMV("_StencilWriteMaskMV", Int) = 40
-		[HideInInspector]_StencilRefDistortionVec("_StencilRefDistortionVec", Int) = 4
-		[HideInInspector]_StencilWriteMaskDistortionVec("_StencilWriteMaskDistortionVec", Int) = 4
-		[HideInInspector]_StencilWriteMaskGBuffer("_StencilWriteMaskGBuffer", Int) = 14
-		[HideInInspector]_StencilRefGBuffer("_StencilRefGBuffer", Int) = 2
-		[HideInInspector]_ZTestGBuffer("_ZTestGBuffer", Int) = 4
-		[HideInInspector][ToggleUI]_RequireSplitLighting("_RequireSplitLighting", Float) = 0
-		[HideInInspector][ToggleUI]_ReceivesSSR("_ReceivesSSR", Float) = 0
-		[HideInInspector]_SurfaceType("_SurfaceType", Float) = 0
-		[HideInInspector]_BlendMode("_BlendMode", Float) = 0
-		[HideInInspector]_SrcBlend("_SrcBlend", Float) = 1
-		[HideInInspector]_DstBlend("_DstBlend", Float) = 0
-		[HideInInspector]_AlphaSrcBlend("Vec_AlphaSrcBlendtor1", Float) = 1
-		[HideInInspector]_AlphaDstBlend("_AlphaDstBlend", Float) = 0
-		[HideInInspector][ToggleUI]_ZWrite("_ZWrite", Float) = 1
-		[HideInInspector][ToggleUI]_TransparentZWrite("_TransparentZWrite", Float) = 1
-		[HideInInspector]_CullMode("Cull Mode", Float) = 2
-		[HideInInspector]_TransparentSortPriority("_TransparentSortPriority", Int) = 0
-		[HideInInspector][ToggleUI]_EnableFogOnTransparent("_EnableFogOnTransparent", Float) = 1
-		[HideInInspector]_CullModeForward("_CullModeForward", Float) = 2
-		[HideInInspector][Enum(Front, 1, Back, 2)]_TransparentCullMode("_TransparentCullMode", Float) = 2
-		[HideInInspector]_ZTestDepthEqualForOpaque("_ZTestDepthEqualForOpaque", Int) = 4
-		[HideInInspector][Enum(UnityEngine.Rendering.CompareFunction)]_ZTestTransparent("_ZTestTransparent", Float) = 4
-		[HideInInspector][ToggleUI]_TransparentBackfaceEnable("_TransparentBackfaceEnable", Float) = 0
-		[HideInInspector][ToggleUI]_AlphaCutoffEnable("_AlphaCutoffEnable", Float) = 0
-		[HideInInspector][ToggleUI]_UseShadowThreshold("_UseShadowThreshold", Float) = 0
-		[HideInInspector][ToggleUI]_DoubleSidedEnable("_DoubleSidedEnable", Float) = 0
-		[HideInInspector][Enum(Flip, 0, Mirror, 1, None, 2)]_DoubleSidedNormalMode("_DoubleSidedNormalMode", Float) = 2
-		[HideInInspector]_DoubleSidedConstants("_DoubleSidedConstants", Vector) = (1, 1, -1, 0)
+		[HideInInspector] _StencilRef("Stencil Ref", Int) = 0 // StencilUsage.Clear
+		[HideInInspector] _StencilWriteMask("Stencil Write Mask", Int) = 3 // StencilUsage.RequiresDeferredLighting | StencilUsage.SubsurfaceScattering
+		[HideInInspector] _StencilRefDepth("Stencil Ref Depth", Int) = 0 // Nothing
+		[HideInInspector] _StencilWriteMaskDepth("Stencil Write Mask Depth", Int) = 8 // StencilUsage.TraceReflectionRay
+		[HideInInspector] _StencilRefMV("Stencil Ref MV", Int) = 32 // StencilUsage.ObjectMotionVector
+		[HideInInspector] _StencilWriteMaskMV("Stencil Write Mask MV", Int) = 32 // StencilUsage.ObjectMotionVector
+		[HideInInspector] _StencilRefDistortionVec("Stencil Ref Distortion Vec", Int) = 2 // StencilUsage.DistortionVectors
+		[HideInInspector] _StencilWriteMaskDistortionVec("Stencil Write Mask Distortion Vec", Int) = 2 // StencilUsage.DistortionVectors
+		[HideInInspector] _StencilWriteMaskGBuffer("Stencil Write Mask GBuffer", Int) = 3 // StencilUsage.RequiresDeferredLighting | StencilUsage.SubsurfaceScattering
+		[HideInInspector] _StencilRefGBuffer("Stencil Ref GBuffer", Int) = 2 // StencilUsage.RequiresDeferredLighting
+		[HideInInspector] _ZTestGBuffer("ZTest GBuffer", Int) = 4
+		[HideInInspector][ToggleUI] _RequireSplitLighting("Require Split Lighting", Float) = 0
+		[HideInInspector][ToggleUI] _ReceivesSSR("Receives SSR", Float) = 1
+		[HideInInspector] _SurfaceType("Surface Type", Float) = 0
+		[HideInInspector] _BlendMode("Blend Mode", Float) = 0
+		[HideInInspector] _SrcBlend("Src Blend", Float) = 1
+		[HideInInspector] _DstBlend("Dst Blend", Float) = 0
+		[HideInInspector] _AlphaSrcBlend("Alpha Src Blend", Float) = 1
+		[HideInInspector] _AlphaDstBlend("Alpha Dst Blend", Float) = 0
+		[HideInInspector][ToggleUI] _ZWrite("ZWrite", Float) = 1
+		[HideInInspector][ToggleUI] _TransparentZWrite("Transparent ZWrite", Float) = 0
+		[HideInInspector] _CullMode("Cull Mode", Float) = 2
+		[HideInInspector]_TransparentSortPriority("Transparent Sort Priority", Float) = 0
+		[HideInInspector][ToggleUI] _EnableFogOnTransparent("Enable Fog", Float) = 1
+		[HideInInspector] _CullModeForward("Cull Mode Forward", Float) = 2 // This mode is dedicated to Forward to correctly handle backface then front face rendering thin transparent
+		[HideInInspector][Enum(UnityEditor.Rendering.HighDefinition.TransparentCullMode)] _TransparentCullMode("Transparent Cull Mode", Int) = 2 // Back culling by default
+		[HideInInspector] _ZTestDepthEqualForOpaque("ZTest Depth Equal For Opaque", Int) = 4 // Less equal
+		[HideInInspector][Enum(UnityEngine.Rendering.CompareFunction)] _ZTestTransparent("ZTest Transparent", Int) = 4 // Less equal
+		[HideInInspector][ToggleUI] _TransparentBackfaceEnable("Transparent Backface Enable", Float) = 0
+		[HideInInspector][ToggleUI] _AlphaCutoffEnable("Alpha Cutoff Enable", Float) = 0
+		[HideInInspector][ToggleUI] _UseShadowThreshold("Use Shadow Threshold", Float) = 0
+		[HideInInspector] [ToggleUI] _DoubleSidedEnable("Double Sided Enable", Float) = 0
+		[HideInInspector] [Enum(Flip, 0, Mirror, 1, None, 2)] _DoubleSidedNormalMode("Double Sided Normal Mode", Float) = 2
+		[HideInInspector] _DoubleSidedConstants("DoubleSidedConstants", Vector) = (1,1,-1,0)
 		[HideInInspector]_DistortionEnable("_DistortionEnable",Float) = 0
 		[HideInInspector]_DistortionOnly("_DistortionOnly",Float) = 0
+
 		//_TessPhongStrength( "Tess Phong Strength", Range( 0, 1 ) ) = 0.5
 		//_TessValue( "Tess Max Tessellation", Range( 1, 32 ) ) = 16
 		//_TessMin( "Tess Min Distance", Float ) = 10
 		//_TessMax( "Tess Max Distance", Float ) = 25
 		//_TessEdgeLength ( "Tess Edge length", Range( 2, 50 ) ) = 16
 		//_TessMaxDisp( "Tess Max Displacement", Float ) = 25
+
+		[HideInInspector][ToggleUI] _TransparentWritingMotionVec("Transparent Writing MotionVec", Float) = 0
+		[HideInInspector][Enum(UnityEditor.Rendering.HighDefinition.OpaqueCullMode)] _OpaqueCullMode("Opaque Cull Mode", Int) = 2 // Back culling by default
+		[HideInInspector][ToggleUI] _SupportDecals("Support Decals", Float) = 1
+		[HideInInspector][ToggleUI] _ReceivesSSRTransparent("Receives SSR Transparent", Float) = 0
+		[HideInInspector] _EmissionColor("Color", Color) = (1, 1, 1)
+		[HideInInspector] _UnlitColorMap_MipInfo("_UnlitColorMap_MipInfo", Vector) = (0, 0, 0, 0)
 	}
 
 	SubShader
@@ -58,7 +66,7 @@ Shader /*ase_name*/ "Hidden/HD/Unlit" /*end*/
 			Option:Surface Type:Opaque,Transparent:Opaque
 				Opaque:SetShaderProperty:_SurfaceType,0
 				Opaque:SetPropertyOnSubShader:RenderQueue,Geometry
-				Opaque:ShowOption:  Rendering Pass 
+				Opaque:ShowOption:  Rendering Pass
 				Opaque:HideOption:  Rendering Pass
 				Opaque:HideOption:  Blending Mode
 				Opaque:HideOption:  Receive Fog
@@ -68,7 +76,7 @@ Shader /*ase_name*/ "Hidden/HD/Unlit" /*end*/
 				Opaque:HideOption:  Depth Test
 				Transparent:SetShaderProperty:_SurfaceType,1
 				Transparent:SetPropertyOnSubShader:RenderQueue,Transparent
-				Transparent:HideOption:  Rendering Pass 
+				Transparent:HideOption:  Rendering Pass
 				Transparent:ShowOption:  Rendering Pass
 				Transparent:ShowOption:  Blending Mode
 				Transparent:ShowOption:  Receive Fog
@@ -97,6 +105,8 @@ Shader /*ase_name*/ "Hidden/HD/Unlit" /*end*/
 			Option:  Receive Fog:false,true:true
 				true:SetShaderProperty:_EnableFogOnTransparent,1
 				false,disable:SetShaderProperty:_EnableFogOnTransparent,0
+				true:SetDefine:pragma shader_feature_local _ENABLE_FOG_ON_TRANSPARENT
+				false:RemoveDefine:pragma shader_feature_local _ENABLE_FOG_ON_TRANSPARENT
 			Option:  Distortion:false,true:false
 				true:ExcludeAllPassesBut:DistortionVectors
 				true:IncludePass:DistortionVectors
@@ -154,14 +164,22 @@ Shader /*ase_name*/ "Hidden/HD/Unlit" /*end*/
 				false:ExcludePass:Motion Vectors
 			Option:  Add Precomputed Velocity:false,true:false
 				false,disable:RemoveDefine:_ADD_PRECOMPUTED_VELOCITY 1
+                false,disable:RemoveDefine:pragma shader_feature_local _ADD_PRECOMPUTED_VELOCITY
 				true:SetDefine:_ADD_PRECOMPUTED_VELOCITY 1
+				true:SetDefine:pragma shader_feature_local _ADD_PRECOMPUTED_VELOCITY
 				true:SetShaderProperty:_AddPrecomputedVelocity,1
 			Option:Shadow Matte:false,true:false
-				false,disable:SetShaderProperty:_ShadowMatteFilter,//[HideInInspector]_ShadowMatteFilter("Shadow Matte Filter", Float) = 2
-				true:ShowPort:Forward Unlit:Shadow Tint
+				false,disable:SetShaderProperty:_ShadowMatteFilter,//[HideInInspector]_ShadowMatteFilter("Shadow Matte Filter", Float) = 2.006836
 				false,disable:HidePort:Forward Unlit:Shadow Tint
-				true:SetDefine:_ENABLE_SHADOW_MATTE 1
 				false,disable:RemoveDefine:_ENABLE_SHADOW_MATTE 1
+				false,disable:RemoveDefine:Forward Unlit:pragma multi_compile SHADOW_LOW SHADOW_MEDIUM SHADOW_HIGH
+				false,disable:RemoveDefine:Motion Vectors:WRITE_NORMAL_BUFFER
+				false,disable:RemoveDefine:DepthForwardOnly:WRITE_NORMAL_BUFFER
+				true:SetDefine:_ENABLE_SHADOW_MATTE 1
+				true:ShowPort:Forward Unlit:Shadow Tint
+				true:SetDefine:Forward Unlit:pragma multi_compile SHADOW_LOW SHADOW_MEDIUM SHADOW_HIGH
+				true:SetDefine:Motion Vectors:WRITE_NORMAL_BUFFER
+				true:SetDefine:DepthForwardOnly:WRITE_NORMAL_BUFFER
 			Option:Cast Shadows:false,true:true
 				true:IncludePass:ShadowCaster
 				false,disable:ExcludePass:ShadowCaster
@@ -170,15 +188,17 @@ Shader /*ase_name*/ "Hidden/HD/Unlit" /*end*/
 				false:RemoveDefine:pragma multi_compile _ DOTS_INSTANCING_ON
 			Option:GPU Instancing:false,true:true
 				true:SetDefine:pragma multi_compile_instancing
+				true:SetDefine:pragma instancing_options renderinglayer
 				false:RemoveDefine:pragma multi_compile_instancing
+				false:RemoveDefine:pragma instancing_options renderinglayer
 			Option:Tessellation:false,true:false
-				true:SetDefine:TESSELLATION_ON 1
+				true:SetDefine:ASE_TESSELLATION 1
 				true:SetDefine:pragma require tessellation tessHW
 				true:SetDefine:pragma hull HullFunction
 				true:SetDefine:pragma domain DomainFunction
 				true:ShowOption:  Phong
 				true:ShowOption:  Type
-				false,disable:RemoveDefine:TESSELLATION_ON 1
+				false,disable:RemoveDefine:ASE_TESSELLATION 1
 				false,disable:RemoveDefine:pragma require tessellation tessHW
 				false,disable:RemoveDefine:pragma hull HullFunction
 				false,disable:RemoveDefine:pragma domain DomainFunction
@@ -248,7 +268,6 @@ Shader /*ase_name*/ "Hidden/HD/Unlit" /*end*/
 		HLSLINCLUDE
 		#pragma target 4.5
 		#pragma only_renderers d3d11 playstation xboxone xboxseries vulkan metal switch
-		#pragma instancing_options renderinglayer
 
 		#ifndef ASE_TESS_FUNCS
 		#define ASE_TESS_FUNCS
@@ -256,7 +275,7 @@ Shader /*ase_name*/ "Hidden/HD/Unlit" /*end*/
 		{
 			return tessValue;
 		}
-		
+
 		float CalcDistanceTessFactor (float4 vertex, float minDist, float maxDist, float tess, float4x4 o2w, float3 cameraPos )
 		{
 			float3 wpos = mul(o2w,vertex).xyz;
@@ -373,22 +392,21 @@ Shader /*ase_name*/ "Hidden/HD/Unlit" /*end*/
 			   Pass Replace
 			}
 			HLSLPROGRAM
-			#define SHADERPASS SHADERPASS_FORWARD_UNLIT
-			#pragma multi_compile _ DEBUG_DISPLAY
 
 			#pragma shader_feature _SURFACE_TYPE_TRANSPARENT
-			#pragma shader_feature_local _ _BLENDMODE_ALPHA _BLENDMODE_ADD _BLENDMODE_PRE_MULTIPLY
 			#pragma shader_feature_local _ALPHATEST_ON
-			#pragma shader_feature_local _ENABLE_FOG_ON_TRANSPARENT
+
+			#pragma multi_compile _ DEBUG_DISPLAY
 
 			#pragma vertex Vert
 			#pragma fragment Frag
 
+			#define SHADERPASS SHADERPASS_FORWARD_UNLIT
 			#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Common.hlsl"
-			#include "Packages/com.unity.render-pipelines.high-definition/Runtime/ShaderLibrary/ShaderVariables.hlsl"
-			#include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/ShaderPass/FragInputs.hlsl"
-			#include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/ShaderPass/ShaderPass.cs.hlsl"
-			#include "Packages/com.unity.render-pipelines.high-definition/Runtime/ShaderLibrary/ShaderGraphHeader.hlsl"
+            #include "Packages/com.unity.render-pipelines.high-definition/Runtime/ShaderLibrary/ShaderVariables.hlsl"
+            #include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/ShaderPass/FragInputs.hlsl"
+            #include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/ShaderPass/ShaderPass.cs.hlsl"
+            #include "Packages/com.unity.render-pipelines.high-definition/Runtime/ShaderLibrary/ShaderGraphHeader.hlsl"
 
 			#if defined(_ENABLE_SHADOW_MATTE) && SHADERPASS == SHADERPASS_FORWARD_UNLIT
 				#define LIGHTLOOP_DISABLE_TILE_AND_CLUSTER
@@ -402,8 +420,6 @@ Shader /*ase_name*/ "Hidden/HD/Unlit" /*end*/
 				#include "Packages/com.unity.render-pipelines.high-definition/Runtime/Lighting/PunctualLightCommon.hlsl"
 				#include "Packages/com.unity.render-pipelines.high-definition/Runtime/Lighting/LightLoop/HDShadowLoop.hlsl"
 			#endif
-
-
 
 			/*ase_pragma*/
 
@@ -468,7 +484,7 @@ Shader /*ase_name*/ "Hidden/HD/Unlit" /*end*/
 			float _DoubleSidedEnable;
 			float _DoubleSidedNormalMode;
 			float4 _DoubleSidedConstants;
-			#ifdef TESSELLATION_ON
+			#ifdef ASE_TESSELLATION
 				float _TessPhongStrength;
 				float _TessValue;
 				float _TessMin;
@@ -477,6 +493,7 @@ Shader /*ase_name*/ "Hidden/HD/Unlit" /*end*/
 				float _TessMaxDisp;
 			#endif
 			CBUFFER_END
+
 			/*ase_globals*/
 
 			#include "Packages/com.unity.render-pipelines.high-definition/Runtime/Material/Material.hlsl"
@@ -515,18 +532,17 @@ Shader /*ase_name*/ "Hidden/HD/Unlit" /*end*/
 					float shadow;
 					float3 shadow3;
 					posInput = GetPositionInput(fragInputs.positionSS.xy, _ScreenSize.zw, fragInputs.positionSS.z, UNITY_MATRIX_I_VP, UNITY_MATRIX_V);
-					float3 normalWS = normalize(fragInputs.tangentToWorld[1]);
-					uint renderingLayers = _EnableLightLayers ? asuint(unity_RenderingLayer.x) : DEFAULT_LIGHT_LAYERS;
-					ShadowLoopMin(shadowContext, posInput, normalWS, asuint(_ShadowMatteFilter), renderingLayers, shadow3);
-					shadow = dot(shadow3, float3(1.0f/3.0f, 1.0f/3.0f, 1.0f/3.0f));
-
-					float4 shadowColor = (1 - shadow)*surfaceDescription.ShadowTint.rgba;
+					float3 upWS = normalize(fragInputs.tangentToWorld[1]);
+					uint renderingLayers = GetMeshRenderingLightLayer();
+					ShadowLoopMin(shadowContext, posInput, upWS, asuint(_ShadowMatteFilter), renderingLayers, shadow3);
+					shadow = dot(shadow3, float3(1.0 / 3.0, 1.0 / 3.0, 1.0 / 3.0));
+					float4 shadowColor = (1.0 - shadow) * surfaceDescription.ShadowTint.rgba;
 					float  localAlpha  = saturate(shadowColor.a + surfaceDescription.Alpha);
 
 					#ifdef _SURFACE_TYPE_TRANSPARENT
-						surfaceData.color = lerp(shadowColor.rgb*surfaceData.color, lerp(lerp(shadowColor.rgb, surfaceData.color, 1 - surfaceDescription.ShadowTint.a), surfaceData.color, shadow), surfaceDescription.Alpha);
+						surfaceData.color = lerp(shadowColor.rgb * surfaceData.color, lerp(lerp(shadowColor.rgb, surfaceData.color, 1.0 - surfaceDescription.ShadowTint.a), surfaceData.color, shadow), surfaceDescription.Alpha);
 					#else
-						surfaceData.color = lerp(lerp(shadowColor.rgb, surfaceData.color, 1 - surfaceDescription.ShadowTint.a), surfaceData.color, shadow);
+						surfaceData.color = lerp(lerp(shadowColor.rgb, surfaceData.color, 1.0 - surfaceDescription.ShadowTint.a), surfaceData.color, shadow);
 					#endif
 					localAlpha = ApplyBlendMode(surfaceData.color, localAlpha).a;
 					surfaceDescription.Alpha = localAlpha;
@@ -565,7 +581,7 @@ Shader /*ase_name*/ "Hidden/HD/Unlit" /*end*/
 				return o;
 			}
 
-			#if defined(TESSELLATION_ON)
+			#if defined(ASE_TESSELLATION)
 			struct VertexControl
 			{
 				float3 positionOS : INTERNALTESSPOS;
@@ -732,21 +748,19 @@ Shader /*ase_name*/ "Hidden/HD/Unlit" /*end*/
 			ColorMask 0
 
 			HLSLPROGRAM
-			#define SHADERPASS SHADERPASS_SHADOWS
 
 			#pragma shader_feature _SURFACE_TYPE_TRANSPARENT
-			#pragma shader_feature_local _ _BLENDMODE_ALPHA _BLENDMODE_ADD _BLENDMODE_PRE_MULTIPLY
 			#pragma shader_feature_local _ALPHATEST_ON
-			#pragma shader_feature_local _ENABLE_FOG_ON_TRANSPARENT
 
 			#pragma vertex Vert
 			#pragma fragment Frag
 
+			#define SHADERPASS SHADERPASS_SHADOWS
 			#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Common.hlsl"
-			#include "Packages/com.unity.render-pipelines.high-definition/Runtime/ShaderLibrary/ShaderVariables.hlsl"
-			#include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/ShaderPass/FragInputs.hlsl"
-			#include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/ShaderPass/ShaderPass.cs.hlsl"
-			#include "Packages/com.unity.render-pipelines.high-definition/Runtime/ShaderLibrary/ShaderGraphHeader.hlsl"
+            #include "Packages/com.unity.render-pipelines.high-definition/Runtime/ShaderLibrary/ShaderVariables.hlsl"
+            #include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/ShaderPass/FragInputs.hlsl"
+            #include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/ShaderPass/ShaderPass.cs.hlsl"
+            #include "Packages/com.unity.render-pipelines.high-definition/Runtime/ShaderLibrary/ShaderGraphHeader.hlsl"
 
 			/*ase_pragma*/
 
@@ -810,7 +824,7 @@ Shader /*ase_name*/ "Hidden/HD/Unlit" /*end*/
 			float _DoubleSidedEnable;
 			float _DoubleSidedNormalMode;
 			float4 _DoubleSidedConstants;
-			#ifdef TESSELLATION_ON
+			#ifdef ASE_TESSELLATION
 				float _TessPhongStrength;
 				float _TessValue;
 				float _TessMin;
@@ -819,6 +833,7 @@ Shader /*ase_name*/ "Hidden/HD/Unlit" /*end*/
 				float _TessMaxDisp;
 			#endif
 			CBUFFER_END
+
 			/*ase_globals*/
 
 			#include "Packages/com.unity.render-pipelines.high-definition/Runtime/Material/Material.hlsl"
@@ -878,7 +893,7 @@ Shader /*ase_name*/ "Hidden/HD/Unlit" /*end*/
 				return o;
 			}
 
-			#if defined(TESSELLATION_ON)
+			#if defined(ASE_TESSELLATION)
 			struct VertexControl
 			{
 				float3 positionOS : INTERNALTESSPOS;
@@ -1031,21 +1046,19 @@ Shader /*ase_name*/ "Hidden/HD/Unlit" /*end*/
 			Cull Off
 
 			HLSLPROGRAM
-			#define SHADERPASS SHADERPASS_LIGHT_TRANSPORT
 
 			#pragma shader_feature _SURFACE_TYPE_TRANSPARENT
-			#pragma shader_feature_local _ _BLENDMODE_ALPHA _BLENDMODE_ADD _BLENDMODE_PRE_MULTIPLY
 			#pragma shader_feature_local _ALPHATEST_ON
-			#pragma shader_feature_local _ENABLE_FOG_ON_TRANSPARENT
 
 			#pragma vertex Vert
 			#pragma fragment Frag
 
+			#define SHADERPASS SHADERPASS_LIGHT_TRANSPORT
 			#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Common.hlsl"
-			#include "Packages/com.unity.render-pipelines.high-definition/Runtime/ShaderLibrary/ShaderVariables.hlsl"
-			#include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/ShaderPass/FragInputs.hlsl"
-			#include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/ShaderPass/ShaderPass.cs.hlsl"
-			#include "Packages/com.unity.render-pipelines.high-definition/Runtime/ShaderLibrary/ShaderGraphHeader.hlsl"
+            #include "Packages/com.unity.render-pipelines.high-definition/Runtime/ShaderLibrary/ShaderVariables.hlsl"
+            #include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/ShaderPass/FragInputs.hlsl"
+            #include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/ShaderPass/ShaderPass.cs.hlsl"
+            #include "Packages/com.unity.render-pipelines.high-definition/Runtime/ShaderLibrary/ShaderGraphHeader.hlsl"
 
 			CBUFFER_START( UnityPerMaterial )
 			float4 _EmissionColor;
@@ -1091,7 +1104,7 @@ Shader /*ase_name*/ "Hidden/HD/Unlit" /*end*/
 			float _DoubleSidedEnable;
 			float _DoubleSidedNormalMode;
 			float4 _DoubleSidedConstants;
-			#ifdef TESSELLATION_ON
+			#ifdef ASE_TESSELLATION
 				float _TessPhongStrength;
 				float _TessValue;
 				float _TessMin;
@@ -1108,6 +1121,7 @@ Shader /*ase_name*/ "Hidden/HD/Unlit" /*end*/
 
 			float unity_OneOverOutputBoost;
 			float unity_MaxOutputValue;
+
 			/*ase_globals*/
 
 			#include "Packages/com.unity.render-pipelines.high-definition/Runtime/Material/Material.hlsl"
@@ -1199,7 +1213,7 @@ Shader /*ase_name*/ "Hidden/HD/Unlit" /*end*/
 				return o;
 			}
 
-			#if defined(TESSELLATION_ON)
+			#if defined(ASE_TESSELLATION)
 			struct VertexControl
 			{
 				float3 positionOS : INTERNALTESSPOS;
@@ -1345,23 +1359,22 @@ Shader /*ase_name*/ "Hidden/HD/Unlit" /*end*/
 			ColorMask 0
 
 			HLSLPROGRAM
-			#define SHADERPASS SHADERPASS_DEPTH_ONLY
-			#define SCENESELECTIONPASS
-			#pragma editor_sync_compilation
 
 			#pragma shader_feature _SURFACE_TYPE_TRANSPARENT
-			#pragma shader_feature_local _ _BLENDMODE_ALPHA _BLENDMODE_ADD _BLENDMODE_PRE_MULTIPLY
 			#pragma shader_feature_local _ALPHATEST_ON
-			#pragma shader_feature_local _ENABLE_FOG_ON_TRANSPARENT
+
+			#pragma editor_sync_compilation
 
 			#pragma vertex Vert
 			#pragma fragment Frag
 
+			#define SHADERPASS SHADERPASS_DEPTH_ONLY
+			#define SCENESELECTIONPASS 1
 			#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Common.hlsl"
-			#include "Packages/com.unity.render-pipelines.high-definition/Runtime/ShaderLibrary/ShaderVariables.hlsl"
-			#include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/ShaderPass/FragInputs.hlsl"
-			#include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/ShaderPass/ShaderPass.cs.hlsl"
-			#include "Packages/com.unity.render-pipelines.high-definition/Runtime/ShaderLibrary/ShaderGraphHeader.hlsl"
+            #include "Packages/com.unity.render-pipelines.high-definition/Runtime/ShaderLibrary/ShaderVariables.hlsl"
+            #include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/ShaderPass/FragInputs.hlsl"
+            #include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/ShaderPass/ShaderPass.cs.hlsl"
+            #include "Packages/com.unity.render-pipelines.high-definition/Runtime/ShaderLibrary/ShaderGraphHeader.hlsl"
 
 			int _ObjectId;
 			int _PassValue;
@@ -1410,7 +1423,7 @@ Shader /*ase_name*/ "Hidden/HD/Unlit" /*end*/
 			float _DoubleSidedEnable;
 			float _DoubleSidedNormalMode;
 			float4 _DoubleSidedConstants;
-			#ifdef TESSELLATION_ON
+			#ifdef ASE_TESSELLATION
 				float _TessPhongStrength;
 				float _TessValue;
 				float _TessMin;
@@ -1419,6 +1432,7 @@ Shader /*ase_name*/ "Hidden/HD/Unlit" /*end*/
 				float _TessMaxDisp;
 			#endif
 			CBUFFER_END
+
 			/*ase_globals*/
 
 			#include "Packages/com.unity.render-pipelines.high-definition/Runtime/Material/Material.hlsl"
@@ -1497,7 +1511,7 @@ Shader /*ase_name*/ "Hidden/HD/Unlit" /*end*/
 				return o;
 			}
 
-			#if defined(TESSELLATION_ON)
+			#if defined(ASE_TESSELLATION)
 			struct VertexControl
 			{
 				float3 positionOS : INTERNALTESSPOS;
@@ -1639,22 +1653,21 @@ Shader /*ase_name*/ "Hidden/HD/Unlit" /*end*/
 			ColorMask 0 0
 
 			HLSLPROGRAM
-			#define SHADERPASS SHADERPASS_DEPTH_ONLY
-			#pragma multi_compile _ WRITE_MSAA_DEPTH
 
 			#pragma shader_feature _SURFACE_TYPE_TRANSPARENT
-			#pragma shader_feature_local _ _BLENDMODE_ALPHA _BLENDMODE_ADD _BLENDMODE_PRE_MULTIPLY
 			#pragma shader_feature_local _ALPHATEST_ON
-			#pragma shader_feature_local _ENABLE_FOG_ON_TRANSPARENT
+
+			#pragma multi_compile _ WRITE_MSAA_DEPTH
 
 			#pragma vertex Vert
 			#pragma fragment Frag
 
+			#define SHADERPASS SHADERPASS_DEPTH_ONLY
 			#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Common.hlsl"
-			#include "Packages/com.unity.render-pipelines.high-definition/Runtime/ShaderLibrary/ShaderVariables.hlsl"
-			#include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/ShaderPass/FragInputs.hlsl"
-			#include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/ShaderPass/ShaderPass.cs.hlsl"
-			#include "Packages/com.unity.render-pipelines.high-definition/Runtime/ShaderLibrary/ShaderGraphHeader.hlsl"
+            #include "Packages/com.unity.render-pipelines.high-definition/Runtime/ShaderLibrary/ShaderVariables.hlsl"
+            #include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/ShaderPass/FragInputs.hlsl"
+            #include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/ShaderPass/ShaderPass.cs.hlsl"
+            #include "Packages/com.unity.render-pipelines.high-definition/Runtime/ShaderLibrary/ShaderGraphHeader.hlsl"
 
 			CBUFFER_START( UnityPerMaterial )
 			float4 _EmissionColor;
@@ -1700,7 +1713,7 @@ Shader /*ase_name*/ "Hidden/HD/Unlit" /*end*/
 			float _DoubleSidedEnable;
 			float _DoubleSidedNormalMode;
 			float4 _DoubleSidedConstants;
-			#ifdef TESSELLATION_ON
+			#ifdef ASE_TESSELLATION
 				float _TessPhongStrength;
 				float _TessValue;
 				float _TessMin;
@@ -1709,6 +1722,7 @@ Shader /*ase_name*/ "Hidden/HD/Unlit" /*end*/
 				float _TessMaxDisp;
 			#endif
 			CBUFFER_END
+
 			/*ase_globals*/
 
 			#include "Packages/com.unity.render-pipelines.high-definition/Runtime/Material/Material.hlsl"
@@ -1786,7 +1800,7 @@ Shader /*ase_name*/ "Hidden/HD/Unlit" /*end*/
 				return o;
 			}
 
-			#if defined(TESSELLATION_ON)
+			#if defined(ASE_TESSELLATION)
 			struct VertexControl
 			{
 				float3 positionOS : INTERNALTESSPOS;
@@ -1949,22 +1963,21 @@ Shader /*ase_name*/ "Hidden/HD/Unlit" /*end*/
 			}
 
 			HLSLPROGRAM
-			#define SHADERPASS SHADERPASS_MOTION_VECTORS
-			#pragma multi_compile _ WRITE_MSAA_DEPTH
 
 			#pragma shader_feature _SURFACE_TYPE_TRANSPARENT
-			#pragma shader_feature_local _ _BLENDMODE_ALPHA _BLENDMODE_ADD _BLENDMODE_PRE_MULTIPLY
 			#pragma shader_feature_local _ALPHATEST_ON
-			#pragma shader_feature_local _ENABLE_FOG_ON_TRANSPARENT
+
+			#pragma multi_compile _ WRITE_MSAA_DEPTH
 
 			#pragma vertex Vert
 			#pragma fragment Frag
 
+			#define SHADERPASS SHADERPASS_MOTION_VECTORS
 			#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Common.hlsl"
-			#include "Packages/com.unity.render-pipelines.high-definition/Runtime/ShaderLibrary/ShaderVariables.hlsl"
-			#include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/ShaderPass/FragInputs.hlsl"
-			#include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/ShaderPass/ShaderPass.cs.hlsl"
-			#include "Packages/com.unity.render-pipelines.high-definition/Runtime/ShaderLibrary/ShaderGraphHeader.hlsl"
+            #include "Packages/com.unity.render-pipelines.high-definition/Runtime/ShaderLibrary/ShaderVariables.hlsl"
+            #include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/ShaderPass/FragInputs.hlsl"
+            #include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/ShaderPass/ShaderPass.cs.hlsl"
+            #include "Packages/com.unity.render-pipelines.high-definition/Runtime/ShaderLibrary/ShaderGraphHeader.hlsl"
 
 			CBUFFER_START( UnityPerMaterial )
 			float4 _EmissionColor;
@@ -2010,7 +2023,7 @@ Shader /*ase_name*/ "Hidden/HD/Unlit" /*end*/
 			float _DoubleSidedEnable;
 			float _DoubleSidedNormalMode;
 			float4 _DoubleSidedConstants;
-			#ifdef TESSELLATION_ON
+			#ifdef ASE_TESSELLATION
 				float _TessPhongStrength;
 				float _TessValue;
 				float _TessMin;
@@ -2019,6 +2032,7 @@ Shader /*ase_name*/ "Hidden/HD/Unlit" /*end*/
 				float _TessMaxDisp;
 			#endif
 			CBUFFER_END
+
 			/*ase_globals*/
 
 			#include "Packages/com.unity.render-pipelines.high-definition/Runtime/Material/Material.hlsl"
@@ -2169,7 +2183,7 @@ Shader /*ase_name*/ "Hidden/HD/Unlit" /*end*/
 				return o;
 			}
 
-			#if defined(TESSELLATION_ON)
+			#if defined(ASE_TESSELLATION)
 			struct VertexControl
 			{
 				float3 positionOS : INTERNALTESSPOS;
@@ -2361,21 +2375,19 @@ Shader /*ase_name*/ "Hidden/HD/Unlit" /*end*/
 			}
 
 			HLSLPROGRAM
-			#define SHADERPASS SHADERPASS_DISTORTION
 
 			#pragma shader_feature _SURFACE_TYPE_TRANSPARENT
-			#pragma shader_feature_local _ _BLENDMODE_ALPHA _BLENDMODE_ADD _BLENDMODE_PRE_MULTIPLY
 			#pragma shader_feature_local _ALPHATEST_ON
-			#pragma shader_feature_local _ENABLE_FOG_ON_TRANSPARENT
 
 			#pragma vertex Vert
 			#pragma fragment Frag
 
-			#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Common.hlsl"
+			#define SHADERPASS SHADERPASS_DISTORTION
+            #include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Common.hlsl"
 			#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/NormalSurfaceGradient.hlsl"
-			#include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/ShaderPass/FragInputs.hlsl"
-			#include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/ShaderPass/ShaderPass.cs.hlsl"
-			#include "Packages/com.unity.render-pipelines.high-definition/Runtime/ShaderLibrary/ShaderGraphHeader.hlsl"
+            #include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/ShaderPass/FragInputs.hlsl"
+            #include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/ShaderPass/ShaderPass.cs.hlsl"
+            #include "Packages/com.unity.render-pipelines.high-definition/Runtime/ShaderLibrary/ShaderGraphHeader.hlsl" // Need to be here for Gradient struct definition
 
 			#define SHADER_UNLIT
 
@@ -2423,7 +2435,7 @@ Shader /*ase_name*/ "Hidden/HD/Unlit" /*end*/
 			float _DoubleSidedEnable;
 			float _DoubleSidedNormalMode;
 			float4 _DoubleSidedConstants;
-			#ifdef TESSELLATION_ON
+			#ifdef ASE_TESSELLATION
 				float _TessPhongStrength;
 				float _TessValue;
 				float _TessMin;
@@ -2432,6 +2444,7 @@ Shader /*ase_name*/ "Hidden/HD/Unlit" /*end*/
 				float _TessMaxDisp;
 			#endif
 			CBUFFER_END
+
 			/*ase_globals*/
 
 			#include "Packages/com.unity.render-pipelines.high-definition/Runtime/Material/Material.hlsl"
@@ -2517,7 +2530,7 @@ Shader /*ase_name*/ "Hidden/HD/Unlit" /*end*/
 				return o;
 			}
 
-			#if defined(TESSELLATION_ON)
+			#if defined(ASE_TESSELLATION)
 			struct VertexControl
 			{
 				float3 positionOS : INTERNALTESSPOS;
@@ -2633,6 +2646,7 @@ Shader /*ase_name*/ "Hidden/HD/Unlit" /*end*/
 		}
 		/*ase_pass_end*/
 	}
+	/*ase_lod*/
 	CustomEditor "Rendering.HighDefinition.HDUnlitGUI"
 	FallBack "Hidden/InternalErrorShader"
 }
