@@ -208,7 +208,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Depth: -0.69
+    - Depth: -0.85
     - Smoothness: 0.7
     - UV_Offset_Scalar: 0.05
     - UV_Offset_Speed: 1
@@ -218,11 +218,11 @@ Material:
     - Vector1_645404D7: 1
     - Vector1_6B9EA178: 1
     - Vector1_8e4f945d03134060b3ddcd20073a9c34: 0.33
-    - Vector1_98d0ab993a11494f95d9d4080013e2fe: 0.3
+    - Vector1_98d0ab993a11494f95d9d4080013e2fe: 0.1
     - Vector1_D03EAD1A: 1
     - Vector1_DC0D7652: 0
     - Vector1_E04DC205: 1
-    - Vector1_cecef40e72f740728fbfc4f4bdc0c42e: 0.75
+    - Vector1_cecef40e72f740728fbfc4f4bdc0c42e: 0.5
     - Vector1_f0ef6f113ed748b69f85b2ec0e524c01: 0
     - _AORemapMax: 1
     - _AORemapMin: 0
@@ -372,10 +372,10 @@ Material:
     - Color_DF96D22A: {r: 0, g: 0, b: 0, a: 0}
     - FresnelPower: {r: 0.16, g: 0.5, b: 0, a: 0}
     - Gloss: {r: 0.7, g: 0, b: 0, a: 0}
-    - MainColor: {r: 0.04245281, g: 0.1325043, b: 0.254717, a: 1}
+    - MainColor: {r: 0.106680885, g: 0.18580602, b: 0.2924528, a: 1}
     - Smoothness: {r: 0.7, g: 0.7, b: 0, a: 0}
     - Tiling_Scale: {r: 1, g: 1, b: 0, a: 0}
-    - TopColor: {r: 0.13332145, g: 0.3962264, b: 0.3962264, a: 0}
+    - TopColor: {r: 0.063783064, g: 0.23584908, b: 0.23584908, a: 0}
     - UVOffsetSpeed: {r: 0.1, g: 0.1, b: 0, a: 0}
     - UV_Offset: {r: 0, g: 1, b: 0, a: 0}
     - UV_Offset_Speed: {r: 0.1, g: 0.1, b: 0.1, a: 0}
