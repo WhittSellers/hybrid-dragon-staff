@@ -147,6 +147,7 @@
         "niceName": "Flowtoys Connect Bridge OSC Module",
         "type": "Flowtoys Connect Bridge OSC Module",
         "scripts": {
+          "editorIsCollapsed": true,
           "items": [
             {
               "niceName": "flowtoys-connect",
@@ -262,7 +263,7 @@
                       "feedbackOnly": false
                     },
                     {
-                      "value": 4,
+                      "value": 1,
                       "alwaysNotify": true,
                       "minValue": 1,
                       "maxValue": 50,
@@ -278,6 +279,7 @@
                       "feedbackOnly": false
                     }
                   ],
+                  "editorIsCollapsed": true,
                   "owned": true,
                   "niceName": "Mode"
                 },
@@ -388,7 +390,7 @@
                 "mode": {
                   "parameters": [
                     {
-                      "value": 1,
+                      "value": 2,
                       "alwaysNotify": true,
                       "minValue": 1,
                       "maxValue": 13,
@@ -404,7 +406,7 @@
                       "feedbackOnly": false
                     },
                     {
-                      "value": 4,
+                      "value": 1,
                       "alwaysNotify": true,
                       "minValue": 1,
                       "maxValue": 50,
@@ -528,12 +530,6 @@
         }
       },
       {
-        "parameters": [
-          {
-            "value": true,
-            "controlAddress": "/enabled"
-          }
-        ],
         "niceName": "OSC",
         "type": "OSC",
         "scripts": {
@@ -547,10 +543,6 @@
           "containers": {
             "oscInput": {
               "parameters": [
-                {
-                  "value": true,
-                  "controlAddress": "/enabled"
-                },
                 {
                   "value": 9010,
                   "hexMode": false,
@@ -569,10 +561,6 @@
               "items": [
                 {
                   "parameters": [
-                    {
-                      "value": true,
-                      "controlAddress": "/enabled"
-                    },
                     {
                       "value": false,
                       "controlAddress": "/local"
@@ -611,7 +599,6 @@
         "values": {
           "parameters": [
             {
-              "value": 0.0,
               "controlAddress": "/_1_fader1",
               "type": "Float",
               "niceName": "/1/fader1",
@@ -623,7 +610,6 @@
               "shortName": "_1_fader1"
             },
             {
-              "value": 0.0,
               "controlAddress": "/_1_fader2",
               "type": "Float",
               "niceName": "/1/fader2",
@@ -635,7 +621,6 @@
               "shortName": "_1_fader2"
             },
             {
-              "value": 0.0,
               "controlAddress": "/_1_fader3",
               "type": "Float",
               "niceName": "/1/fader3",
@@ -647,7 +632,6 @@
               "shortName": "_1_fader3"
             },
             {
-              "value": 0.0,
               "controlAddress": "/_1_fader4",
               "type": "Float",
               "niceName": "/1/fader4",
@@ -659,7 +643,6 @@
               "shortName": "_1_fader4"
             },
             {
-              "value": 0.0,
               "controlAddress": "/_1_fader5",
               "type": "Float",
               "niceName": "/1/fader5",
@@ -671,7 +654,6 @@
               "shortName": "_1_fader5"
             },
             {
-              "value": 0.0,
               "controlAddress": "/_1_toggle1",
               "type": "Float",
               "niceName": "/1/toggle1",
@@ -683,7 +665,6 @@
               "shortName": "_1_toggle1"
             },
             {
-              "value": 0.0,
               "controlAddress": "/_1_toggle2",
               "type": "Float",
               "niceName": "/1/toggle2",
@@ -695,7 +676,6 @@
               "shortName": "_1_toggle2"
             },
             {
-              "value": 0.0,
               "controlAddress": "/_1_toggle3",
               "type": "Float",
               "niceName": "/1/toggle3",
@@ -707,7 +687,6 @@
               "shortName": "_1_toggle3"
             },
             {
-              "value": 0.0,
               "controlAddress": "/_1_toggle4",
               "type": "Float",
               "niceName": "/1/toggle4",
@@ -1696,6 +1675,12 @@
         }
       },
       {
+        "parameters": [
+          {
+            "value": true,
+            "controlAddress": "/enabled"
+          }
+        ],
         "niceName": "OSC 1",
         "type": "OSC",
         "scripts": {
@@ -1709,6 +1694,10 @@
           "containers": {
             "oscInput": {
               "parameters": [
+                {
+                  "value": true,
+                  "controlAddress": "/enabled"
+                },
                 {
                   "value": 10000,
                   "hexMode": false,
@@ -1754,6 +1743,242 @@
         "values": {
           "parameters": [
             {
+              "value": 0.0,
+              "controlAddress": "/_b1",
+              "type": "Float",
+              "niceName": "/b1",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_b1"
+            },
+            {
+              "value": 0.0,
+              "controlAddress": "/_b10",
+              "type": "Float",
+              "niceName": "/b10",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_b10"
+            },
+            {
+              "value": 0.0,
+              "controlAddress": "/_b11",
+              "type": "Float",
+              "niceName": "/b11",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_b11"
+            },
+            {
+              "value": 0.0,
+              "controlAddress": "/_b12",
+              "type": "Float",
+              "niceName": "/b12",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_b12"
+            },
+            {
+              "value": 0.0,
+              "controlAddress": "/_b13",
+              "type": "Float",
+              "niceName": "/b13",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_b13"
+            },
+            {
+              "value": 0.0,
+              "controlAddress": "/_b14",
+              "type": "Float",
+              "niceName": "/b14",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_b14"
+            },
+            {
+              "value": 0.0,
+              "controlAddress": "/_b15",
+              "type": "Float",
+              "niceName": "/b15",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_b15"
+            },
+            {
+              "value": 0.0,
+              "controlAddress": "/_b16",
+              "type": "Float",
+              "niceName": "/b16",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_b16"
+            },
+            {
+              "controlAddress": "/_b17",
+              "type": "Float",
+              "niceName": "/b17",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_b17"
+            },
+            {
+              "controlAddress": "/_b18",
+              "type": "Float",
+              "niceName": "/b18",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_b18"
+            },
+            {
+              "controlAddress": "/_b19",
+              "type": "Float",
+              "niceName": "/b19",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_b19"
+            },
+            {
+              "value": 0.0,
+              "controlAddress": "/_b2",
+              "type": "Float",
+              "niceName": "/b2",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_b2"
+            },
+            {
+              "controlAddress": "/_b20",
+              "type": "Float",
+              "niceName": "/b20",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_b20"
+            },
+            {
+              "value": 0.0,
+              "controlAddress": "/_b3",
+              "type": "Float",
+              "niceName": "/b3",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_b3"
+            },
+            {
+              "value": 0.0,
+              "controlAddress": "/_b4",
+              "type": "Float",
+              "niceName": "/b4",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_b4"
+            },
+            {
+              "value": 0.0,
+              "controlAddress": "/_b5",
+              "type": "Float",
+              "niceName": "/b5",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_b5"
+            },
+            {
+              "value": 0.0,
+              "controlAddress": "/_b6",
+              "type": "Float",
+              "niceName": "/b6",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_b6"
+            },
+            {
+              "value": 0.0,
+              "controlAddress": "/_b7",
+              "type": "Float",
+              "niceName": "/b7",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_b7"
+            },
+            {
+              "value": 0.0,
+              "controlAddress": "/_b8",
+              "type": "Float",
+              "niceName": "/b8",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_b8"
+            },
+            {
+              "value": 0.0,
+              "controlAddress": "/_b9",
+              "type": "Float",
+              "niceName": "/b9",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_b9"
+            },
+            {
               "controlAddress": "/_chiroll",
               "type": "Float",
               "niceName": "/chiroll",
@@ -1785,6 +2010,360 @@
               "hideInEditor": false,
               "feedbackOnly": false,
               "shortName": "_horizontalspin"
+            },
+            {
+              "controlAddress": "/_s1",
+              "type": "Float",
+              "niceName": "/s1",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_s1"
+            },
+            {
+              "value": 0.0,
+              "controlAddress": "/_s10",
+              "type": "Float",
+              "niceName": "/s10",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_s10"
+            },
+            {
+              "controlAddress": "/_s11",
+              "type": "Float",
+              "niceName": "/s11",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_s11"
+            },
+            {
+              "controlAddress": "/_s12",
+              "type": "Float",
+              "niceName": "/s12",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_s12"
+            },
+            {
+              "controlAddress": "/_s13",
+              "type": "Float",
+              "niceName": "/s13",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_s13"
+            },
+            {
+              "controlAddress": "/_s14",
+              "type": "Float",
+              "niceName": "/s14",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_s14"
+            },
+            {
+              "controlAddress": "/_s15",
+              "type": "Float",
+              "niceName": "/s15",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_s15"
+            },
+            {
+              "controlAddress": "/_s16",
+              "type": "Float",
+              "niceName": "/s16",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_s16"
+            },
+            {
+              "controlAddress": "/_s17",
+              "type": "Float",
+              "niceName": "/s17",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_s17"
+            },
+            {
+              "controlAddress": "/_s18",
+              "type": "Float",
+              "niceName": "/s18",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_s18"
+            },
+            {
+              "controlAddress": "/_s19",
+              "type": "Float",
+              "niceName": "/s19",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_s19"
+            },
+            {
+              "controlAddress": "/_s2",
+              "type": "Float",
+              "niceName": "/s2",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_s2"
+            },
+            {
+              "controlAddress": "/_s20",
+              "type": "Float",
+              "niceName": "/s20",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_s20"
+            },
+            {
+              "controlAddress": "/_s21",
+              "type": "Float",
+              "niceName": "/s21",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_s21"
+            },
+            {
+              "controlAddress": "/_s22",
+              "type": "Float",
+              "niceName": "/s22",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_s22"
+            },
+            {
+              "controlAddress": "/_s23",
+              "type": "Float",
+              "niceName": "/s23",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_s23"
+            },
+            {
+              "controlAddress": "/_s24",
+              "type": "Float",
+              "niceName": "/s24",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_s24"
+            },
+            {
+              "controlAddress": "/_s25",
+              "type": "Float",
+              "niceName": "/s25",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_s25"
+            },
+            {
+              "controlAddress": "/_s26",
+              "type": "Float",
+              "niceName": "/s26",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_s26"
+            },
+            {
+              "controlAddress": "/_s27",
+              "type": "Float",
+              "niceName": "/s27",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_s27"
+            },
+            {
+              "controlAddress": "/_s28",
+              "type": "Float",
+              "niceName": "/s28",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_s28"
+            },
+            {
+              "controlAddress": "/_s29",
+              "type": "Float",
+              "niceName": "/s29",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_s29"
+            },
+            {
+              "controlAddress": "/_s3",
+              "type": "Float",
+              "niceName": "/s3",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_s3"
+            },
+            {
+              "controlAddress": "/_s30",
+              "type": "Float",
+              "niceName": "/s30",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_s30"
+            },
+            {
+              "controlAddress": "/_s31",
+              "type": "Float",
+              "niceName": "/s31",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_s31"
+            },
+            {
+              "controlAddress": "/_s32",
+              "type": "Float",
+              "niceName": "/s32",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_s32"
+            },
+            {
+              "controlAddress": "/_s4",
+              "type": "Float",
+              "niceName": "/s4",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_s4"
+            },
+            {
+              "controlAddress": "/_s5",
+              "type": "Float",
+              "niceName": "/s5",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_s5"
+            },
+            {
+              "controlAddress": "/_s6",
+              "type": "Float",
+              "niceName": "/s6",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_s6"
+            },
+            {
+              "controlAddress": "/_s7",
+              "type": "Float",
+              "niceName": "/s7",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_s7"
+            },
+            {
+              "controlAddress": "/_s8",
+              "type": "Float",
+              "niceName": "/s8",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_s8"
+            },
+            {
+              "value": 0.0,
+              "controlAddress": "/_s9",
+              "type": "Float",
+              "niceName": "/s9",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false,
+              "shortName": "_s9"
             },
             {
               "controlAddress": "/_tracker1:rx",
@@ -4310,11 +4889,6 @@
                     "CinemachineVirtualCamera": {
                       "parameters": [
                         {
-                          "value": 0,
-                          "hexMode": false,
-                          "controlAddress": "/m_Priority"
-                        },
-                        {
                           "value": "RoundRobin",
                           "controlAddress": "/m_StandbyUpdate"
                         }
@@ -4538,11 +5112,6 @@
                     "CinemachineVirtualCamera": {
                       "parameters": [
                         {
-                          "value": 0,
-                          "hexMode": false,
-                          "controlAddress": "/m_Priority"
-                        },
-                        {
                           "value": "RoundRobin",
                           "controlAddress": "/m_StandbyUpdate"
                         }
@@ -4746,11 +5315,6 @@
                     },
                     "CinemachineVirtualCamera": {
                       "parameters": [
-                        {
-                          "value": 0,
-                          "hexMode": false,
-                          "controlAddress": "/m_Priority"
-                        },
                         {
                           "value": "RoundRobin",
                           "controlAddress": "/m_StandbyUpdate"
@@ -11644,12 +12208,6 @@
                       "niceName": "Transform"
                     },
                     "VFXManager": {
-                      "parameters": [
-                        {
-                          "value": 0.0,
-                          "controlAddress": "/turbulenceIntensity"
-                        }
-                      ],
                       "editorIsCollapsed": true,
                       "owned": true,
                       "niceName": "VFXManager"
@@ -68702,1014 +69260,6 @@
           }
         },
         "hasListenExtension": false
-      },
-      {
-        "niceName": "MIDI",
-        "type": "MIDI",
-        "scripts": {
-          "viewOffset": [
-            0,
-            0
-          ],
-          "viewZoom": 1.0
-        },
-        "params": {
-          "parameters": [
-            {
-              "value": [
-                "\\\\?\\usb#vid_1235&pid_0061&mi_00#6&29da9b68&0&0000#{6994ad04-93ef-11d0-a3cc-00a0c9223196}\\global",
-                ""
-              ],
-              "controlAddress": "/devices"
-            }
-          ],
-          "containers": {
-            "pass_through": {
-            }
-          }
-        },
-        "templates": {
-          "viewOffset": [
-            0,
-            0
-          ],
-          "viewZoom": 1.0
-        },
-        "values": {
-          "parameters": [
-            {
-              "value": 0,
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 41,
-              "MIDIType": 0,
-              "controlAddress": "/_9_F1",
-              "type": "MIDI Value",
-              "niceName": "[9] F1",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : F1",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "value": 0,
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 42,
-              "MIDIType": 0,
-              "controlAddress": "/_9_F#1",
-              "type": "MIDI Value",
-              "niceName": "[9] F#1",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : F#1",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "value": 0,
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 43,
-              "MIDIType": 0,
-              "controlAddress": "/_9_G1",
-              "type": "MIDI Value",
-              "niceName": "[9] G1",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : G1",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "value": 0,
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 44,
-              "MIDIType": 0,
-              "controlAddress": "/_9_G#1",
-              "type": "MIDI Value",
-              "niceName": "[9] G#1",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : G#1",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 57,
-              "MIDIType": 0,
-              "controlAddress": "/_9_A2",
-              "type": "MIDI Value",
-              "niceName": "[9] A2",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : A2",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 58,
-              "MIDIType": 0,
-              "controlAddress": "/_9_A#2",
-              "type": "MIDI Value",
-              "niceName": "[9] A#2",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : A#2",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 59,
-              "MIDIType": 0,
-              "controlAddress": "/_9_B2",
-              "type": "MIDI Value",
-              "niceName": "[9] B2",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : B2",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 60,
-              "MIDIType": 0,
-              "controlAddress": "/_9_C3",
-              "type": "MIDI Value",
-              "niceName": "[9] C3",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : C3",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "value": 0,
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 73,
-              "MIDIType": 0,
-              "controlAddress": "/_9_C#4",
-              "type": "MIDI Value",
-              "niceName": "[9] C#4",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : C#4",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "value": 0,
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 74,
-              "MIDIType": 0,
-              "controlAddress": "/_9_D4",
-              "type": "MIDI Value",
-              "niceName": "[9] D4",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : D4",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "value": 0,
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 75,
-              "MIDIType": 0,
-              "controlAddress": "/_9_D#4",
-              "type": "MIDI Value",
-              "niceName": "[9] D#4",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : D#4",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "value": 0,
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 76,
-              "MIDIType": 0,
-              "controlAddress": "/_9_E4",
-              "type": "MIDI Value",
-              "niceName": "[9] E4",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : E4",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 89,
-              "MIDIType": 0,
-              "controlAddress": "/_9_F5",
-              "type": "MIDI Value",
-              "niceName": "[9] F5",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : F5",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 90,
-              "MIDIType": 0,
-              "controlAddress": "/_9_F#5",
-              "type": "MIDI Value",
-              "niceName": "[9] F#5",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : F#5",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 91,
-              "MIDIType": 0,
-              "controlAddress": "/_9_G5",
-              "type": "MIDI Value",
-              "niceName": "[9] G5",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : G5",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 92,
-              "MIDIType": 0,
-              "controlAddress": "/_9_G#5",
-              "type": "MIDI Value",
-              "niceName": "[9] G#5",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : G#5",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 105,
-              "MIDIType": 0,
-              "controlAddress": "/_9_A6",
-              "type": "MIDI Value",
-              "niceName": "[9] A6",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : A6",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 106,
-              "MIDIType": 0,
-              "controlAddress": "/_9_A#6",
-              "type": "MIDI Value",
-              "niceName": "[9] A#6",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : A#6",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 107,
-              "MIDIType": 0,
-              "controlAddress": "/_9_B6",
-              "type": "MIDI Value",
-              "niceName": "[9] B6",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : B6",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 108,
-              "MIDIType": 0,
-              "controlAddress": "/_9_C7",
-              "type": "MIDI Value",
-              "niceName": "[9] C7",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : C7",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 13,
-              "MIDIType": 2,
-              "controlAddress": "/_9_CC13",
-              "type": "MIDI Value",
-              "niceName": "[9] CC13",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : CC13",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 14,
-              "MIDIType": 2,
-              "controlAddress": "/_9_CC14",
-              "type": "MIDI Value",
-              "niceName": "[9] CC14",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : CC14",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 15,
-              "MIDIType": 2,
-              "controlAddress": "/_9_CC15",
-              "type": "MIDI Value",
-              "niceName": "[9] CC15",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : CC15",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "value": 6,
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 16,
-              "MIDIType": 2,
-              "controlAddress": "/_9_CC16",
-              "type": "MIDI Value",
-              "niceName": "[9] CC16",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : CC16",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 17,
-              "MIDIType": 2,
-              "controlAddress": "/_9_CC17",
-              "type": "MIDI Value",
-              "niceName": "[9] CC17",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : CC17",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 18,
-              "MIDIType": 2,
-              "controlAddress": "/_9_CC18",
-              "type": "MIDI Value",
-              "niceName": "[9] CC18",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : CC18",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 19,
-              "MIDIType": 2,
-              "controlAddress": "/_9_CC19",
-              "type": "MIDI Value",
-              "niceName": "[9] CC19",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : CC19",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 20,
-              "MIDIType": 2,
-              "controlAddress": "/_9_CC20",
-              "type": "MIDI Value",
-              "niceName": "[9] CC20",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : CC20",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 29,
-              "MIDIType": 2,
-              "controlAddress": "/_9_CC29",
-              "type": "MIDI Value",
-              "niceName": "[9] CC29",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : CC29",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 30,
-              "MIDIType": 2,
-              "controlAddress": "/_9_CC30",
-              "type": "MIDI Value",
-              "niceName": "[9] CC30",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : CC30",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 31,
-              "MIDIType": 2,
-              "controlAddress": "/_9_CC31",
-              "type": "MIDI Value",
-              "niceName": "[9] CC31",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : CC31",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 32,
-              "MIDIType": 2,
-              "controlAddress": "/_9_CC32",
-              "type": "MIDI Value",
-              "niceName": "[9] CC32",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : CC32",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 33,
-              "MIDIType": 2,
-              "controlAddress": "/_9_CC33",
-              "type": "MIDI Value",
-              "niceName": "[9] CC33",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : CC33",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 34,
-              "MIDIType": 2,
-              "controlAddress": "/_9_CC34",
-              "type": "MIDI Value",
-              "niceName": "[9] CC34",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : CC34",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 35,
-              "MIDIType": 2,
-              "controlAddress": "/_9_CC35",
-              "type": "MIDI Value",
-              "niceName": "[9] CC35",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : CC35",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 36,
-              "MIDIType": 2,
-              "controlAddress": "/_9_CC36",
-              "type": "MIDI Value",
-              "niceName": "[9] CC36",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : CC36",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 49,
-              "MIDIType": 2,
-              "controlAddress": "/_9_CC49",
-              "type": "MIDI Value",
-              "niceName": "[9] CC49",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : CC49",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 50,
-              "MIDIType": 2,
-              "controlAddress": "/_9_CC50",
-              "type": "MIDI Value",
-              "niceName": "[9] CC50",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : CC50",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 51,
-              "MIDIType": 2,
-              "controlAddress": "/_9_CC51",
-              "type": "MIDI Value",
-              "niceName": "[9] CC51",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : CC51",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 52,
-              "MIDIType": 2,
-              "controlAddress": "/_9_CC52",
-              "type": "MIDI Value",
-              "niceName": "[9] CC52",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : CC52",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 53,
-              "MIDIType": 2,
-              "controlAddress": "/_9_CC53",
-              "type": "MIDI Value",
-              "niceName": "[9] CC53",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : CC53",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 54,
-              "MIDIType": 2,
-              "controlAddress": "/_9_CC54",
-              "type": "MIDI Value",
-              "niceName": "[9] CC54",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : CC54",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 55,
-              "MIDIType": 2,
-              "controlAddress": "/_9_CC55",
-              "type": "MIDI Value",
-              "niceName": "[9] CC55",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : CC55",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 56,
-              "MIDIType": 2,
-              "controlAddress": "/_9_CC56",
-              "type": "MIDI Value",
-              "niceName": "[9] CC56",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : CC56",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 77,
-              "MIDIType": 2,
-              "controlAddress": "/_9_CC77",
-              "type": "MIDI Value",
-              "niceName": "[9] CC77",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : CC77",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 78,
-              "MIDIType": 2,
-              "controlAddress": "/_9_CC78",
-              "type": "MIDI Value",
-              "niceName": "[9] CC78",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : CC78",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 79,
-              "MIDIType": 2,
-              "controlAddress": "/_9_CC79",
-              "type": "MIDI Value",
-              "niceName": "[9] CC79",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : CC79",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "value": 0,
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 80,
-              "MIDIType": 2,
-              "controlAddress": "/_9_CC80",
-              "type": "MIDI Value",
-              "niceName": "[9] CC80",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : CC80",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "value": 0,
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 81,
-              "MIDIType": 2,
-              "controlAddress": "/_9_CC81",
-              "type": "MIDI Value",
-              "niceName": "[9] CC81",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : CC81",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "value": 0,
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 82,
-              "MIDIType": 2,
-              "controlAddress": "/_9_CC82",
-              "type": "MIDI Value",
-              "niceName": "[9] CC82",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : CC82",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "value": 0,
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 83,
-              "MIDIType": 2,
-              "controlAddress": "/_9_CC83",
-              "type": "MIDI Value",
-              "niceName": "[9] CC83",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : CC83",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 84,
-              "MIDIType": 2,
-              "controlAddress": "/_9_CC84",
-              "type": "MIDI Value",
-              "niceName": "[9] CC84",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : CC84",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 104,
-              "MIDIType": 2,
-              "controlAddress": "/_9_CC104",
-              "type": "MIDI Value",
-              "niceName": "[9] CC104",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : CC104",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 105,
-              "MIDIType": 2,
-              "controlAddress": "/_9_CC105",
-              "type": "MIDI Value",
-              "niceName": "[9] CC105",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : CC105",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 106,
-              "MIDIType": 2,
-              "controlAddress": "/_9_CC106",
-              "type": "MIDI Value",
-              "niceName": "[9] CC106",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : CC106",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 9,
-              "pitchOrNumber": 107,
-              "MIDIType": 2,
-              "controlAddress": "/_9_CC107",
-              "type": "MIDI Value",
-              "niceName": "[9] CC107",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 9 : CC107",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            }
-          ],
-          "containers": {
-            "tempo": {
-            },
-            "mtc": {
-            }
-          }
-        }
       }
     ],
     "viewOffset": [
@@ -71665,8 +71215,8 @@
       }
     ],
     "viewOffset": [
-      -380,
-      166
+      -311,
+      -36
     ],
     "viewZoom": 1.0,
     "transitions": {
@@ -71680,8 +71230,8 @@
     "comments": {
       "hideInEditor": true,
       "viewOffset": [
-        -380,
-        166
+        -311,
+        -36
       ],
       "viewZoom": 1.0
     }

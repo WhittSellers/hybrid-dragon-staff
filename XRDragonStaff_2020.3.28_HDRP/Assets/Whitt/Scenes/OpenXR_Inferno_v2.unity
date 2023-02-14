@@ -1518,8 +1518,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spoutName: Unity Spout Sender
   _keepAlpha: 0
-  _captureMethod: 0
-  _sourceCamera: {fileID: 0}
+  _captureMethod: 1
+  _sourceCamera: {fileID: 111894336}
   _sourceTexture: {fileID: 0}
   _resources: {fileID: 11400000, guid: f449ebbe2051c2e4d993eaa773a410de, type: 2}
 --- !u!1 &112005042
