@@ -28,26 +28,26 @@
   "layout": {
     "mainLayout": {
       "type": 1,
-      "width": 1920,
-      "height": 989,
+      "width": 1366,
+      "height": 677,
       "direction": 2,
       "shifters": [
         {
           "type": 1,
-          "width": 1920,
-          "height": 989,
+          "width": 1366,
+          "height": 677,
           "direction": 2,
           "shifters": [
             {
               "type": 1,
-              "width": 1920,
-              "height": 571,
+              "width": 1366,
+              "height": 415,
               "direction": 1,
               "shifters": [
                 {
                   "type": 0,
                   "width": 307,
-                  "height": 571,
+                  "height": 415,
                   "currentContent": "Modules",
                   "tabs": [
                     {
@@ -57,8 +57,8 @@
                 },
                 {
                   "type": 0,
-                  "width": 1173,
-                  "height": 571,
+                  "width": 619,
+                  "height": 415,
                   "currentContent": "State Machine",
                   "tabs": [
                     {
@@ -78,7 +78,7 @@
                 {
                   "type": 0,
                   "width": 428,
-                  "height": 571,
+                  "height": 415,
                   "currentContent": "Inspector",
                   "tabs": [
                     {
@@ -90,14 +90,14 @@
             },
             {
               "type": 1,
-              "width": 1920,
-              "height": 412,
+              "width": 1366,
+              "height": 256,
               "direction": 1,
               "shifters": [
                 {
                   "type": 0,
                   "width": 178,
-                  "height": 412,
+                  "height": 256,
                   "currentContent": "Sequences",
                   "tabs": [
                     {
@@ -107,8 +107,8 @@
                 },
                 {
                   "type": 0,
-                  "width": 1027,
-                  "height": 412,
+                  "width": 473,
+                  "height": 256,
                   "currentContent": "Sequence Editor",
                   "tabs": [
                     {
@@ -119,7 +119,7 @@
                 {
                   "type": 0,
                   "width": 703,
-                  "height": 412,
+                  "height": 256,
                   "currentContent": "Logger",
                   "tabs": [
                     {
@@ -1675,12 +1675,6 @@
         }
       },
       {
-        "parameters": [
-          {
-            "value": true,
-            "controlAddress": "/enabled"
-          }
-        ],
         "niceName": "OSC 1",
         "type": "OSC",
         "scripts": {
@@ -1694,10 +1688,6 @@
           "containers": {
             "oscInput": {
               "parameters": [
-                {
-                  "value": true,
-                  "controlAddress": "/enabled"
-                },
                 {
                   "value": 10000,
                   "hexMode": false,
@@ -1743,7 +1733,6 @@
         "values": {
           "parameters": [
             {
-              "value": 0.0,
               "controlAddress": "/_b1",
               "type": "Float",
               "niceName": "/b1",
@@ -1755,7 +1744,6 @@
               "shortName": "_b1"
             },
             {
-              "value": 0.0,
               "controlAddress": "/_b10",
               "type": "Float",
               "niceName": "/b10",
@@ -1767,7 +1755,6 @@
               "shortName": "_b10"
             },
             {
-              "value": 0.0,
               "controlAddress": "/_b11",
               "type": "Float",
               "niceName": "/b11",
@@ -1779,7 +1766,6 @@
               "shortName": "_b11"
             },
             {
-              "value": 0.0,
               "controlAddress": "/_b12",
               "type": "Float",
               "niceName": "/b12",
@@ -1803,7 +1789,6 @@
               "shortName": "_b13"
             },
             {
-              "value": 0.0,
               "controlAddress": "/_b14",
               "type": "Float",
               "niceName": "/b14",
@@ -1815,7 +1800,6 @@
               "shortName": "_b14"
             },
             {
-              "value": 0.0,
               "controlAddress": "/_b15",
               "type": "Float",
               "niceName": "/b15",
@@ -1827,7 +1811,6 @@
               "shortName": "_b15"
             },
             {
-              "value": 0.0,
               "controlAddress": "/_b16",
               "type": "Float",
               "niceName": "/b16",
@@ -1872,7 +1855,6 @@
               "shortName": "_b19"
             },
             {
-              "value": 0.0,
               "controlAddress": "/_b2",
               "type": "Float",
               "niceName": "/b2",
@@ -1895,7 +1877,6 @@
               "shortName": "_b20"
             },
             {
-              "value": 0.0,
               "controlAddress": "/_b3",
               "type": "Float",
               "niceName": "/b3",
@@ -1907,7 +1888,6 @@
               "shortName": "_b3"
             },
             {
-              "value": 0.0,
               "controlAddress": "/_b4",
               "type": "Float",
               "niceName": "/b4",
@@ -1919,7 +1899,6 @@
               "shortName": "_b4"
             },
             {
-              "value": 0.0,
               "controlAddress": "/_b5",
               "type": "Float",
               "niceName": "/b5",
@@ -1931,7 +1910,6 @@
               "shortName": "_b5"
             },
             {
-              "value": 0.0,
               "controlAddress": "/_b6",
               "type": "Float",
               "niceName": "/b6",
@@ -1943,7 +1921,6 @@
               "shortName": "_b6"
             },
             {
-              "value": 0.0,
               "controlAddress": "/_b7",
               "type": "Float",
               "niceName": "/b7",
@@ -1955,7 +1932,6 @@
               "shortName": "_b7"
             },
             {
-              "value": 0.0,
               "controlAddress": "/_b8",
               "type": "Float",
               "niceName": "/b8",
@@ -1967,7 +1943,6 @@
               "shortName": "_b8"
             },
             {
-              "value": 0.0,
               "controlAddress": "/_b9",
               "type": "Float",
               "niceName": "/b9",
@@ -2023,7 +1998,6 @@
               "shortName": "_s1"
             },
             {
-              "value": 0.0,
               "controlAddress": "/_s10",
               "type": "Float",
               "niceName": "/s10",
@@ -2310,6 +2284,7 @@
               "shortName": "_s4"
             },
             {
+              "value": 0.8818897604942322,
               "controlAddress": "/_s5",
               "type": "Float",
               "niceName": "/s5",
@@ -2321,6 +2296,7 @@
               "shortName": "_s5"
             },
             {
+              "value": 0.0236220471560955,
               "controlAddress": "/_s6",
               "type": "Float",
               "niceName": "/s6",
@@ -2354,7 +2330,6 @@
               "shortName": "_s8"
             },
             {
-              "value": 0.0,
               "controlAddress": "/_s9",
               "type": "Float",
               "niceName": "/s9",
@@ -71215,8 +71190,8 @@
       }
     ],
     "viewOffset": [
-      -311,
-      -36
+      -318,
+      5
     ],
     "viewZoom": 1.0,
     "transitions": {
@@ -71230,8 +71205,8 @@
     "comments": {
       "hideInEditor": true,
       "viewOffset": [
-        -311,
-        -36
+        -318,
+        5
       ],
       "viewZoom": 1.0
     }
