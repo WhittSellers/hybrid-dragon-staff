@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.38095886, g: 0.5494006, b: 1.7427394, a: 1}
+  m_IndirectSpecularColor: {r: 0.38069636, g: 0.5495169, b: 1.7432203, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2642,7 +2642,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ExecuteInEditor: 1
-  m_Bindings: []
+  m_Bindings:
+  - {fileID: 235329175}
+  - {fileID: 235329177}
+  - {fileID: 235329179}
+  - {fileID: 235329178}
   m_VisualEffect: {fileID: 235329173}
 --- !u!114 &235329177
 MonoBehaviour:
@@ -4627,7 +4631,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ExecuteInEditor: 1
-  m_Bindings: []
+  m_Bindings:
+  - {fileID: 448887382}
+  - {fileID: 448887381}
+  - {fileID: 448887380}
+  - {fileID: 448887378}
   m_VisualEffect: {fileID: 448887376}
 --- !u!114 &448887380
 MonoBehaviour:
@@ -6448,7 +6456,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ExecuteInEditor: 1
-  m_Bindings: []
+  m_Bindings:
+  - {fileID: 726459126}
+  - {fileID: 726459125}
+  - {fileID: 726459124}
+  - {fileID: 726459123}
   m_VisualEffect: {fileID: 726459129}
 --- !u!73398921 &726459128
 VFXRenderer:
@@ -7340,7 +7352,7 @@ GameObject:
   m_Component:
   - component: {fileID: 879240181}
   m_Layer: 0
-  m_Name: Landscape
+  m_Name: Directional Light and Volume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7544,7 +7556,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ExecuteInEditor: 1
-  m_Bindings: []
+  m_Bindings:
+  - {fileID: 912544599}
+  - {fileID: 912544598}
+  - {fileID: 912544597}
+  - {fileID: 912544596}
   m_VisualEffect: {fileID: 912544602}
 --- !u!73398921 &912544601
 VFXRenderer:
@@ -9385,7 +9401,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ExecuteInEditor: 1
-  m_Bindings: []
+  m_Bindings:
+  - {fileID: 1153645454}
+  - {fileID: 1153645458}
+  - {fileID: 1153645459}
+  - {fileID: 1153645460}
   m_VisualEffect: {fileID: 1153645457}
 --- !u!73398921 &1153645456
 VFXRenderer:
@@ -10208,7 +10228,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ExecuteInEditor: 1
-  m_Bindings: []
+  m_Bindings:
+  - {fileID: 1219786807}
+  - {fileID: 1219786803}
+  - {fileID: 1219786802}
   m_VisualEffect: {fileID: 1219786805}
 --- !u!1 &1226471163
 GameObject:
@@ -10617,7 +10640,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ExecuteInEditor: 1
-  m_Bindings: []
+  m_Bindings:
+  - {fileID: 1272893955}
+  - {fileID: 1272893954}
+  - {fileID: 1272893953}
+  - {fileID: 1272893952}
+  - {fileID: 1272893951}
+  - {fileID: 1272893950}
   m_VisualEffect: {fileID: 1272893948}
 --- !u!73398921 &1272893957
 VFXRenderer:
@@ -11847,7 +11876,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ExecuteInEditor: 1
-  m_Bindings: []
+  m_Bindings:
+  - {fileID: 1520563538}
   m_VisualEffect: {fileID: 1520563541}
 --- !u!73398921 &1520563540
 VFXRenderer:
@@ -12482,7 +12512,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ExecuteInEditor: 1
-  m_Bindings: []
+  m_Bindings:
+  - {fileID: 1627158657}
+  - {fileID: 1627158659}
   m_VisualEffect: {fileID: 1627158656}
 --- !u!114 &1627158659
 MonoBehaviour:
@@ -13191,7 +13223,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ExecuteInEditor: 1
-  m_Bindings: []
+  m_Bindings:
+  - {fileID: 1682919492}
+  - {fileID: 1682919491}
+  - {fileID: 1682919490}
+  - {fileID: 1682919489}
+  - {fileID: 1682919488}
+  - {fileID: 1682919487}
   m_VisualEffect: {fileID: 1682919485}
 --- !u!73398921 &1682919494
 VFXRenderer:
