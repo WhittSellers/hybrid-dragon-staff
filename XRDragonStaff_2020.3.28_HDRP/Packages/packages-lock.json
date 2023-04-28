@@ -279,6 +279,18 @@
         "com.unity.xr.legacyinputhelpers": "2.1.4"
       }
     },
+    "jp.keijiro.akvfx": {
+      "version": "1.0.4",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "org.nuget.system.memory": "4.5.3",
+        "org.nuget.microsoft.azure.kinect.sensor": "1.4.1",
+        "com.unity.mathematics": "1.1.0",
+        "com.unity.visualeffectgraph": "7.3.1"
+      },
+      "url": "https://registry.npmjs.com"
+    },
     "jp.keijiro.klak.ndi": {
       "version": "2.0.3",
       "depth": 0,
@@ -380,6 +392,16 @@
       },
       "url": "https://registry.npmjs.com"
     },
+    "org.nuget.microsoft.azure.kinect.sensor": {
+      "version": "1.4.1",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "org.nuget.system.numerics.vectors": "4.5.0",
+        "org.nuget.system.memory": "4.5.3"
+      },
+      "url": "https://unitynuget-registry.azurewebsites.net"
+    },
     "org.nuget.system.buffers": {
       "version": "4.4.0",
       "depth": 1,
@@ -399,8 +421,8 @@
       "url": "https://unitynuget-registry.azurewebsites.net"
     },
     "org.nuget.system.numerics.vectors": {
-      "version": "4.4.0",
-      "depth": 1,
+      "version": "4.5.0",
+      "depth": 2,
       "source": "registry",
       "dependencies": {},
       "url": "https://unitynuget-registry.azurewebsites.net"
