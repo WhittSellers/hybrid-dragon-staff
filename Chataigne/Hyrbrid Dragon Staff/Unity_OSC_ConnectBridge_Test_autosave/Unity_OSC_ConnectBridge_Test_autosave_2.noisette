@@ -254,7 +254,7 @@
                 "mode": {
                   "parameters": [
                     {
-                      "value": 1,
+                      "value": 2,
                       "alwaysNotify": true,
                       "minValue": 1,
                       "maxValue": 13,
@@ -270,7 +270,7 @@
                       "feedbackOnly": false
                     },
                     {
-                      "value": 4,
+                      "value": 1,
                       "alwaysNotify": true,
                       "minValue": 1,
                       "maxValue": 50,
@@ -338,7 +338,7 @@
                       "feedbackOnly": false
                     },
                     {
-                      "value": 0.5,
+                      "value": 1.0,
                       "alwaysNotify": true,
                       "minValue": 0.0,
                       "maxValue": 1.0,
@@ -397,7 +397,7 @@
                 "mode": {
                   "parameters": [
                     {
-                      "value": 1,
+                      "value": 2,
                       "alwaysNotify": true,
                       "minValue": 1,
                       "maxValue": 13,
@@ -413,7 +413,7 @@
                       "feedbackOnly": false
                     },
                     {
-                      "value": 4,
+                      "value": 1,
                       "alwaysNotify": true,
                       "minValue": 1,
                       "maxValue": 50,
@@ -480,7 +480,7 @@
                       "feedbackOnly": false
                     },
                     {
-                      "value": 0.5,
+                      "value": 1.0,
                       "alwaysNotify": true,
                       "minValue": 0.0,
                       "maxValue": 1.0,
@@ -606,7 +606,7 @@
         "values": {
           "parameters": [
             {
-              "value": 0.253948986530304,
+              "value": 0.1432921886444092,
               "controlAddress": "/_1_fader1",
               "type": "Float",
               "niceName": "/1/fader1",
@@ -618,7 +618,7 @@
               "shortName": "_1_fader1"
             },
             {
-              "value": 0.4046161770820618,
+              "value": 1.0,
               "controlAddress": "/_1_fader2",
               "type": "Float",
               "niceName": "/1/fader2",
@@ -630,7 +630,7 @@
               "shortName": "_1_fader2"
             },
             {
-              "value": 0.1157890558242798,
+              "value": 0.3628811240196228,
               "controlAddress": "/_1_fader3",
               "type": "Float",
               "niceName": "/1/fader3",
@@ -642,7 +642,7 @@
               "shortName": "_1_fader3"
             },
             {
-              "value": 0.11778324842453,
+              "value": 0.4459421634674072,
               "controlAddress": "/_1_fader4",
               "type": "Float",
               "niceName": "/1/fader4",
@@ -654,6 +654,7 @@
               "shortName": "_1_fader4"
             },
             {
+              "value": 0.7483122944831848,
               "controlAddress": "/_1_fader5",
               "type": "Float",
               "niceName": "/1/fader5",
@@ -665,6 +666,7 @@
               "shortName": "_1_fader5"
             },
             {
+              "value": 1.0,
               "controlAddress": "/_1_toggle1",
               "type": "Float",
               "niceName": "/1/toggle1",
@@ -676,6 +678,7 @@
               "shortName": "_1_toggle1"
             },
             {
+              "value": 0.0,
               "controlAddress": "/_1_toggle2",
               "type": "Float",
               "niceName": "/1/toggle2",
@@ -687,6 +690,7 @@
               "shortName": "_1_toggle2"
             },
             {
+              "value": 0.0,
               "controlAddress": "/_1_toggle3",
               "type": "Float",
               "niceName": "/1/toggle3",
@@ -698,6 +702,7 @@
               "shortName": "_1_toggle3"
             },
             {
+              "value": 1.0,
               "controlAddress": "/_1_toggle4",
               "type": "Float",
               "niceName": "/1/toggle4",
@@ -1788,6 +1793,7 @@
               "shortName": "_b12"
             },
             {
+              "value": 0.0,
               "controlAddress": "/_b13",
               "type": "Float",
               "niceName": "/b13",
@@ -1799,6 +1805,7 @@
               "shortName": "_b13"
             },
             {
+              "value": 0.0,
               "controlAddress": "/_b14",
               "type": "Float",
               "niceName": "/b14",
@@ -1909,6 +1916,7 @@
               "shortName": "_b4"
             },
             {
+              "value": 0.0,
               "controlAddress": "/_b5",
               "type": "Float",
               "niceName": "/b5",
@@ -1976,7 +1984,6 @@
               "shortName": "_chiroll"
             },
             {
-              "value": 0.0,
               "controlAddress": "/_horizontalisolation",
               "type": "Float",
               "niceName": "/horizontalisolation",
@@ -1988,7 +1995,6 @@
               "shortName": "_horizontalisolation"
             },
             {
-              "value": 0.0,
               "controlAddress": "/_horizontalspin",
               "type": "Float",
               "niceName": "/horizontalspin",
@@ -2033,6 +2039,7 @@
               "shortName": "_s11"
             },
             {
+              "value": 0.1181102395057678,
               "controlAddress": "/_s12",
               "type": "Float",
               "niceName": "/s12",
@@ -2044,7 +2051,7 @@
               "shortName": "_s12"
             },
             {
-              "value": 0.0,
+              "value": 0.8188976645469666,
               "controlAddress": "/_s13",
               "type": "Float",
               "niceName": "/s13",
@@ -2056,7 +2063,7 @@
               "shortName": "_s13"
             },
             {
-              "value": 0.0,
+              "value": 0.188976377248764,
               "controlAddress": "/_s14",
               "type": "Float",
               "niceName": "/s14",
@@ -2134,6 +2141,7 @@
               "shortName": "_s2"
             },
             {
+              "value": 0.4330708682537079,
               "controlAddress": "/_s20",
               "type": "Float",
               "niceName": "/s20",
@@ -2145,7 +2153,7 @@
               "shortName": "_s20"
             },
             {
-              "value": 0.5354330539703369,
+              "value": 0.5039370059967041,
               "controlAddress": "/_s21",
               "type": "Float",
               "niceName": "/s21",
@@ -2157,7 +2165,7 @@
               "shortName": "_s21"
             },
             {
-              "value": 0.0,
+              "value": 0.6535432934761047,
               "controlAddress": "/_s22",
               "type": "Float",
               "niceName": "/s22",
@@ -2169,6 +2177,7 @@
               "shortName": "_s22"
             },
             {
+              "value": 0.03937007859349251,
               "controlAddress": "/_s23",
               "type": "Float",
               "niceName": "/s23",
@@ -2180,6 +2189,7 @@
               "shortName": "_s23"
             },
             {
+              "value": 0.0,
               "controlAddress": "/_s24",
               "type": "Float",
               "niceName": "/s24",
@@ -2235,7 +2245,7 @@
               "shortName": "_s28"
             },
             {
-              "value": 0.0,
+              "value": 0.8267716765403748,
               "controlAddress": "/_s29",
               "type": "Float",
               "niceName": "/s29",
@@ -2258,6 +2268,7 @@
               "shortName": "_s3"
             },
             {
+              "value": 0.2992126047611237,
               "controlAddress": "/_s30",
               "type": "Float",
               "niceName": "/s30",
@@ -2269,6 +2280,7 @@
               "shortName": "_s30"
             },
             {
+              "value": 0.07086614519357681,
               "controlAddress": "/_s31",
               "type": "Float",
               "niceName": "/s31",
@@ -2280,6 +2292,7 @@
               "shortName": "_s31"
             },
             {
+              "value": 0.110236220061779,
               "controlAddress": "/_s32",
               "type": "Float",
               "niceName": "/s32",
@@ -2302,7 +2315,7 @@
               "shortName": "_s4"
             },
             {
-              "value": 0.0,
+              "value": 0.8976377844810486,
               "controlAddress": "/_s5",
               "type": "Float",
               "niceName": "/s5",
@@ -2314,7 +2327,7 @@
               "shortName": "_s5"
             },
             {
-              "value": 0.0,
+              "value": 0.5039370059967041,
               "controlAddress": "/_s6",
               "type": "Float",
               "niceName": "/s6",
@@ -2326,6 +2339,7 @@
               "shortName": "_s6"
             },
             {
+              "value": 0.0,
               "controlAddress": "/_s7",
               "type": "Float",
               "niceName": "/s7",
@@ -2337,7 +2351,7 @@
               "shortName": "_s7"
             },
             {
-              "value": 0.7480314970016479,
+              "value": 0.0,
               "controlAddress": "/_s8",
               "type": "Float",
               "niceName": "/s8",
@@ -5622,6 +5636,11 @@
                         "CinemachineVirtualCamera": {
                           "parameters": [
                             {
+                              "value": 1,
+                              "hexMode": false,
+                              "controlAddress": "/m_Priority"
+                            },
+                            {
                               "value": "RoundRobin",
                               "controlAddress": "/m_StandbyUpdate"
                             }
@@ -5841,6 +5860,11 @@
                         "CinemachineVirtualCamera": {
                           "parameters": [
                             {
+                              "value": 5,
+                              "hexMode": false,
+                              "controlAddress": "/m_Priority"
+                            },
+                            {
                               "value": "RoundRobin",
                               "controlAddress": "/m_StandbyUpdate"
                             }
@@ -5874,6 +5898,10 @@
                             {
                               "value": "Distance",
                               "controlAddress": "/m_PositionUnits"
+                            },
+                            {
+                              "value": -2.0,
+                              "controlAddress": "/m_Speed"
                             }
                           ],
                           "editorIsCollapsed": true,
@@ -6059,6 +6087,11 @@
                         },
                         "CinemachineVirtualCamera": {
                           "parameters": [
+                            {
+                              "value": 2,
+                              "hexMode": false,
+                              "controlAddress": "/m_Priority"
+                            },
                             {
                               "value": "RoundRobin",
                               "controlAddress": "/m_StandbyUpdate"
@@ -6263,6 +6296,11 @@
                         },
                         "CinemachineVirtualCamera": {
                           "parameters": [
+                            {
+                              "value": 2,
+                              "hexMode": false,
+                              "controlAddress": "/m_Priority"
+                            },
                             {
                               "value": "RoundRobin",
                               "controlAddress": "/m_StandbyUpdate"
@@ -15194,6 +15232,12 @@
                       "niceName": "Transform"
                     },
                     "VFXManager": {
+                      "parameters": [
+                        {
+                          "value": 2.993249177932739,
+                          "controlAddress": "/turbulenceIntensity"
+                        }
+                      ],
                       "editorIsCollapsed": true,
                       "owned": true,
                       "niceName": "VFXManager"
@@ -86895,6 +86939,23 @@
                           "linkType": 1,
                           "mappingValueIndex": 0
                         }
+                      }
+                    }
+                  },
+                  {
+                    "niceName": "MappingOutput 1",
+                    "type": "BaseItem",
+                    "commandModule": "oSCQuery",
+                    "commandPath": "",
+                    "commandType": "Set Value",
+                    "command": {
+                      "parameters": [
+                        {
+                          "value": "",
+                          "controlAddress": "/target"
+                        }
+                      ],
+                      "paramLinks": {
                       }
                     }
                   }
